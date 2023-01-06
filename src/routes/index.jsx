@@ -1,10 +1,10 @@
+import Blog from "../pages/Blog";
 import Shop from "../pages/Shop";
 import Home from "../pages/Home";
-import Error from "../pages/Error";
-import Blog from "../pages/Blog";
-import About from "../pages/About";
-import Register from "../pages/Register";
 import Login from "../pages/Login";
+import About from "../pages/About";
+import Error from "../pages/Error";
+import Register from "../pages/Register";
 import { Routes, Route } from "react-router-dom";
 
 function Authenticator() {
