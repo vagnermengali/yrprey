@@ -32,13 +32,13 @@ export const ContainerSection = styled.section`
     text-transform: none;
     gap: 30px;
   }
-  .container-left .divLinks {
+  .container-left .div-links {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 70%;
   }
-  .container-left .divLinks p {
+  .container-left .div-links p {
     font-size: 24px;
     font-weight: 700;
     text-decoration: none;
