@@ -1,7 +1,6 @@
 import React from "react";
 import { StyledTableCollection } from "./style";
-import { SiZcash, SiDash, SiLitecoin } from "react-icons/si";
-import { FaCheckCircle, FaEthereum, FaBitcoin, FaMonero } from "react-icons/fa";
+import { FaCheckCircle, FaEthereum } from "react-icons/fa";
 import profileRed from "../../assets/image//collectibles/red/potion-red.png";
 import profileBlue from "../../assets/image//collectibles/blue/potion-blue.png";
 import profileWhite from "../../assets/image//collectibles/white/potion-white.png";
@@ -33,7 +32,7 @@ const TableCollection = () => {
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>
-                  <FaEthereum className="eth" /> <SiZcash className="zec" />
+                  <FaEthereum className="eth" />
                 </span>
               </div>
               <p className="card-table-static">1</p>
@@ -53,7 +52,7 @@ const TableCollection = () => {
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>
-                  <FaEthereum className="eth" /> <FaBitcoin className="btc" />
+                  <FaEthereum className="eth" />
                 </span>
               </div>
               <p className="card-table-static">1</p>
@@ -73,7 +72,7 @@ const TableCollection = () => {
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>
-                  <FaEthereum className="eth" /> <FaMonero className="xmr" />
+                  <FaEthereum className="eth" />
                 </span>
               </div>
               <p className="card-table-static">1</p>
@@ -93,7 +92,7 @@ const TableCollection = () => {
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>
-                  <FaEthereum className="eth" /> <SiLitecoin className="ltc" />
+                  <FaEthereum className="eth" />
                 </span>
               </div>
               <p className="card-table-static">1</p>
@@ -113,7 +112,7 @@ const TableCollection = () => {
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>
-                  <FaEthereum className="eth" /> <SiDash className="dash" />
+                  <FaEthereum className="eth" />
                 </span>
               </div>
               <p className="card-table-static">1</p>

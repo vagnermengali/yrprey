@@ -11,25 +11,19 @@ export const StyledCollectionsSection = styled.section`
   background-image: url(${background_error});
   background-repeat: no-repeat;
   background-size: cover;
+
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 85%;
+    margin-top: 70px;
   }
   .content {
     display: flex;
-    flex-direction: column;
-
-    gap: 30px;
-  }
-  .content h1 {
-    color: var(--white);
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.22;
-    letter-spacing: 0;
-    text-transform: none;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
   }
 `;

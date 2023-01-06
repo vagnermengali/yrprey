@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import CardShop from "../../../components/ShopCard"
 import { useParams } from 'react-router-dom';
 import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
 import { FullPage, Slide } from "react-full-page";
 import { StyledCollectionsSection } from "./style";
+import img from "../../../assets/image/collectibles/red/sword-red.png"
 
 function Collections() {
   document.title = "Collections • Prey";
@@ -21,7 +23,12 @@ function Collections() {
           <StyledCollectionsSection>
             <div className="container">
               <div className="content">
-                <h1>Page {id} under development...</h1>
+                <CardShop title_image={"prey"} image={img} title={id}/>
+                <CardShop title_image={"prey"} image={img} title={id}/>
+                <CardShop title_image={"prey"} image={img} title={id}/>
+                <CardShop title_image={"prey"} image={img} title={id}/>
+                <CardShop title_image={"prey"} image={img} title={id}/>
+                <CardShop title_image={"prey"} image={img} title={id}/>
               </div>
             </div>
           </StyledCollectionsSection>

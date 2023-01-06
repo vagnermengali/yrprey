@@ -1,6 +1,6 @@
 import AOS from "aos";
 import { useEffect } from "react";
-import Card from "../../../components/Card";
+import CardBlog from "../../../components/CardBlog";
 import { StyledBlogSection } from "./style";
 import nft2 from "../../../assets/image/collectibles/red/axe-red.png";
 import nft1 from "../../../assets/image/collectibles/red/sword-red.png";
@@ -22,7 +22,7 @@ function BlogSection() {
         </h4>
         <div className="content-center">
           <div data-aos="fade-right">
-            <Card
+            <CardBlog
               background_color="var(--grey-0)"
               details_color={"var(--grey-2)"}
               link_color={"var(--secondary-color)"}
@@ -33,7 +33,7 @@ function BlogSection() {
             />
           </div>
           <div data-aos="fade">
-            <Card
+            <CardBlog
               image={nft2}
               title="The Security Risks Of Cyber Changing Package"
               text_details="Mynex has been providing managed web, email and co-location an hosting for local small- to medium-sized Businesses."
@@ -41,7 +41,7 @@ function BlogSection() {
             />
           </div>
           <div data-aos="fade-left">
-            <Card
+            <CardBlog
               background_color="var(--grey-0)"
               details_color={"var(--grey-2)"}
               link_color={"var(--secondary-color)"}
