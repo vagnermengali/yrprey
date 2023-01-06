@@ -1,5 +1,5 @@
-import { StyledInitialSection } from "./style";
 import { useContext } from "react";
+import { StyledInitialSection } from "./style";
 import { Context } from "../../../providers/pageContext";
 import padclock from "../../../assets/image/Illustrations/Illustration-cyber-3.svg";
 
