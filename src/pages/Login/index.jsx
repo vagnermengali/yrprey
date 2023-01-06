@@ -2,8 +2,10 @@ import FormContact from "./Form";
 import { motion } from "framer-motion";
 import Header from "../../components/Header";
 import { StyledLogintSection } from "./style";
+import MarketingCard from "../../components/MarketingCard";
 
 function LoginSection() {
+  document.title = "Login - PREY";
   return (
     <motion.div
       initial={{ opacity: 0.3 }}
@@ -23,6 +25,7 @@ function LoginSection() {
             </div>
           </div>
           <div className="container-right">
+            <MarketingCard />
           </div>
         </div>
       </StyledLogintSection>
