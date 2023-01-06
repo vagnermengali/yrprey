@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { HeaderContainer, DivHeader } from "./style";
+import { Context } from "../../providers/pageContext";
 import logo from "../../assets/image/logos/logo-letter.svg";
 import { Link as LinkRouter, useNavigate } from "react-router-dom";
 
 function Header() {
-  const navigate = useNavigate();
+  const { navigate } = useContext(Context);
 
   return (
     <>

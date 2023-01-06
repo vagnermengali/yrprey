@@ -33,14 +33,3 @@ function Card({
 }
 
 export default Card;
-
-{
-  /* <StyledCard>
-<img src={image} alt="" />
-<div>
-  <p className="title">{title}</p>
-  <p className="details">{details}</p>
-  <Link to={route}></Link>
-</div>
-</StyledCard> */
-}

@@ -4,6 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ContainerCarousel } from "./style";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { HiOutlineStatusOnline } from "react-icons/hi";
@@ -57,7 +58,9 @@ function Carousel() {
                   <p className="carousel-date">Qui, 12 Jan</p>
                   <h2 className="carousel-title">Prey Warrior Club Red</h2>
                   <p className="carousel-details">PREY</p>
-                  <button className="carousel-button">See drop</button>
+                  <Link to="/shop/collection/red" className="carousel-button">
+                    See drop
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -72,7 +75,9 @@ function Carousel() {
                   <p className="carousel-date">Qui, 5 Jan</p>
                   <h2 className="carousel-title">Prey Warrior Club Blue</h2>
                   <p className="carousel-details">PREY</p>
-                  <button className="carousel-button">See drop</button>
+                  <Link to="/shop/collection/blue" className="carousel-button">
+                    See drop
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -87,7 +92,9 @@ function Carousel() {
                   <p className="carousel-date">Seg, 9 Jan</p>
                   <h2 className="carousel-title">Prey Warrior Club White</h2>
                   <p className="carousel-details">PREY</p>
-                  <button className="carousel-button">See drop</button>
+                  <Link to="/shop/collection/white" className="carousel-button">
+                    See drop
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -102,7 +109,9 @@ function Carousel() {
                   <p className="carousel-date">Quin, 19 Jan</p>
                   <h2 className="carousel-title">Prey Warrior Club Cian</h2>
                   <p className="carousel-details">PREY</p>
-                  <button className="carousel-button">See drop</button>
+                  <Link to="/shop/collection/cian" className="carousel-button">
+                    See drop
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -117,7 +126,9 @@ function Carousel() {
                   <p className="carousel-date">Ter, 15 Jan</p>
                   <h2 className="carousel-title">Prey Warrior Club Beige</h2>
                   <p className="carousel-details">PREY</p>
-                  <button className="carousel-button">See drop</button>
+                  <Link to="/shop/collection/beige" className="carousel-button">
+                    See drop
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>

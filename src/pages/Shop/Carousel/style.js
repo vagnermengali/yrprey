@@ -7,7 +7,7 @@ export const ContainerCarousel = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   background-image: url(${background});
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,7 +18,7 @@ export const ContainerCarousel = styled.div`
     align-items: center;
     width: 85%;
     gap: 30px;
-    padding-top:40px;
+    padding-top: 40px;
   }
   .content-text {
     display: flex;
@@ -92,7 +92,6 @@ export const ContainerCarousel = styled.div`
     color: var(--primary-color);
   }
   .carousel-button {
-    padding: 20px 24px;
     border: none;
     outline: none;
     color: var(--white);
@@ -106,6 +105,10 @@ export const ContainerCarousel = styled.div`
     line-height: 16px;
     width: 140px;
     height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
   }
   .carousel-button:after {
     content: "";
@@ -168,7 +171,6 @@ export const ContainerCarousel = styled.div`
     height: 100%;
     border-radius: 10px;
   }
-
   .swiper-slide {
     background-position: center;
     background-size: cover;

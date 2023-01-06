@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background_error from "../../../assets/image/backgrounds/background-error.svg";
+import background_error from "../../../assets/image/backgrounds/background-shop-colletion.svg";
 
 export const StyledCollectionsSection = styled.section`
   width: 100vw;
