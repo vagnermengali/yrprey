@@ -1,3 +1,4 @@
+import 'aos/dist/aos.css';
 import Authenticator from "./routes";
 import "animate.css/animate.min.css";
 
