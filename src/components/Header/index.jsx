@@ -18,7 +18,7 @@ function Header() {
             </div>
             <nav>
               <LinkRouter to="/" className="link">
-                Home
+                Homepage
               </LinkRouter>
               <LinkRouter to="/about" className="link">
                 About us
