@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import ShopSection from "./ShopSection";
 import BlogSection from "./BlogSection";
 import AboutSection from "./AboutSection";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import InitialSection from "./InitialSection";
 import ContactSection from "./ContactSection";
@@ -33,6 +34,9 @@ function Home() {
           </Slide>
           <Slide>
             <ContactSection />
+          </Slide>
+          <Slide>
+            <Footer />
           </Slide>
         </FullPage>
       </motion.div>
