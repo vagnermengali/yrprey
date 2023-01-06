@@ -7,6 +7,7 @@ import profileBlue from "../../assets/image//collectibles/blue/potion-blue.png";
 import profileWhite from "../../assets/image//collectibles/white/potion-white.png";
 import profileCian from "../../assets/image//collectibles/cian/potion-cian.png";
 import profileBeige from "../../assets/image//collectibles/beige/potion-beige.png";
+import { Link } from "react-router-dom";
 
 const TableCollection = () => {
   return (
@@ -38,7 +39,7 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <button className="btn-top-collections">purchase</button>
+            <Link to="/shop/collection/red" className="btn-top-collections">Purchase</Link>
           </li>
           <li>
             <div className="card-table">
@@ -58,7 +59,7 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <button className="btn-top-collections">purchase</button>
+            <Link to="/shop/collection/blue" className="btn-top-collections">Purchase</Link>
           </li>
           <li>
             <div className="card-table">
@@ -78,7 +79,7 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <button className="btn-top-collections">purchase</button>
+            <Link to="/shop/collection/white" className="btn-top-collections">Purchase</Link>
           </li>
           <li>
             <div className="card-table">
@@ -98,7 +99,7 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <button className="btn-top-collections">purchase</button>
+            <Link to="/shop/collection/cian" className="btn-top-collections">Purchase</Link>
           </li>
           <li>
             <div className="card-table">
@@ -118,7 +119,7 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <button className="btn-top-collections">purchase</button>
+            <Link to="/shop/collection/beige" className="btn-top-collections">Purchase</Link>
           </li>
         </ul>
       </div>
