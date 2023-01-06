@@ -141,7 +141,6 @@ export const Form = styled.form`
     opacity: 1;
   }
   .btn:active {
-    color: var(--black);
     font-weight: bold;
   }
   .input-contact {

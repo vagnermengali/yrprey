@@ -105,7 +105,6 @@ export const StyledInitialSection = styled.div`
     opacity: 1;
   }
   .btn:active {
-    color: var(--black);
     font-weight: bold;
   }
   .container-right {
