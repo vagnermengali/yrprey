@@ -19,9 +19,9 @@ function ShopSection() {
         <p className="title-shop" data-aos="fade-in">
           Shop
         </p>
-        <h4 data-aos="fade">
+        <h3 data-aos="fade">
           Buy, trade and hold <span>100+ Collectibles</span> on Prey
-        </h4>
+        </h3>
         <div className="content-center">
           <div data-aos="fade-down-right">
             <CardShopClean
