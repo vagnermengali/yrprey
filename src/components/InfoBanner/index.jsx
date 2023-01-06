@@ -1,10 +1,10 @@
 import { BsCheck2 } from "react-icons/bs";
-import { StyledMarketingCard, DivMarketingCard } from "./style";
+import { StyledInfoBanner, DivInfoBanner } from "./style";
 
-function MarketingCard() {
+function InfoBanner() {
   return (
-    <StyledMarketingCard>
-      <DivMarketingCard>
+    <StyledInfoBanner>
+      <DivInfoBanner>
         <h2>Use all your knowledge of security and vulnerabilities here</h2>
         <div>
           <p>
@@ -21,9 +21,9 @@ function MarketingCard() {
             <BsCheck2 className="icon" /> Create your unsecured account
           </p>
         </div>
-      </DivMarketingCard>
-    </StyledMarketingCard>
+      </DivInfoBanner>
+    </StyledInfoBanner>
   );
 }
 
-export default MarketingCard;
+export default InfoBanner;

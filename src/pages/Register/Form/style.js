@@ -4,15 +4,15 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  .container-input {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  .container-input{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
   }
-  .container-button {
-    display: flex;
-    align-items: center;
-    gap: 45px;
+  .container-button{
+    display:flex;
+    align-items:center;
+    gap:45px;
   }
   .label {
     font-weight: 600;
@@ -25,7 +25,7 @@ export const Form = styled.form`
     font-size: 16px;
     line-height: 16px;
     color: var(--primary-color);
-    text-decoration: none;
+    text-decoration:none;
     :hover {
       color: var(--secondary-color);
     }
@@ -35,8 +35,8 @@ export const Form = styled.form`
     font-size: 16px;
     line-height: 16px;
     color: var(--primary-color);
-    text-decoration: none;
-    margin-top: 30px;
+    text-decoration:none;
+    margin-top:30px;
     :hover {
       color: var(--secondary-color);
     }
@@ -82,6 +82,18 @@ export const Form = styled.form`
     background-color: transparent;
     color: var(--grey-2);
     outline: none;
+  }
+  p {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 26px;
+    color: var(--grey-2);
+  }
+  .fictitious-terms {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 26px;
+    color: var(--primary-color);
   }
   .btn {
     padding: 20px 24px;

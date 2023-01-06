@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import background_login from "../../assets/image/backgrounds/background-login.svg";
 
-export const StyledLogintSection = styled.div`
+export const StyledLoginSection = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
