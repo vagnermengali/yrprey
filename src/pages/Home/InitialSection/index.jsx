@@ -4,8 +4,8 @@ import { Context } from "../../../providers/pageContext";
 import padclock from "../../../assets/image/Illustrations/Illustration-cyber-3.svg";
 
 function InitialSection() {
-  const { navigate } = useContext(Context)
-  
+  const { navigate } = useContext(Context);
+
   return (
     <StyledInitialSection>
       <div className="container">
