@@ -1,5 +1,7 @@
+import { StyledBlogSection } from "./style";
+
 function BlogSection() {
-  return <></>;
+  return <StyledBlogSection></StyledBlogSection>;
 }
 
 export default BlogSection;

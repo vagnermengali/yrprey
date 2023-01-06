@@ -1,5 +1,7 @@
+import { StyledShopSection } from "./style";
+
 function ShopSection() {
-  return <></>;
+  return <StyledShopSection></StyledShopSection>;
 }
 
 export default ShopSection;

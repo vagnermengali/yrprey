@@ -5,6 +5,7 @@ import AboutSection from "./AboutSection";
 import Header from "../../components/Header";
 import InitialSection from "./InitialSection";
 import ContactSection from "./ContactSection";
+import { FullPage, Slide } from "react-full-page";
 
 function Home() {
   document.title = "Welcome to Prey";
@@ -16,12 +17,24 @@ function Home() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Header />
-        <InitialSection />
-        <AboutSection />
-        <ShopSection />
-        <BlogSection />
-        <ContactSection />
+        <FullPage>
+          <Slide>
+            <Header />
+            <InitialSection />
+          </Slide>
+          <Slide>
+            <AboutSection />
+          </Slide>
+          <Slide>
+            <ShopSection />
+          </Slide>
+          <Slide>
+            <BlogSection />
+          </Slide>
+          <Slide>
+            <ContactSection />
+          </Slide>
+        </FullPage>
       </motion.div>
     </>
   );

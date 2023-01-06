@@ -1,5 +1,7 @@
+import { StyledInitialSection } from "./style";
+
 function InitialSection() {
-  return <></>;
+  return <StyledInitialSection></StyledInitialSection>;
 }
 
 export default InitialSection;

@@ -1,5 +1,7 @@
+import { StyledAboutSection } from "./style";
+
 function AboutSection() {
-  return <></>;
+  return <StyledAboutSection></StyledAboutSection>;
 }
 
 export default AboutSection;

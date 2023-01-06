@@ -1,5 +1,7 @@
+import { StyledContactSection } from "./style";
+
 function ContactSection() {
-  return <></>;
+  return <StyledContactSection></StyledContactSection>;
 }
 
 export default ContactSection;
