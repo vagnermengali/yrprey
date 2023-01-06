@@ -1,10 +1,10 @@
 import { Form } from "./style";
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { formSchema } from "../../../validators/login";
+import { formSchema } from "../../../validators/register";
 
-function FormLogin() {
+function FormRegister() {
   const {
     register,
     handleSubmit,
@@ -20,7 +20,7 @@ function FormLogin() {
         <input
           className="input-email"
           type="text"
-          placeholder="Your Email"
+          placeholder="example@gmail.com"
           {...register("email")}
         />
       </div>
@@ -32,29 +32,28 @@ function FormLogin() {
         <input
           type="password"
           className="input-password"
-          placeholder="Your Password"
+          placeholder="***********"
           {...register("password")}
         />
       </div>
       <label className={errors.password ? "error" : "no-error"}>
         {errors.password?.message}
       </label>
-      <Link
-        className="link"
-        onClick={() => alert("make modal to proceed")}
-      >
-        Forgot your password?
-      </Link>
+      <p>
+        By signing up, you agree to our{" "}
+        <span className="fictitious-terms">Terms</span> and{" "}
+        <span className="fictitious-terms">Privacy Policy</span>.
+      </p>
       <div className="container-button">
         <button type="submit" className="btn">
-          Log in
-        </button>
-        <Link to="/register" className="link-signup">
           Sign up
+        </button>
+        <Link to="/login" className="link-signup">
+          Log in
         </Link>
       </div>
     </Form>
   );
 }
 
-export default FormLogin;
+export default FormRegister;

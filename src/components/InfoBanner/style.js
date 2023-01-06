@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMarketingCard = styled.div`
+export const StyledInfoBanner = styled.div`
   width: 83%;
   background: var(--grey-0);
   padding: 45px;
@@ -8,7 +8,7 @@ export const StyledMarketingCard = styled.div`
   border-radius: 6px;
   animation: shakeY 40s ease-in-out infinite alternate-reverse both;
 `;
-export const DivMarketingCard = styled.div`
+export const DivInfoBanner = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;

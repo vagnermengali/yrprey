@@ -1,11 +1,11 @@
-import FormContact from "./Form";
+import FormLogin from "./Form";
 import { motion } from "framer-motion";
 import Header from "../../components/Header";
-import { StyledLogintSection } from "./style";
-import MarketingCard from "../../components/MarketingCard";
+import { StyledLoginSection } from "./style";
+import InfoBanner from "../../components/InfoBanner";
 
-function LoginSection() {
-  document.title = "Login - PREY";
+function Login() {
+  document.title = "Login • Prey";
   return (
     <motion.div
       initial={{ opacity: 0.3 }}
@@ -13,7 +13,7 @@ function LoginSection() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <StyledLogintSection id="contact">
+      <StyledLoginSection>
         <Header />
         <div className="container">
           <div className="container-left">
@@ -21,16 +21,16 @@ function LoginSection() {
               <h1>
                 Ready to roll up your <span>sleeves again?</span>
               </h1>
-              <FormContact />
+              <FormLogin />
             </div>
           </div>
           <div className="container-right">
-            <MarketingCard />
+            <InfoBanner />
           </div>
         </div>
-      </StyledLogintSection>
+      </StyledLoginSection>
     </motion.div>
   );
 }
 
-export default LoginSection;
+export default Login;
