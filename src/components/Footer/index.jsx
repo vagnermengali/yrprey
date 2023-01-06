@@ -54,19 +54,19 @@ function Footer() {
         <div className="content-right">
           <div>
             <p>Company</p>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               About Us
             </Link>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Carrer
             </Link>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Business Contacts
             </Link>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Our Blog
             </Link>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Terms & Conditions
             </Link>
           </div>
@@ -75,34 +75,34 @@ function Footer() {
             <Link to="/" className="link">
               Home
             </Link>
-            <Link to="/" className="link">
+            <Link to="/about" className="link">
               About Us
             </Link>
-            <Link to="/" className="link">
+            <Link to="/shop" className="link">
               Shop
             </Link>
-            <Link to="/" className="link">
+            <Link to="/blog" className="link">
               Blog
             </Link>
           </div>
           <div>
             <p>Solution</p>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Application Security
             </Link>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Could Security
             </Link>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Infrastruture
             </Link>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Threat Hunter
             </Link>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Disaster Planning
             </Link>
-            <Link to="/" className="link">
+            <Link to="*" className="link">
               Cyber Security
             </Link>
           </div>
