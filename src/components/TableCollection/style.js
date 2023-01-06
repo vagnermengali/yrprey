@@ -91,20 +91,8 @@ export const StyledTableCollection = styled.div`
   .eth {
     color: var(--grey-1);
   }
-  .zec {
-    color: var(--yellow-0);
-  }
-  .dash {
-    color: var(--blue-1);
-  }
   .btc {
     color: var(--orange-1);
-  }
-  .xmr {
-    color: var(--orange-0);
-  }
-  .ltc {
-    color: var(--blue-0);
   }
   .btn-top-collections {
     border: none;

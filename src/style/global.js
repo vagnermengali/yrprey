@@ -2,8 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
  @font-face {
-  font-family: 'bakbakone';
-  src: local('bakbakone'), url(/font/Roboto-Regular.ttf) format('truetype');
+  font-family: 'Roboto';
+  src: local('Roboto'), url(/font/Roboto-Regular.ttf) format('truetype');
 }
 
 :root {
@@ -79,7 +79,7 @@ export const ResetCSS = createGlobalStyle`
     border: 0;
     font-size: 100%;
     font: inherit;
-    font-family: 'bakbakone', sans-serif;
+    font-family: 'Roboto', sans-serif;
     vertical-align: baseline;
     scroll-behavior: smooth;
   }
