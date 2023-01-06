@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 import spacecraft from "../../assets/image/Illustrations/Illustration-cyber-6.svg";
 
 function Error() {
-  document.title = "Página não encotrada";
+  document.title = "Page not found";
 
   return (
     <motion.div
@@ -20,13 +20,11 @@ function Error() {
         <div className="container">
           <div className="container-left">
             <h1>Oops!</h1>
-            <div className="divLinks">
-              <p>Algo deu errado...</p>
-              <p>
-                Não conseguimos encontrar a página que você está procurando.
-              </p>
+            <div className="div-links">
+              <p>Something went wrong...</p>
+              <p>We could not find the page you are looking for.</p>
               <Link className="link" to="/">
-                Voltar para a página principal ㅤ<FaArrowRight />
+                Back to main page ㅤ<FaArrowRight />
               </Link>
             </div>
           </div>
