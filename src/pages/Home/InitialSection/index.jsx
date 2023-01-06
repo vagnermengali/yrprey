@@ -1,11 +1,13 @@
 import { StyledInitialSection } from "./style";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../../../providers/pageContext";
 import padclock from "../../../assets/image/Illustrations/Illustration-cyber-3.svg";
 
 function InitialSection() {
-  const navigate = useNavigate();
+  const { navigate } = useContext(Context)
+  
   return (
-    <StyledInitialSection id="home">
+    <StyledInitialSection>
       <div className="container">
         <div className="container-left">
           <h1>
