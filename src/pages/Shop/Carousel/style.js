@@ -149,7 +149,6 @@ export const ContainerCarousel = styled.div`
     opacity: 1;
   }
   .carousel-button:active {
-    color: var(--black);
     font-weight: bold;
   }
   .container-right {
