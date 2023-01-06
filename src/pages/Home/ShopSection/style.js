@@ -22,14 +22,14 @@ export const StyledShopSection = styled.div`
     text-decoration-line: underline;
     color: var(--white);
   }
-  h4 {
+  h3 {
     font-weight: 700;
     font-size: 40px;
     line-height: 52px;
     text-align: center;
     color: var(--white);
   }
-  span {
+  h3 span {
     background: var(--primary-color);
     background: var(--gradient-color);
     -webkit-background-clip: text;
