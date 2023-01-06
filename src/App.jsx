@@ -1,5 +1,6 @@
 import Authenticator from "./routes";
 
+
 function App() {
   return (
     <>
