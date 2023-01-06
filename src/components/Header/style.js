@@ -140,7 +140,6 @@ export const DivHeader = styled.div`
     background: transparent;
   }
   .btn:active {
-    color: var(--black);
     font-weight: bold;
   }
 `;
