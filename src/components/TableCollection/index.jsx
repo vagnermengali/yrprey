@@ -28,7 +28,7 @@ const TableCollection = () => {
                   <img src={profileRed} alt="img" />
                 </div>
                 <h4>
-                  Prey Warrior Club Redﾠ
+                  YRPrey Club Redﾠ
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>
@@ -48,7 +48,7 @@ const TableCollection = () => {
                   <img src={profileBlue} alt="img" />
                 </div>
                 <h4>
-                  Prey Warrior Club Blueﾠ
+                  YRPrey Club Blueﾠ
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>
@@ -68,7 +68,7 @@ const TableCollection = () => {
                   <img src={profileWhite} alt="img" />
                 </div>
                 <h4>
-                  Prey Warrior Club Whiteﾠ
+                  YRPrey Club Whiteﾠ
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>
@@ -88,7 +88,7 @@ const TableCollection = () => {
                   <img src={profileCian} alt="img" />
                 </div>
                 <h4>
-                  Prey Warrior Club Cianﾠ
+                  YRPrey Club Cianﾠ
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>
@@ -108,7 +108,7 @@ const TableCollection = () => {
                   <img src={profileBeige} alt="img" />
                 </div>
                 <h4>
-                  Prey Warrior Club Beigeﾠ
+                  YRPrey Club Beigeﾠ
                   <FaCheckCircle className="checked" />
                 </h4>
                 <span>

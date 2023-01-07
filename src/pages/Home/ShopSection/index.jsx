@@ -20,28 +20,28 @@ function ShopSection() {
           Shop
         </p>
         <h3 data-aos="fade">
-          Buy, trade and hold <span>100+ Collectibles</span> on Prey
+          Buy, trade and hold <span>100+ Collectibles</span> on YRYRPrey
         </h3>
         <div className="content-center">
           <div data-aos="fade-down-right">
             <CardShopClean
               image={nft1}
               title_image={"book"}
-              title="Warrior Red #103"
+              title="YRPrey Club Red"
             />
           </div>
           <div data-aos="fade">
             <CardShopClean
               image={nft2}
               title_image={"potion"}
-              title="Warrior Red #104"
+              title="YRPrey Club Red"
             />
           </div>
           <div data-aos="fade-down-left">
             <CardShopClean
               image={nft3}
               title_image={"map"}
-              title="Warrior Red #105"
+              title="YRPrey Club Red"
             />
           </div>
         </div>
