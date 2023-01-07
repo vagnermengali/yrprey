@@ -37,7 +37,7 @@ import shieldBeige from "../../../assets/image/collectibles/beige/shield-beige.p
 import swordBeige from "../../../assets/image/collectibles/beige/sword-beige.png";
 
 function Collections() {
-  document.title = "Collections • Prey";
+  document.title = "Collections • YRPrey";
   const { id } = useParams();
 
   return (
@@ -56,32 +56,32 @@ function Collections() {
                 {id == "red" ? (
                   <>
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={swordRed}
                       title={id}
                       name={"Sword"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={mapRed}
                       title={id}
                       name={"Map"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={bookRed}
                       title={id}
                       name={"Book"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={potionRed}
                       title={id}
                       name={"Potion"}
                     />
-                    <CardShop title_image={"prey"} image={axeRed} title={id} />
+                    <CardShop title_image={"YRPrey"} image={axeRed} title={id} />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={arrowRed}
                       title={id}
                       name={"Axe"}
@@ -91,37 +91,37 @@ function Collections() {
                 {id == "blue" ? (
                   <>
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={axeBlue}
                       title={id}
                       name={"Axe"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={mapBlue}
                       title={id}
                       name={"Map"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={bookBlue}
                       title={id}
                       name={"Book"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={swordBlue}
                       title={id}
                       name={"Sword"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={potionBlue}
                       title={id}
                       name={"Potion"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={shieldBlue}
                       title={id}
                       name={"Shield"}
@@ -130,33 +130,33 @@ function Collections() {
                 ) : null}
                 {id == "cian" ? (
                   <>
-                    <CardShop title_image={"prey"} image={mapCian} title={id} />
+                    <CardShop title_image={"YRPrey"} image={mapCian} title={id} />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={bookCian}
                       title={id}
                       name={"Book"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={swordCian}
                       title={id}
                       name={"Sword"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={helmetCian}
                       title={id}
                       name={"Helmet"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={potionCian}
                       title={id}
                       name={"Potion"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={shieldCian}
                       title={id}
                       name={"Shield"}
@@ -166,37 +166,37 @@ function Collections() {
                 {id == "white" ? (
                   <>
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={mapWhite}
                       title={id}
                       name={"Map"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={bookWhite}
                       title={id}
                       name={"Book"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={swordWhite}
                       title={id}
                       name={"Sword"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={helmetWhite}
                       title={id}
                       name={"Helmet"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={potionWhite}
                       title={id}
                       name={"Potion"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={shieldWhite}
                       title={id}
                       name={"Shield"}
@@ -206,37 +206,37 @@ function Collections() {
                 {id == "beige" ? (
                   <>
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={axeBeige}
                       title={id}
                       name={"Axe"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={mapBeige}
                       title={id}
                       name={"Map"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={bookBeige}
                       title={id}
                       name={"Book"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={swordBeige}
                       title={id}
                       name={"Sword"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={potionBeige}
                       title={id}
                       name={"Potion"}
                     />
                     <CardShop
-                      title_image={"prey"}
+                      title_image={"YRPrey"}
                       image={shieldBeige}
                       title={id}
                       name={"Shield"}

@@ -14,7 +14,7 @@ function CardShop({ image, title_image, title, name }) {
           <div class="text-content">
             <div>
               <h1 class="text-title">
-                Prey Warrior Club {title}
+              YRPrey Club {title}
                 <span>
                   ﾠ<FaCheckCircle className="checked" />
                 </span>

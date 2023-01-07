@@ -19,7 +19,7 @@ function ContactSection() {
               Our Company <span>Contact Information</span>
             </h5>
             <p>
-              Since 2022, PREY has provided places to test, train and improve
+              Since 2022, YRPrey has provided places to test, train and improve
               your skills in the area of ​​security and vulnerability.
             </p>
           </div>
@@ -50,7 +50,7 @@ function ContactSection() {
               </button>
               <div>
                 <p className="title">Our Mail</p>
-                <p className="details">preydigital@gmail.com</p>
+                <p className="details">yrpreydigital@gmail.com</p>
               </div>
             </div>
           </div>
