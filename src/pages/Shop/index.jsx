@@ -7,7 +7,7 @@ import TopCollections from "./Top collections";
 import { FullPage, Slide } from "react-full-page";
 
 function Shop() {
-  document.title = "Shop • Prey";
+  document.title = "Shop • YRPrey";
   return (
     <motion.div
       initial={{ opacity: 0.3 }}

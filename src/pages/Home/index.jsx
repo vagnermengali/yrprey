@@ -9,7 +9,7 @@ import ContactSection from "./ContactSection";
 import { FullPage, Slide } from "react-full-page";
 
 function Home() {
-  document.title = "Welcome to Prey";
+  document.title = "Welcome to YRPrey";
   return (
     <>
       <motion.div

@@ -5,7 +5,7 @@ import { StyledLoginSection } from "./style";
 import InfoBanner from "../../components/InfoBanner";
 
 function Login() {
-  document.title = "Login • Prey";
+  document.title = "Login • YRPrey";
   return (
     <motion.div
       initial={{ opacity: 0.3 }}

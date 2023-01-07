@@ -5,7 +5,7 @@ import { StyledRegisterSection } from "./style";
 import InfoBanner from "../../components/InfoBanner";
 
 function Register() {
-  document.title = "Register • Prey";
+  document.title = "Register • YRPrey";
   return (
     <motion.div
       initial={{ opacity: 0.3 }}
