@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import { FullPage, Slide } from "react-full-page";
 
 function About() {
-  document.title = "About • Prey";
+  document.title = "About • YRPrey";
   return (
     <motion.div
       initial={{ opacity: 0.3 }}
