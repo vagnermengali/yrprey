@@ -27,21 +27,21 @@ function ShopSection() {
             <CardShopClean
               image={nft1}
               title_image={"book"}
-              title="Warrior Red #103"
+              title="Prey Warrior Red"
             />
           </div>
           <div data-aos="fade">
             <CardShopClean
               image={nft2}
               title_image={"potion"}
-              title="Warrior Red #104"
+              title="Prey Warrior Red"
             />
           </div>
           <div data-aos="fade-down-left">
             <CardShopClean
               image={nft3}
               title_image={"map"}
-              title="Warrior Red #105"
+              title="Prey Warrior Club Red"
             />
           </div>
         </div>

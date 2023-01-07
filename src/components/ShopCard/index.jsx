@@ -1,29 +1,29 @@
 import { StyledCardShop } from "./style";
 import { FaCheckCircle, FaEthereum, FaBitcoin } from "react-icons/fa";
 
-function CardShop({ image, title_image, title }) {
+function CardShop({ image, title_image, title, name }) {
   return (
     <StyledCardShop>
       <div class="flip-card-inner">
         <div class="flip-card-front">
           <div>
-            <img src={image} />
+            <img src={image} alt={title_image}/>
           </div>
         </div>
         <div class="flip-card-back">
           <div class="text-content">
             <div>
               <h1 class="text-title">
-                Prey Warrior Club 
+                Prey Warrior Club {title}
                 <span>
-                  {title}ﾠ<FaCheckCircle className="checked" />
+                  ﾠ<FaCheckCircle className="checked" />
                 </span>
               </h1>
               <span>
                 <FaEthereum className="eth" />
               </span>
             </div>
-            <p className="text-name-item">Sword-Red #104</p>
+            <p className="text-name-item">{name}-{title}</p>
           </div>
           <div class="container-button">
             <div class="text-details">

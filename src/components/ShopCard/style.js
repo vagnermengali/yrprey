@@ -27,12 +27,12 @@ export const StyledCardShop = styled.div`
     color: var(--tertiary-color);
     display: flex;
     align-items: center;
+    text-transform: capitalize;
   }
   .text-title span {
     font-size: 18px;
     font-weight: bold;
     color: var(--tertiary-color);
-    text-transform: capitalize;
     display: flex;
     align-items: center;
   }
