@@ -56,7 +56,7 @@ export const StyledInitialSection = styled.div`
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 6px;
+    border-radius: 16px;
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;

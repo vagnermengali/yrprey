@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { FaArrowRight } from "react-icons/fa";
 import { FullPage, Slide } from "react-full-page";
-import spacecraft from "../../assets/image/Illustrations/Illustration-cyber-6.svg";
+import spacecraft from "../../assets/image/Illustrations/Illustration-cyber-41.svg";
 
 function Error() {
   document.title = "Page not found";

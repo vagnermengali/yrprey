@@ -51,6 +51,7 @@ export const DivHeader = styled.div`
     font-size: 16px;
     line-height: 26px;
     cursor: pointer;
+    font-family: 'Norse', sans-serif;
     :after {
       content: "";
       position: absolute;

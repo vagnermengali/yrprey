@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledCard = styled.div`
   width: 370px;
   height: 511px;
+  border-radius: 2px;
   background: ${(props) =>
     props.background_color === "var(--grey-0)"
       ? "var(--grey-0)"
@@ -20,17 +21,28 @@ export const StyledCard = styled.div`
   }
   .content-down {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: space-between;
     padding: 24px 16px;
-    gap: 25px;
+    width: 100%;
+    height: 50%;
   }
-  border-radius: 2px;
+  .content-down div {
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+  }
   .title {
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
     color: var(--white);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
   .details {
     font-style: normal;

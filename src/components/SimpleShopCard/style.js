@@ -11,6 +11,10 @@ export const StyledCardShopClean = styled.div`
     overflow: hidden;
     border: 1px solid var(--grey-6);
     border-radius: 3px;
+    text-decoration:none;
+    .link {
+      text-decoration:none;
+    }
   .card-img {
     width: 100%;
   }

@@ -6,7 +6,6 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background-color: var(--grey-5);
 `;
 
 export const DivOne = styled.div`
@@ -39,6 +38,25 @@ export const DivOne = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+  }
+  .content-right div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:center;
+  }
+  .error {
+    width: 90%;
+    padding: 8.5px 0;
+    color: var(--quartenary-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .no-error {
+    width: 90%;
+    min-height: 30px;
   }
   .content-right input {
     width: 282px;
@@ -55,25 +73,69 @@ export const DivOne = styled.div`
     outline: none;
     box-shadow: none;
     border: none;
+    font-family: "Norse", sans-serif;
   }
   .content-right button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 18px 24px;
-    gap: 4px;
-    width: 182px;
-    height: 56px;
-    background: var(--black);
-    border-bottom-right-radius: 6px;
-    border-top-right-radius: 6px;
-    color: var(--white);
-    cursor: pointer;
+    padding: 20px 24px;
     border: none;
-
-    :hover {
-      background: var(--grey-0);
+    outline: none;
+    color: var(--white);
+    font-family: inherit;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    width: 222px;
+    height: 56px;
+  }
+  .content-right button:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-color-1);
+    left: 0;
+    top: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .content-right button:before {
+    content: "";
+    background: var(--gradient-color-animation-1);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
     }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  .content-right button:hover::before {
+    opacity: 1;
+  }
+  .content-right button:active {
+    font-weight: bold;
   }
 `;
 

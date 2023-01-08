@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledCardShop = styled.div`
   background-color: transparent;
-  width: 285px;
+  width: 295px;
   height: 285px;
   perspective: 1000px;
   font-family: sans-serif;
@@ -135,7 +135,7 @@ export const StyledCardShop = styled.div`
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 6px;
+    border-radius: 16px;
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;

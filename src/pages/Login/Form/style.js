@@ -44,7 +44,7 @@ export const Form = styled.form`
   .error {
     width: 90%;
     padding: 8.5px 0;
-    background: var(--gradient-color);
+    background: var(--quartenary-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
