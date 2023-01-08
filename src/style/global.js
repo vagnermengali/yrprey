@@ -2,24 +2,36 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
  @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url(/font/Roboto-Regular.ttf) format('truetype');
+  font-family: 'Norse';
+  src: local('Norse'), url(/font/Norse.otf) format('truetype');
 }
 
 :root {
-    --primary-color:#FF1A56;
-    --secondary-color: #D80B4B;
-    --tertiary-color: #A9254E;
-    --quartenary-color:#FCB9CB;
-    --gradient-color: linear-gradient(90deg, #FF1A56 0%, #D80B4B 100%);
+    --primary-color:#88583F;
+    --secondary-color: #50322C;
+    --tertiary-color: #BA864C;
+    --quartenary-color:#E1BC5A;
+    --quinternary-color: #1A1313;
+    --gradient-color: linear-gradient(90deg, #88583F 0%, #50322C 100%);
+    --gradient-color-1: linear-gradient(90deg, #50322C 0%, #1A1313 100%);
     --gradient-color-animation: linear-gradient(
         45deg,
-        #FF1A56,
-        #D80B4B,
-        #FF1A56,
-        #D80B4B,
-        #FF1A56,
-        #D80B4B
+        #88583F,
+        #50322C,
+        #88583F,
+        #50322C,
+        #88583F,
+        #50322C
+      );
+      --gradient-color-animation-1: linear-gradient(
+        45deg,
+        
+        #50322C,
+        #1A1313,
+        #50322C,
+        #1A1313,
+        #50322C,
+        #1A1313
       );
     --grey-0:#28292A;
     --grey-1: #3D3E3F;
@@ -35,6 +47,7 @@ export const GlobalStyles = createGlobalStyle`
     --orange-1: #f7931a;
     --white: #FFFFFF;
     --black: #000000;
+    --error: #FF1A56;
     --transparent: transparent;
     
   html, body, #root {
@@ -42,17 +55,16 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
     margin:0;
     padding:0;
-    background-color: var(--grey-5);
+    background-color: var(--quinternary-color);
   }  
   *::selection {
-    background-color: #FF1A56;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white);
     text-shadow: none;
-}
+  }
   a {
     cursor: pointer;
   }
-
   * {
     box-sizing: border-box;
   }
@@ -79,7 +91,7 @@ export const ResetCSS = createGlobalStyle`
     border: 0;
     font-size: 100%;
     font: inherit;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Norse', sans-serif;
     vertical-align: baseline;
     scroll-behavior: smooth;
   }

@@ -21,8 +21,10 @@ function Card({
         <img src={image} alt="" className="image" />
       </div>
       <div className="content-down">
-        <p className="title">{title}</p>
-        <p className="details">{text_details}</p>
+        <div>
+          <p className="title">{title}</p>
+          <p className="details">{text_details}</p>
+        </div>
         <Link className="link" to={route}>
           Read Moreㅤ
           <FaArrowRight />

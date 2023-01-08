@@ -71,7 +71,7 @@ export const ContainerSection = styled.section`
     }
   }
   .container-right {
-    width: 65%;
+    width: 75%;
     height: 100%;
   }
   .container-right img {

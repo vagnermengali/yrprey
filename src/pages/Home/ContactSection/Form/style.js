@@ -6,10 +6,11 @@ export const Form = styled.form`
   align-items: center;
   flex-direction: column;
   width: 100%;
+  
   .error-column {
     width: 90%;
     padding: 8.5px 0;
-    background: var(--gradient-color);
+    background: var(--quartenary-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
@@ -19,7 +20,7 @@ export const Form = styled.form`
   .error-row {
     width: 100%;
     padding: 8.5px 0;
-    background: var(--gradient-color);
+    background: var(--quartenary-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
@@ -47,6 +48,7 @@ export const Form = styled.form`
     background-color: transparent;
     color: var(--grey-2);
     outline: none;
+    font-family: 'Norse', sans-serif;
   }
   .input-subject {
     box-sizing: border-box;
@@ -61,6 +63,7 @@ export const Form = styled.form`
     background-color: transparent;
     color: var(--grey-2);
     outline: none;
+    font-family: 'Norse', sans-serif;
   }
   textarea {
     box-sizing: border-box;
@@ -78,6 +81,7 @@ export const Form = styled.form`
     color: var(--grey-2);
     outline: none;
     resize: none;
+    font-family: 'Norse', sans-serif;
   }
   .btn {
     padding: 20px 24px;
@@ -96,7 +100,7 @@ export const Form = styled.form`
     height: 56px;
     margin-top: 30px;
     box-sizing: border-box;
-    border-radius: 2px;
+    border-radius: 12px;
     cursor: pointer;
   }
   .btn:after {
@@ -169,6 +173,7 @@ export const Form = styled.form`
     background-color: transparent;
     color: var(--grey-2);
     outline: none;
+    font-family: 'Norse', sans-serif;
   }
   input[type="number"]::-webkit-outer-spin-button,
   input[type="number"]::-webkit-inner-spin-button {

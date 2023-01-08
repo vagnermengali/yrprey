@@ -1,5 +1,9 @@
-import { StyledFooter, DivOne, DivTwo, DivTree } from "./style";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 import logo from "../../assets/image/logos/logo-letter.svg";
+import { formSchema } from "../../validators/drop";
+import { StyledFooter, DivOne, DivTwo, DivTree } from "./style";
+
 import { Link } from "react-router-dom";
 import {
   FaTwitter,
@@ -10,6 +14,13 @@ import {
 } from "react-icons/fa";
 
 function Footer() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(formSchema),
+  });
   return (
     <StyledFooter>
       <DivOne>
@@ -20,13 +31,23 @@ function Footer() {
               Sign up for the latest news, drops and collectibles.
             </p>
           </div>
-          <div className="content-right">
-            <input placeholder="Email Address" />
-            <button>
-              Subscribe Nowﾠ
-              <FaExternalLinkAlt />
-            </button>
-          </div>
+          <form className="content-right" onSubmit={handleSubmit()}>
+            <label className={errors.email ? "error" : "no-error"}>
+              {errors.email?.message}
+            </label>{" "}
+            <div>
+              {" "}
+              <input
+                type="text"
+                placeholder="Email Address"
+                {...register("email")}
+              />{" "}
+              <button type="submit">
+                Subscribe Nowﾠ
+                <FaExternalLinkAlt />
+              </button>
+            </div>
+          </form>
         </div>
       </DivOne>
       <DivTwo>

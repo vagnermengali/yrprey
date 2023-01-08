@@ -17,6 +17,7 @@ export const StyledCollectionsSection = styled.section`
     justify-content: center;
     align-items: center;
     width: 85%;
+    height: 100%;
     margin-top: 70px;
   }
   .content {
@@ -25,5 +26,8 @@ export const StyledCollectionsSection = styled.section`
     align-items: center;
     flex-wrap: wrap;
     gap: 50px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
   }
 `;
