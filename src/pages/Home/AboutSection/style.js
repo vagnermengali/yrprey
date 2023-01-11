@@ -62,7 +62,7 @@ export const StyledAboutSection = styled.div`
     height: 100%;
   }
   .container-left img {
-    width: 100%;
+    width: 90%;
     height: max-content;
   }
 `;
