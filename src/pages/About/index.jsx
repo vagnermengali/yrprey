@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { StyledAboutSection } from "./style";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import HomeButton from "../../components/HomeButton";
 
 function About() {
   document.title = "About • YRPrey";
@@ -21,6 +22,7 @@ function About() {
             </div>
           </StyledAboutSection>
           <Footer />
+          <HomeButton/>
     </motion.div>
   );
 }

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { StyledBlogSection } from "./style";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import HomeButton from "../../components/HomeButton";
 
 function Blog() {
   document.title = "Blog • YRPrey";
@@ -21,6 +22,7 @@ function Blog() {
             </div>
           </StyledBlogSection>
           <Footer />
+          <HomeButton/>
     </motion.div>
   );
 }
