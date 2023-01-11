@@ -33,6 +33,7 @@ function Error() {
               </div>
             </div>
           </ContainerSection>
+          <Footer />
     </motion.div>
   );
 }

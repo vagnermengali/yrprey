@@ -243,6 +243,7 @@ function Collections() {
               </div>
             </div>
           </StyledCollectionsSection>
+          <Footer />
     </motion.div>
   );
 }

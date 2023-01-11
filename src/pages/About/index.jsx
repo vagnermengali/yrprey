@@ -20,6 +20,7 @@ function About() {
               </div>
             </div>
           </StyledAboutSection>
+          <Footer />
     </motion.div>
   );
 }

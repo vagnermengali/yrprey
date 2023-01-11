@@ -17,7 +17,7 @@ function Shop() {
           <Header />
           <Carousel />
           <TopCollections />
-    
+          <Footer />
     </motion.div>
   );
 }
