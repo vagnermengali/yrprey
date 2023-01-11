@@ -9,18 +9,8 @@ import Collections from "../pages/Shop/Collections";
 import { Routes, Route, Navigate } from "react-router-dom";
 import SmoothScroll from "../components/SmoothScroll";
 
-
 function Authenticator() {
-  const [loading, setLoading] = useState(true);
-  const spinner = document.getElementById("spinner");
-  if (spinner) {
-    setTimeout(() => {
-      spinner.style.display = "none";
-      setLoading(false);
-    }, 2000);
-  }
   return (
-    !loading && (
     <SmoothScroll>
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -36,7 +26,6 @@ function Authenticator() {
         ></Route>
       </Routes>
     </SmoothScroll>
-    )
   );
 }
 
