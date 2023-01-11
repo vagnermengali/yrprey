@@ -3,7 +3,6 @@ import CardShop from "../../../components/ShopCard";
 import { useParams } from "react-router-dom";
 import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
-import { FullPage, Slide } from "react-full-page";
 import { StyledCollectionsSection } from "./style";
 import swordRed from "../../../assets/image/collectibles/red/sword-red.png";
 import arrowRed from "../../../assets/image/collectibles/red/arrow-red.png";
@@ -47,8 +46,6 @@ function Collections() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <FullPage>
-        <Slide>
           <Header />
           <StyledCollectionsSection>
             <div className="container">
@@ -246,11 +243,6 @@ function Collections() {
               </div>
             </div>
           </StyledCollectionsSection>
-        </Slide>
-        <Slide>
-          <Footer />
-        </Slide>
-      </FullPage>
     </motion.div>
   );
 }

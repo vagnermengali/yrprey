@@ -4,8 +4,7 @@ import { ContainerSection } from "./style";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { FaArrowRight } from "react-icons/fa";
-import { FullPage, Slide } from "react-full-page";
-import spacecraft from "../../assets/image/Illustrations/Illustration-cyber-41.svg";
+import spacecraft from "../../assets/image/Illustrations/altar-2.svg";
 
 function Error() {
   document.title = "Page not found";
@@ -16,8 +15,6 @@ function Error() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <FullPage>
-        <Slide>
           <Header />
           <ContainerSection>
             <div className="container">
@@ -36,11 +33,6 @@ function Error() {
               </div>
             </div>
           </ContainerSection>
-        </Slide>
-        <Slide>
-          <Footer />
-        </Slide>
-      </FullPage>
     </motion.div>
   );
 }

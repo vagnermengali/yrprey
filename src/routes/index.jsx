@@ -6,7 +6,7 @@ import About from "../pages/About";
 import Error from "../pages/Error";
 import Register from "../pages/Register";
 import Collections from "../pages/Shop/Collections";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function Authenticator() {
   return (
@@ -18,7 +18,7 @@ function Authenticator() {
       <Route path="/about" element={<About />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/register" element={<Register />}></Route>
-      <Route path="*" element={<Error />}></Route>
+      <Route path="*" element={<Navigate to="/error" replace={true} />}></Route>
     </Routes>
   );
 }

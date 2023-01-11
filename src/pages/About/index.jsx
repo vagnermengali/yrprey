@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { StyledAboutSection } from "./style";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { FullPage, Slide } from "react-full-page";
 
 function About() {
   document.title = "About • YRPrey";
@@ -13,8 +12,6 @@ function About() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <FullPage>
-        <Slide>
           <Header />
           <StyledAboutSection>
             <div className="container">
@@ -23,11 +20,6 @@ function About() {
               </div>
             </div>
           </StyledAboutSection>
-        </Slide>
-        <Slide>
-          <Footer />
-        </Slide>
-      </FullPage>
     </motion.div>
   );
 }

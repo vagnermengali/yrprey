@@ -71,12 +71,11 @@ export const ContainerSection = styled.section`
     }
   }
   .container-right {
-    width: 75%;
+    width: 50%;
     height: 100%;
   }
   .container-right img {
     width: 100%;
-    height: 100%;
     height: max-content;
     animation: shakeY 20s ease-in-out infinite alternate-reverse both;
   }

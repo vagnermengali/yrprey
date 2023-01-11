@@ -33,6 +33,7 @@ export const StyledInitialSection = styled.div`
     font-size: 60px;
     line-height: 65px;
     color: var(--white);
+    width:400px;
   }
   .container-left span {
     background: var(--gradient-color);
@@ -108,11 +109,11 @@ export const StyledInitialSection = styled.div`
     font-weight: bold;
   }
   .container-right {
-    width: 65%;
+    width: 50%;
     height: 100%;
   }
   .container-right .image {
-    width: 100%;
+    width: 90%;
     height: max-content;
     animation: shakeY 20s ease-in-out infinite alternate-reverse both;
   }

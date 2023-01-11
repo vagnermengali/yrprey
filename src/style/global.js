@@ -104,13 +104,13 @@ export const ResetCSS = createGlobalStyle`
     line-height: 1;
   }
   ::-webkit-scrollbar {
-  width: 0.1px;
+  width: 0px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--gray-4);
+    background: var(--grey-4);
   }
   ::-webkit-scrollbar-thumb {
-    background-color: var(--gray-2);
+    background-color: var(--grey-2);
     border-radius: 20px;     
   }
   ol, ul {
