@@ -17,7 +17,7 @@ function Home() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-      >
+      > <HomeButton/>
             <Header />
             <InitialSection />
             <AboutSection />
@@ -25,7 +25,7 @@ function Home() {
             <BlogSection />
             <ContactSection />
             <Footer />
-            <HomeButton/>
+           
       </motion.div>
     </>
   );
