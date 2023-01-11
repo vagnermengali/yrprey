@@ -5,6 +5,7 @@ export const Context = createContext();
 
 const ProviderPage = ({ children }) => {
   const navigate = useNavigate();
+  
   return (
   <Context.Provider value={{ navigate }}>
     {children}
