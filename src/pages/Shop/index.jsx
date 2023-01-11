@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import TopCollections from "./Top collections";
+import HomeButton from "../../components/HomeButton";
 
 function Shop() {
   document.title = "Shop • YRPrey";
@@ -18,6 +19,7 @@ function Shop() {
           <Carousel />
           <TopCollections />
           <Footer />
+          <HomeButton/>
     </motion.div>
   );
 }

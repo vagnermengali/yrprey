@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import InitialSection from "./InitialSection";
 import ContactSection from "./ContactSection";
+import HomeButton from "../../components/HomeButton";
 
 function Home() {
   document.title = "Welcome to YRPrey";
@@ -24,6 +25,7 @@ function Home() {
             <BlogSection />
             <ContactSection />
             <Footer />
+            <HomeButton/>
       </motion.div>
     </>
   );
