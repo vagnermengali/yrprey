@@ -20,6 +20,7 @@ function Blog() {
               </div>
             </div>
           </StyledBlogSection>
+          <Footer />
     </motion.div>
   );
 }
