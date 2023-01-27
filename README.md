@@ -56,7 +56,7 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
-<a href="#--scanner-cnab" >Voltar ao início</a></p>
+<p align ='center'><a href="#--scanner-cnab" >Voltar ao início</a></p>
 
 ---
 
@@ -70,7 +70,6 @@ A url base da API é
 <h2 align ='center'> Listando transações </h2>
 
 Nessa aplicação o usuário sem fazer login ou se cadastrar pode ver as transações do documento escaneado:
-Aqui conseguimos ver os usuários, suas tecnologias e seus trabalhos cadastrados.
 
 `GET /api/transaction/ - FORMATO DA REQUISIÇÃO`
 
@@ -80,7 +79,7 @@ Não é necessário um corpo da requisição.
 
 `GET /api/transaction/ - FORMATO DA RESPOSTA - STATUS 200`
 
-```json<p> 
+```json
 [
   "total": 2,
   "results": 
@@ -105,8 +104,7 @@ Não é necessário um corpo da requisição.
 
 <h2 align ='center'> Deletando transações </h2>
 
-Nessa aplicação o usuário sem fazer login ou se cadastrar pode ver as transações do documento escaneado:
-Aqui conseguimos ver os usuários, suas tecnologias e seus trabalhos cadastrados.
+Nessa aplicação o usuário sem fazer login ou se cadastrar pode apagar as transações salvas para fazer um novo escaneado:
 
 `DELETE /api/transaction/delete/ - FORMATO DA REQUISIÇÃO`
 
@@ -122,8 +120,7 @@ Não é necessário um corpo da requisição.
 
 <h2 align ='center'> Buscar transações de loja específica  </h2>
 
-Nessa aplicação o usuário sem fazer login ou se cadastrar pode ver as transações do documento escaneado:
-Aqui conseguimos ver os usuários, suas tecnologias e seus trabalhos cadastrados.
+Nessa aplicação o usuário sem fazer login ou se cadastrar pode ver as transações específicas de uma determinada loja do documento escaneado:
 
 `GET /api/transaction/store/store_name/ - FORMATO DA REQUISIÇÃO`
 
@@ -158,8 +155,7 @@ Não é necessário um corpo da requisição.
 
 <h2 align ='center'> Escaneamento do documento CNAB </h2>
 
-Nessa aplicação o usuário sem fazer login ou se cadastrar pode ver as transações do documento escaneado:
-Aqui conseguimos ver os usuários, suas tecnologias e seus trabalhos cadastrados.
+Nessa aplicação o usuário sem fazer login ou se cadastrar fazer o upload do arquivo e assim escanear o documento:
 
 `POST /api/transaction/file-scan/ - FORMATO DA REQUISIÇÃO`
 
@@ -188,13 +184,13 @@ Não há transações a serem listadas.
 }
 ```
 
-Não há transações a serem listadas.
+Não há transações a serem deletadas.
 
 `DELETE /api/transaction/delete/ - FORMATO DA RESPOSTA - STATUS 404`
 
 ```json
 {
-    "details": "Transaction list is empty"
+    "details": "There are no transactions to delete"
 }
 ```
 
@@ -221,11 +217,13 @@ Buscar por histórico de transações de loja específica não encontrada.
     ]
 }
 ```
+<p align ='center'><a href="#--scanner-cnab" >Voltar ao início</a></p>
+
 ---
 
 ## **Swagger** 
 
-São algumas rotas voltada a documentação em geral da aplicação
+Api também conta com algumas rotas de interação, manipulação e documentação mais detalhada.
 
 `api/schema/ `
 
@@ -233,7 +231,7 @@ São algumas rotas voltada a documentação em geral da aplicação
 
 `api/docs/swagger-ui/ `
 
-<p> <a href="#--scanner-cnab">Voltar ao topo</a></p>
+<p align ='center'><a href="#--scanner-cnab" >Voltar ao início</a></p>
 
 ---
 
