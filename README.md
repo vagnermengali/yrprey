@@ -114,8 +114,10 @@ Não é necessário um corpo da requisição.
 
 `DELETE /api/transaction/delete/ - FORMATO DA RESPOSTA - STATUS 204`
 
-```
-
+```json
+{
+    "details": "Transactions have been successfully deleted"
+}
 ```
 
 <h2 align ='center'> Buscar transações de loja específica  </h2>
