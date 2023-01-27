@@ -56,14 +56,16 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+<a href="#--scanner-cnab" >Voltar ao início</a></p>
+
+---
+
 
 ## **Endpoints**
 
 A API tem um total de 4 endpoints, podendo escanear o documento CNAB, listar transações, loja específica e deleção de todas as transações para um novo escaneamento. <br/>
 
 A url base da API é 
-
-## Rotas que não precisam de autenticação
 
 <h2 align ='center'> Listando transações </h2>
 
@@ -78,7 +80,7 @@ Não é necessário um corpo da requisição.
 
 `GET /api/transaction/ - FORMATO DA RESPOSTA - STATUS 200`
 
-```json
+```json<p> 
 [
   "total": 2,
   "results": 
@@ -219,7 +221,9 @@ Buscar por histórico de transações de loja específica não encontrada.
     ]
 }
 ```
-## **Swagger**
+---
+
+## **Swagger** 
 
 São algumas rotas voltada a documentação em geral da aplicação
 
@@ -228,6 +232,8 @@ São algumas rotas voltada a documentação em geral da aplicação
 `api/docs/redoc/ `
 
 `api/docs/swagger-ui/ `
+
+<p> <a href="#--scanner-cnab">Voltar ao topo</a></p>
 
 ---
 
