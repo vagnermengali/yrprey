@@ -78,25 +78,25 @@ Não é necessário um corpo da requisição.
 
 `GET /api/transaction/ - FORMATO DA RESPOSTA - STATUS 200`
 
-```
+```json
 [
-  'total': 2,
-  'results': 
+  "total": 2,
+  "results": 
   {
     "id": 0,
     "transaction": "string",
     "date": "string",
-    "value": string,
+    "value": "string",
     "hour": "string",
-    "store": "string"
+    "store": "string",
   },
   {
     "id": 1,
     "transaction": "string",
     "date": "string",
-    "value": string,
+    "value": "string",
     "hour": "string",
-    "store": "string"
+    "store": "string",
   }
 ]
 ```
@@ -131,25 +131,25 @@ Não é necessário um corpo da requisição.
 
 `GET /api/transaction/store/store_name/ - FORMATO DA RESPOSTA - STATUS 200`
 
-```
+```json
 [
-  'total': 2,
-  'results': 
+  "total": 2,
+  "results": 
   {
     "id": 0,
     "transaction": "string",
     "date": "string",
-    "value": string,
+    "value": "string",
     "hour": "string",
-    "store": "string"
+    "store": "Padaria dos sonhos",
   },
   {
     "id": 1,
     "transaction": "string",
     "date": "string",
-    "value": string,
+    "value": "string",
     "hour": "string",
-    "store": "string"
+    "store": "Padaria dos sonhos",
   }
 ]
 ```
@@ -167,7 +167,7 @@ Não é necessário um corpo da requisição.
 
 `POST /api/transaction/file-scan/ - FORMATO DA RESPOSTA - STATUS 200`
 
-```
+```json
 {
     "details": "Scan completed successfully"
 }
