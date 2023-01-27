@@ -41,12 +41,12 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt 
 ```
-<p>6. Crie as migrações:</p>
+<p>6. Crie suas migrações:</p>
   
 ```
 python manage.py makemigrations 
 ```
-<p>6. Aplique as migrações:</p>
+<p>6. Aplique suas migrações:</p>
   
 ```
 python manage.py migrate
