@@ -130,7 +130,7 @@ Nessa aplicação o usuário sem fazer login ou se cadastrar pode ver as transa�
 Não é necessário um corpo da requisição.
 ```
 
-`GET /api/transaction/store/store_name/ - FORMATO DA RESPOSTA - STATUS 200`
+`GET /api/transaction/store/store+name/ - FORMATO DA RESPOSTA - STATUS 200`
 
 ```json
 [
@@ -142,7 +142,7 @@ Não é necessário um corpo da requisição.
     "date": "string",
     "value": "string",
     "hour": "string",
-    "store": "Padaria dos sonhos",
+    "store": "store name",
   },
   {
     "id": 1,
@@ -150,7 +150,7 @@ Não é necessário um corpo da requisição.
     "date": "string",
     "value": "string",
     "hour": "string",
-    "store": "Padaria dos sonhos",
+    "store": "store name",
   }
 ]
 ```
