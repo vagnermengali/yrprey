@@ -1,5 +1,5 @@
 import "swiper/css";
-import React from "react";
+import React, { useEffect } from "react";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
@@ -8,14 +8,41 @@ import { Link } from "react-router-dom";
 import { ContainerCarousel } from "./style";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { HiOutlineStatusOnline } from "react-icons/hi";
-import slide1 from "../../../assets/image/slide/slide-red.png";
-import slide4 from "../../../assets/image/slide/slide-cian.png";
-import slide2 from "../../../assets/image/slide/slide-blue.png";
-import slide3 from "../../../assets/image/slide/slide-white.png";
-import slide5 from "../../../assets/image/slide/slide-beige.png";
 import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
+import axios from "axios";
+import { useState } from "react";
 
 function Carousel() {
+  const [img, setImg] = useState([]);
+
+  function formatTodayDate() {
+    const options = { weekday: "short", day: "numeric", month: "short" };
+    const todayDate = new Date().toLocaleString("en-US", options);
+    return todayDate;
+  }
+
+  function formatText(text, capitalize = true) {
+    const textPart = text.substring(text.indexOf("-") + 1, text.indexOf("."));
+    const formattedText = capitalize
+      ? textPart.charAt(0).toUpperCase() + textPart.slice(1)
+      : textPart.charAt(0).toLowerCase() + textPart.slice(1);
+    return formattedText;
+  }
+
+  const Api = axios.create({
+    baseURL: "http://yrprey.com/index2.php",
+    timeout: 5000,
+  });
+
+  useEffect(() => {
+    Api.post("", {
+      id: "1",
+      qtde: "5",
+    }).then((res) => {
+      setImg(res.data);
+    });
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0.3 }}
@@ -47,91 +74,36 @@ function Carousel() {
             modules={[Autoplay, EffectFade, Pagination, Navigation]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              <div className="container-carousel">
-                <img className="img-carousel" src={slide1} />
-                <div className="content-carousel">
-                  <button className="carousel-status" disabled>
-                    <HiOutlineStatusOnline className="icon" />
-                    ﾠActive now
-                  </button>{" "}
-                  <p className="carousel-date">Qui, 12 Jan</p>
-                  <h2 className="carousel-title">YRPrey Warrior Club Red</h2>
-                  <p className="carousel-details">YRPrey</p>
-                  <Link to="/shop/collection/red" className="carousel-button">
-                    See drop
-                  </Link>
+            {img.map((imageName, index) => (
+              <SwiperSlide>
+                <div className="container-carousel" key={index}>
+                  <img
+                    className="img-carousel"
+                    src={`/src/assets/image/slide/${imageName.nome}`}
+                  />
+                  <div className="content-carousel">
+                    <button className="carousel-status" disabled>
+                      <HiOutlineStatusOnline className="icon" />
+                      ﾠActive now
+                    </button>{" "}
+                    <p className="carousel-date">{formatTodayDate()}</p>
+                    <h2 className="carousel-title">
+                      YRPrey Warrior Club {formatText(imageName.nome, true)}
+                    </h2>
+                    <p className="carousel-details">YRPrey</p>
+                    <Link
+                      to={`/shop/collection/${formatText(
+                        imageName.nome,
+                        false
+                      )}`}
+                      className="carousel-button"
+                    >
+                      See drop
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="container-carousel">
-                <img className="img-carousel" src={slide2} />
-                <div className="content-carousel">
-                  <button className="carousel-status" disabled>
-                    <HiOutlineStatusOnline className="icon" />
-                    ﾠActive now
-                  </button>{" "}
-                  <p className="carousel-date">Qui, 5 Jan</p>
-                  <h2 className="carousel-title">YRPrey Warrior Club Blue</h2>
-                  <p className="carousel-details">YRPrey</p>
-                  <Link to="/shop/collection/blue" className="carousel-button">
-                    See drop
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="container-carousel">
-                <img className="img-carousel" src={slide3} />
-                <div className="content-carousel">
-                  <button className="carousel-status" disabled>
-                    <HiOutlineStatusOnline className="icon" />
-                    ﾠActive now
-                  </button>{" "}
-                  <p className="carousel-date">Seg, 9 Jan</p>
-                  <h2 className="carousel-title">YRPrey Warrior Club White</h2>
-                  <p className="carousel-details">YRPrey</p>
-                  <Link to="/shop/collection/white" className="carousel-button">
-                    See drop
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="container-carousel">
-                <img className="img-carousel" src={slide4} />
-                <div className="content-carousel">
-                  <button className="carousel-status" disabled>
-                    <HiOutlineStatusOnline className="icon" />
-                    ﾠActive now
-                  </button>{" "}
-                  <p className="carousel-date">Quin, 19 Jan</p>
-                  <h2 className="carousel-title">YRPrey Warrior Club Cian</h2>
-                  <p className="carousel-details">YRPrey</p>
-                  <Link to="/shop/collection/cian" className="carousel-button">
-                    See drop
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="container-carousel">
-                <img className="img-carousel" src={slide5} />
-                <div className="content-carousel">
-                  <button className="carousel-status" disabled>
-                    <HiOutlineStatusOnline className="icon" />
-                    ﾠActive now
-                  </button>{" "}
-                  <p className="carousel-date">Ter, 15 Jan</p>
-                  <h2 className="carousel-title">YRPrey Warrior Club Beige</h2>
-                  <p className="carousel-details">YRPrey</p>
-                  <Link to="/shop/collection/beige" className="carousel-button">
-                    See drop
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </ContainerCarousel>
