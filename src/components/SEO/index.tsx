@@ -1,6 +1,6 @@
 import Head from "next/head";
 import logo from "@/assets/image/logos/logo.svg"
-import { ISeo } from "@/interfaces/ISeo/Iseo"
+import { ISeo } from "@/interfaces/ISeo/ISeo"
 
 const SEO = ({ title, description }: ISeo) => {
   return (
