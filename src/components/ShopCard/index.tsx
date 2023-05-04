@@ -4,6 +4,7 @@ import { FaCheckCircle, FaEthereum} from "react-icons/fa";
 import { ICardShop } from "@/interfaces/IChildren/ICardShop";
 
 const CardShop = ({ image, title_image, title, name }: ICardShop) => {
+  
   return (
     <StyledCardShop>
       <div className="flip-card-inner">

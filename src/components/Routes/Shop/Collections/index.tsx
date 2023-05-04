@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import CardShop from "@/components/ShopCard";
-import { useParams } from "react-router-dom";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { StyledCollectionsSection } from "./style";
@@ -34,9 +33,11 @@ import mapBeige from "@/assets/image/collectibles/beige/map-beige.png";
 import potionBeige from "@/assets/image/collectibles/beige/potion-beige.png";
 import shieldBeige from "@/assets/image/collectibles/beige/shield-beige.png";
 import swordBeige from "@/assets/image/collectibles/beige/sword-beige.png";
+import { useRouter } from "next/router";
 
 const Collections = () => {
-  const { id } = useParams();
+  const router = useRouter()
+  const { id } = router.query
 
   return (
     <motion.div
@@ -75,12 +76,17 @@ const Collections = () => {
                   title={id}
                   name={"Potion"}
                 />
-                <CardShop title_image={"YRPrey"} image={axeRed} title={id} />
+                <CardShop
+                  title_image={"YRPrey"}
+                  image={axeRed}
+                  title={id}
+                  name={"Axe"}
+                />
                 <CardShop
                   title_image={"YRPrey"}
                   image={arrowRed}
                   title={id}
-                  name={"Axe"}
+                  name={"Arrow"}
                 />
               </>
             ) : null}
@@ -126,7 +132,12 @@ const Collections = () => {
             ) : null}
             {id == "cian" ? (
               <>
-                <CardShop title_image={"YRPrey"} image={mapCian} title={id} />
+                <CardShop
+                  title_image={"YRPrey"}
+                  image={mapCian}
+                  title={id}
+                  name={"Map"}
+                />
                 <CardShop
                   title_image={"YRPrey"}
                   image={bookCian}

@@ -16,7 +16,8 @@ import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
 
-function Carousel() {
+const Carousel = () => {
+
   return (
     <motion.div
       initial={{ opacity: 0.3 }}

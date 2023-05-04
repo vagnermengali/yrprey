@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const TableCollection = () => {
+  
   return (
     <StyledTableCollection>
       <div className="content-table">
