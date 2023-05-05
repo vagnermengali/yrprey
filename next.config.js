@@ -4,5 +4,5 @@ module.exports = withImages({
   images: {
     disableStaticImages: true,
   },
-  distDir: 'out',
+  outdir: "./build", // diretório de saída
 });
