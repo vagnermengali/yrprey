@@ -1,11 +1,10 @@
-const withImages = require('next-images');
+const withImages = require("next-images");
 
-module.exports = withImages({
+module.exports = {
+  distDir: "build",
+};
+withImages({
   images: {
     disableStaticImages: true,
   },
 });
-
-module.exports = {
-  distDir: 'build',
-}
