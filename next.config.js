@@ -4,6 +4,8 @@ module.exports = withImages({
   images: {
     disableStaticImages: true,
   },
-  outDir: 'build',
-  distDir: 'build'
 });
+
+module.exports = {
+  distDir: 'build',
+}
