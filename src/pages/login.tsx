@@ -4,10 +4,10 @@ import SEO from "@/components/SEO"
 const Login = () => {
   return (
     <>
-      <SEO
+{/*       <SEO
         title="Login • YRPrey"
         description="Join us in the search for bugs and vulnerabilities!"
-      />
+      /> */}
       <LoginSection/>
     </>
   )
