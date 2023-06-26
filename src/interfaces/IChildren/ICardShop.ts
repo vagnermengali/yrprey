@@ -1,11 +1,11 @@
 export interface ICardShopClean{
-    image: string;
+    image: any;
     title_image: string;
     title: string;
 }
 
 export interface ICardShop{
-    image: string;
+    image: any;
     title_image: string;
     title: string;
     name: string;
