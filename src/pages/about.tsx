@@ -4,10 +4,10 @@ import SEO from "@/components/SEO"
 const About = () => {
     return (
         <>
-            <SEO
+{/*             <SEO
                 title="About • YRPrey"
                 description="Learn a little more about us and our purposes with YRPrey!"
-            />
+            /> */}
             <AboutSection/>
         </>
     )

@@ -4,10 +4,10 @@ import SEO from "@/components/SEO"
 const Blog = () => {
   return (
     <>
-      <SEO
+{/*       <SEO
         title="Blog • YRPrey"
         description="You can find all news about security, new bugs, and new vulnerabilities here!"
-      />
+      /> */}
       <BlogSection/>
     </>
   )
