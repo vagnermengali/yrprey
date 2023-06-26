@@ -5,7 +5,7 @@ export interface ICardBlog {
     title: string;
     text_details: string;
     route: string;
-    image: string;
+    image: any;
 }
 
 export interface ICardBlogStyled {
