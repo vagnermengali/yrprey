@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import { StyledLoginSection } from "./style";
 import InfoBanner from "@/components/InfoBanner";
+import Footer from "@/components/Footer";
 
 const Login = () => {
   
@@ -27,8 +28,10 @@ const Login = () => {
           <div className="container-right">
             <InfoBanner />
           </div>
-        </div>
+        </div> 
+        <Footer/>
       </StyledLoginSection>
+     
     </motion.div>
   );
 }

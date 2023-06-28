@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import { StyledRegisterSection } from "./style";
 import InfoBanner from "@/components/InfoBanner";
+import Footer from "@/components/Footer";
 
 const Register = () => {
-  
+
   return (
     <motion.div
       initial={{ opacity: 0.3 }}
@@ -29,6 +30,7 @@ const Register = () => {
             <InfoBanner />
           </div>
         </div>
+        <Footer />
       </StyledRegisterSection>
     </motion.div>
   );

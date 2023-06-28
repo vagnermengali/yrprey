@@ -3,7 +3,6 @@ import background_login from "@/assets/image/backgrounds/background-register.svg
 
 export const StyledRegisterSection = styled.div`
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,6 +14,7 @@ export const StyledRegisterSection = styled.div`
     display: flex;
     justify-content: center;
     width: 85%;
+    padding: 140px 0;
   }
   .container-left {
     display: flex;
