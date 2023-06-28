@@ -11,9 +11,18 @@ export const CardBlogPageItem = styled.li`
     width: 100%;
     height: auto;
     background: var(--gradient-color);
+    border-radius: 5px;
 `;
 
 export const CardBlogPageItemContent = styled.div`
+    
+`;
+
+export const CardBlogPageItemContainer = styled.div`
+    
+`;
+
+export const CardBlogPageItemMainContent = styled.div`
     
 `;
 
@@ -24,6 +33,8 @@ export const CardBlogPageItemContentTop = styled.div`
     align-items: center;
     justify-content: center;
     overflow:hidden;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     height: 250px;
     .content-top-details {
       width: 100%;
