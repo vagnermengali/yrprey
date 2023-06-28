@@ -3,6 +3,7 @@ import { StyledBlogSection } from "./style";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HomeButton from "@/components/HomeButton";
+import CardBlogPage from "./CardBlogPage";
 
 const Blog = () => {
 
@@ -17,7 +18,7 @@ const Blog = () => {
       <StyledBlogSection>
         <div className="container">
           <div className="content">
-            <h1>Page under development...</h1>
+            <CardBlogPage />
           </div>
         </div>
       </StyledBlogSection>

@@ -1,15 +1,23 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.header`
+interface IHeaderBg {
+  scrolled: boolean;
+}
+
+export const HeaderContainer = styled.header<IHeaderBg>`
   height: 5vw;
   z-index: 1;
   top: 0;
-  position: absolute;
+  position: sticky;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  transition: background-color 0.5s ease;
+  background-color: ${({ scrolled }) => scrolled ? "var(--quinternary-color)" : "tranparent"};
+  backdrop-filter: ${({ scrolled }) => (scrolled ? "blur(5px)" : "blur(0px)")};
 `;
+
 export const DivHeader = styled.div`
   width: 85%;
   .content {

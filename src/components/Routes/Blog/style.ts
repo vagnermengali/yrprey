@@ -3,7 +3,7 @@ import background_error from "@/assets/image/backgrounds/background-blog.svg";
 
 export const StyledBlogSection = styled.section`
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { HeaderContainer, DivHeader } from "./style";
 import { Context } from "@/context/context";
 import logo from "@/assets/image/logos/logo-letter.svg";
@@ -7,10 +7,26 @@ import Link from "next/link";
 
 const Header = () => {
   const { router } = useContext(Context);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer scrolled={scrolled}>
         <DivHeader>
           <div className="content">
             <div>
@@ -50,6 +66,6 @@ const Header = () => {
       </HeaderContainer>
     </>
   );
-}
+};
 
 export default Header;

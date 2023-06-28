@@ -78,6 +78,7 @@ const GlobalStyles = createGlobalStyle`
       --tertiary-color: #BA864C;
       --quartenary-color: #E1BC5A;
       --quinternary-color: #1A1313;
+      --senary-color: #201717;
       --gradient-color: linear-gradient(90deg, #88583F 0%, #50322C 100%);
       --gradient-color-1: linear-gradient(90deg, #50322C 0%, #1A1313 100%);
       --gradient-color-animation: linear-gradient(45deg, #88583F, #50322C, #88583F, #50322C, #88583F, #50322C);
@@ -105,7 +106,7 @@ const GlobalStyles = createGlobalStyle`
       height: 100%;
       margin: 0;
       padding: 0;
-      background-color: var(--quinternary-color);
+      background-color: var(--senary-color);
     }  
     
     *::selection {

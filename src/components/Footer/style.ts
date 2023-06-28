@@ -6,6 +6,7 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  background-color: var(--quinternary-color);
 `;
 
 export const DivOne = styled.div`
