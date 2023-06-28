@@ -4,7 +4,7 @@ export const CardBlogPageContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 20px 0 40px 0;
+  padding: 60px 0 60px 0;
 `;
 
 export const CardBlogPageItem = styled.li`

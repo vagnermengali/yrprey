@@ -20,7 +20,6 @@ export const StyledBlogSection = styled.section`
   .content {
     display: flex;
     flex-direction: column;
-
     gap: 30px;
   }
   .content h1 {
