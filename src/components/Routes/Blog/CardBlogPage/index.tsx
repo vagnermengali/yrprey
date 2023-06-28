@@ -5,18 +5,10 @@ import { CardBlogPageContainer, CardBlogPageItem, CardBlogPageItemContent, CardB
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
-
-interface News {
-  media: string;
-  title: string;
-  clean_url: string;
-  published_date: string;
-  summary: string;
-  link: string;
-}
+import { INews } from "@/interfaces/News/INews";
 
 const CardBlogPage = () => {
-  const [listNews, setListNews] = useState<News[]>([]);
+  const [listNews, setListNews] = useState<INews[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,6 +34,12 @@ const CardBlogPage = () => {
 
   const uniqueTitles = new Set<string>();
 
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+    return date.toLocaleString('en-US', options);
+  }
+
   return (
     <CardBlogPageContainer>
       {listNews.map((news, index) => {
@@ -65,7 +63,7 @@ const CardBlogPage = () => {
                 />
                 <div className="content-top-details">
                   <p className="card-blog-page-font">{news.clean_url}</p>
-                  <p className="card-blog-page-date">{news.published_date}</p>
+                  <p className="card-blog-page-date">{formatDate(news.published_date)}</p>
                 </div>
               </CardBlogPageItemContentTop>
               <CardBlogPageItemContentBottom>
