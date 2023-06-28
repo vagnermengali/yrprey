@@ -40,13 +40,6 @@ const ResetStyles = createGlobalStyle`
     ::-webkit-scrollbar {
       width: 0px;
     }
-    ::-webkit-scrollbar-track {
-      background: var(--grey-4);
-    }
-    ::-webkit-scrollbar-thumb {
-      background-color: var(--grey-2);
-      border-radius: 20px;
-    }
     ol, ul {
       list-style: none;
     }

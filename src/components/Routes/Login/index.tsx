@@ -31,7 +31,6 @@ const Login = () => {
         </div> 
         <Footer/>
       </StyledLoginSection>
-     
     </motion.div>
   );
 }
