@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import { StyledLoginSection } from "./style";
 import InfoBanner from "@/components/InfoBanner";
 import Footer from "@/components/Footer";
+import HomeButton from "@/components/HomeButton";
 
 const Login = () => {
   
@@ -30,6 +31,7 @@ const Login = () => {
           </div>
         </div> 
         <Footer/>
+        <HomeButton/>
       </StyledLoginSection>
     </motion.div>
   );

@@ -14,13 +14,13 @@ export const DivOne = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 40%;
   background: var(--gradient-color);
-  .container {
+  .container-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 85%;
+    height: 178px;
   }
   .content-left .title {
     font-weight: 700;

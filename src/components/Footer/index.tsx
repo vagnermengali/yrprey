@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <DivOne>
-        <div className="container">
+        <div className="container-footer">
           <div className="content-left">
             <p className="title">Never miss a drop.</p>
             <p className="paragrafh">

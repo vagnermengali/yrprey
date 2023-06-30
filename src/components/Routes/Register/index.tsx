@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import { StyledRegisterSection } from "./style";
 import InfoBanner from "@/components/InfoBanner";
 import Footer from "@/components/Footer";
+import HomeButton from "@/components/HomeButton";
 
 const Register = () => {
 
@@ -31,6 +32,7 @@ const Register = () => {
           </div>
         </div>
         <Footer />
+        <HomeButton/>
       </StyledRegisterSection>
     </motion.div>
   );
