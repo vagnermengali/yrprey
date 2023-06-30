@@ -62,6 +62,7 @@ const CardBlogPage = () => {
                 width="100"
             height="100"
             sizes="100"
+            loading="lazy"
                 unoptimized
               />
               <div className="content-details-main">
@@ -96,6 +97,7 @@ const CardBlogPage = () => {
                     width="100"
             height="100"
             sizes="100"
+            loading="lazy"
                     unoptimized
                   />
                   <div className="content-top-details">

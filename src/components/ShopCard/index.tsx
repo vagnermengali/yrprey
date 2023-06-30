@@ -15,6 +15,7 @@ const CardShop = ({ image, title_image, title, name }: ICardShop) => {
               width="100"
             height="100"
             sizes="100"
+            loading="lazy"
               alt={title_image}
               className="img-card-shop"
             ></Image>

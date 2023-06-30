@@ -49,7 +49,9 @@ const Carousel = () => {
               <div className="container-carousel">
                 <Image className="img-carousel" src={slide1} width="100"
             height="100"
-            sizes="100" alt="img-carousel"></Image>
+            sizes="100"
+            loading="lazy"
+             alt="img-carousel"></Image>
                 <div className="content-carousel">
                   <button className="carousel-status" disabled>
                     <HiOutlineStatusOnline className="icon" />
@@ -68,7 +70,9 @@ const Carousel = () => {
               <div className="container-carousel">
               <Image className="img-carousel" src={slide2} width="100"
             height="100"
-            sizes="100" alt="img-carousel"></Image>
+            sizes="100"
+            loading="lazy"
+             alt="img-carousel"></Image>
                 <div className="content-carousel">
                   <button className="carousel-status" disabled>
                     <HiOutlineStatusOnline className="icon" />
@@ -87,7 +91,9 @@ const Carousel = () => {
               <div className="container-carousel">
               <Image className="img-carousel" src={slide3} width="100"
             height="100"
-            sizes="100" alt="img-carousel"></Image>
+            sizes="100"
+            loading="lazy"
+             alt="img-carousel"></Image>
                 <div className="content-carousel">
                   <button className="carousel-status" disabled>
                     <HiOutlineStatusOnline className="icon" />
@@ -106,7 +112,9 @@ const Carousel = () => {
               <div className="container-carousel">
               <Image className="img-carousel" src={slide4} width="100"
             height="100"
-            sizes="100" alt="img-carousel"></Image>
+            sizes="100"
+            loading="lazy"
+             alt="img-carousel"></Image>
                 <div className="content-carousel">
                   <button className="carousel-status" disabled>
                     <HiOutlineStatusOnline className="icon" />

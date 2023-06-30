@@ -27,6 +27,7 @@ const Card = ({
           width="100"
             height="100"
             sizes="100"
+            loading="lazy"
           alt="image"
         ></Image>
       </div>

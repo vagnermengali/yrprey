@@ -9,7 +9,8 @@ const Banner = () => {
     <StyledBannerSection>
       <Image className="img-banner-about" src={banner} alt="banner-main" width="100"
             height="100"
-            sizes="100" />
+            sizes="100" 
+            loading="lazy"/>
       <Counter />
     </StyledBannerSection>
   );

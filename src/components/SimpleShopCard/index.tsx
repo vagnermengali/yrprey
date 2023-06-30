@@ -17,6 +17,7 @@ const CardShopClean = ({ image, title_image, title }: ICardShopClean) => {
           width="100"
             height="100"
             sizes="100"
+            loading="lazy"
           alt={title_image}
         ></Image>
         <div className="card-details">
