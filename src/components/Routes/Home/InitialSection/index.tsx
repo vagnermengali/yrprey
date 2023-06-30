@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { StyledInitialSection } from "./style";
 import { Context } from "@/context/context";
-import padclock from "@/assets/image/Illustrations/altar-1.svg";
+import padclock from "@/assets/image/Illustrations/altar-1.png";
 import Image from "next/image";
 
 const InitialSection = () => {
@@ -23,8 +23,8 @@ const InitialSection = () => {
           <Image
             className="image"
             src={padclock}
-            width="100"
-            height="100"
+            width={10000} 
+            height={10000}
             alt="padclock"
           ></Image>
         </div>
