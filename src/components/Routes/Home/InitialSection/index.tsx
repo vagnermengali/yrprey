@@ -26,8 +26,6 @@ const InitialSection = () => {
             width="100"
             height="100"
             sizes="100"
-            loading="lazy"
-            loading="lazy"
             alt="padclock"
           ></Image>
         </div>

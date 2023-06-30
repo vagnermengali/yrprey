@@ -60,9 +60,8 @@ const CardBlogPage = () => {
                 src={listNews[0].media === null || listNews[0].media === "" ? no_image : listNews[0].media}
                 alt={listNews[0].title}
                 width="100"
-            height="100"
-            sizes="100"
-            loading="lazy"
+                height="100"
+                sizes="100"
                 unoptimized
               />
               <div className="content-details-main">
@@ -95,9 +94,8 @@ const CardBlogPage = () => {
                     src={news.media === null || news.media === "" ? no_image : news.media}
                     alt={news.title}
                     width="100"
-            height="100"
-            sizes="100"
-            loading="lazy"
+                    height="100"
+                    sizes="100"
                     unoptimized
                   />
                   <div className="content-top-details">

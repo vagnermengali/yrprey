@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const TableCollection = () => {
-  
+
   return (
     <StyledTableCollection>
       <div className="content-table">
@@ -31,9 +31,8 @@ const TableCollection = () => {
                     className="img"
                     src={profileRed}
                     width="100"
-            height="100"
-            sizes="100"
-            loading="lazy"
+                    height="100"
+                    sizes="100"
                     alt="image"
                   ></Image>
                 </div>
@@ -59,9 +58,8 @@ const TableCollection = () => {
                     className="img"
                     src={profileBlue}
                     width="100"
-            height="100"
-            sizes="100"
-            loading="lazy"
+                    height="100"
+                    sizes="100"
                     alt="image"
                   ></Image>
                 </div>
@@ -87,9 +85,8 @@ const TableCollection = () => {
                     className="img"
                     src={profileWhite}
                     width="100"
-            height="100"
-            sizes="100"
-            loading="lazy"
+                    height="100"
+                    sizes="100"
                     alt="image"
                   ></Image>
                 </div>
@@ -115,9 +112,8 @@ const TableCollection = () => {
                     className="img"
                     src={profileCian}
                     width="100"
-            height="100"
-            sizes="100"
-            loading="lazy"
+                    height="100"
+                    sizes="100"
                     alt="image"
                   ></Image>
                 </div>
@@ -143,9 +139,8 @@ const TableCollection = () => {
                     className="img"
                     src={profileBeige}
                     width="100"
-            height="100"
-            sizes="100"
-            loading="lazy"
+                    height="100"
+                    sizes="100"
                     alt="image"
                   ></Image>
                 </div>

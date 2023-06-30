@@ -16,8 +16,8 @@ const AboutSection = () => {
         <div className="container-left" data-aos="fade-right">
           <Image src={shield} width="100"
             height="100"
-            sizes="100" 
-            loading="lazy" alt="shield"></Image>
+            sizes="100"
+            alt="shield"></Image>
         </div>
         <div className="container-right" data-aos="fade-left">
           <p className="title">About</p>

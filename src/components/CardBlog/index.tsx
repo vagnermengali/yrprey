@@ -13,7 +13,7 @@ const Card = ({
   route,
   image,
 }: ICardBlog) => {
-  
+
   return (
     <StyledCard
       background_color={background_color}
@@ -25,9 +25,8 @@ const Card = ({
           className="image"
           src={image}
           width="100"
-            height="100"
-            sizes="100"
-            loading="lazy"
+          height="100"
+          sizes="100"
           alt="image"
         ></Image>
       </div>

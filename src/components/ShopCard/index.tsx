@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { StyledCardShop } from "./style";
-import { FaCheckCircle, FaEthereum} from "react-icons/fa";
+import { FaCheckCircle, FaEthereum } from "react-icons/fa";
 import { ICardShop } from "@/interfaces/IChildren/ICardShop";
 
 const CardShop = ({ image, title_image, title, name }: ICardShop) => {
-  
+
   return (
     <StyledCardShop>
       <div className="flip-card-inner">
@@ -13,9 +13,8 @@ const CardShop = ({ image, title_image, title, name }: ICardShop) => {
             <Image
               src={image}
               width="100"
-            height="100"
-            sizes="100"
-            loading="lazy"
+              height="100"
+              sizes="100"
               alt={title_image}
               className="img-card-shop"
             ></Image>
