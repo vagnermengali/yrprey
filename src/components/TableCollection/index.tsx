@@ -30,8 +30,9 @@ const TableCollection = () => {
                   <Image
                     className="img"
                     src={profileRed}
-                    width="1000"
-                    height="1000"
+                    width="100"
+            height="100"
+            sizes="100"
                     alt="image"
                   ></Image>
                 </div>
@@ -56,8 +57,9 @@ const TableCollection = () => {
                   <Image
                     className="img"
                     src={profileBlue}
-                    width="1000"
-                    height="1000"
+                    width="100"
+            height="100"
+            sizes="100"
                     alt="image"
                   ></Image>
                 </div>
@@ -82,8 +84,9 @@ const TableCollection = () => {
                   <Image
                     className="img"
                     src={profileWhite}
-                    width="1000"
-                    height="1000"
+                    width="100"
+            height="100"
+            sizes="100"
                     alt="image"
                   ></Image>
                 </div>
@@ -108,8 +111,9 @@ const TableCollection = () => {
                   <Image
                     className="img"
                     src={profileCian}
-                    width="1000"
-                    height="1000"
+                    width="100"
+            height="100"
+            sizes="100"
                     alt="image"
                   ></Image>
                 </div>
@@ -134,8 +138,9 @@ const TableCollection = () => {
                   <Image
                     className="img"
                     src={profileBeige}
-                    width="1000"
-                    height="1000"
+                    width="100"
+            height="100"
+            sizes="100"
                     alt="image"
                   ></Image>
                 </div>

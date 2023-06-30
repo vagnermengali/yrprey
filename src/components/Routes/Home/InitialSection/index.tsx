@@ -23,8 +23,9 @@ const InitialSection = () => {
           <Image
             className="image"
             src={padclock}
-            width={1000} 
-            height={1000}
+            width="100"
+            height="100"
+            sizes="100"
             alt="padclock"
           ></Image>
         </div>

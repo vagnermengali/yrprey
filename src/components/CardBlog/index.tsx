@@ -24,8 +24,9 @@ const Card = ({
         <Image
           className="image"
           src={image}
-          width="1000"
-          height="1000"
+          width="100"
+            height="100"
+            sizes="100"
           alt="image"
         ></Image>
       </div>
