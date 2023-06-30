@@ -92,3 +92,8 @@ const Carousel = () => {
 };
 
 export default Carousel;
+
+TODO: fazer identacao copia e cola e acha eles
+ width="100"
+            height="100"
+            sizes="100"

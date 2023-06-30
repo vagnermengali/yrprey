@@ -106,11 +106,14 @@ export const StyledInitialSection = styled.div`
     font-weight: bold;
   }
   .container-right {
+    display:flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
     height: 100%;
   }
   .container-right .image {
-    width: 90%;
+    width: 80%;
     height: max-content;
     animation: shakeY 20s ease-in-out infinite alternate-reverse both;
   }
