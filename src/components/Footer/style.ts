@@ -155,6 +155,7 @@ export const DivTwo = styled.div`
   }
   .content-left img {
     width: 30%;
+    height: auto;
   }
   .content-left p {
     font-weight: 500;
