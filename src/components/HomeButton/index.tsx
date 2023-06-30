@@ -5,6 +5,7 @@ import AOS from "aos";
 
 const HomeButton = () => {
   const [showButton, setShowButton] = useState(false);
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -17,9 +18,11 @@ const HomeButton = () => {
       window.removeEventListener("scroll", handleButtonVisiblity);
     };
   }, []);
+  
   const handleScrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
       <HomeButtonContainer>
         {showButton && (

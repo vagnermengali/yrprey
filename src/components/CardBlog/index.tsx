@@ -13,6 +13,7 @@ const Card = ({
   route,
   image,
 }: ICardBlog) => {
+
   return (
     <StyledCard
       background_color={background_color}

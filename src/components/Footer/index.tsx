@@ -22,6 +22,7 @@ const Footer = () => {
   } = useForm<IFormDrop>({
     resolver: yupResolver(formSchema),
   });
+  
   return (
     <StyledFooter>
       <DivOne>
