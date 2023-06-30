@@ -4,10 +4,10 @@ import SEO from "@/components/SEO"
 const Shop = () => {
   return (
     <>
- {/*      <SEO
+      <SEO
          title="Shop • YRPrey"
          description="Buy here the most sought-after collectibles in the market!"
-      /> */}
+      />
       <ShopSection/>
     </>
   )
