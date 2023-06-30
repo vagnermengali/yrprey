@@ -63,6 +63,7 @@ const GlobalStyles = createGlobalStyle`
     @font-face {
       font-family: 'Norse';
       src: local('Norse'), url(/font/Norse.otf) format('truetype');
+      font-display: swap;
     }
     
     :root {
