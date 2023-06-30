@@ -3,8 +3,8 @@ import { StyledAboutSection } from "./style";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HomeButton from "@/components/HomeButton";
-import Counter from "./Counter";
 import OurGoals from "./OurGoals";
+import Banner from "./Banner";
 import WhoWeAre from "./WhoWeAre";
 
 const About = () => {
@@ -20,8 +20,8 @@ const About = () => {
       <StyledAboutSection>
         <div className="container">
           <div className="content">
+            <Banner />
             <WhoWeAre />
-            <Counter />
             <OurGoals />
           </div>
         </div>

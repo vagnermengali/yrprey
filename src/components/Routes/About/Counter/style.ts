@@ -7,4 +7,6 @@ export const StyledCounterSection = styled.section`
   justify-content: center;
   align-items: center;
   background: var(--gradient-color);
+  position: absolute;
+  bottom: 0;
 `;

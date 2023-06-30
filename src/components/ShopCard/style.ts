@@ -5,9 +5,12 @@ export const StyledCardShop = styled.div`
   width: 295px;
   height: 285px;
   perspective: 1000px;
-  font-family: sans-serif;
   :hover .flip-card-inner {
     transform: rotateY(180deg);
+  }
+  .img-card-shop {
+    width: 100%;
+    height: 100%;
   }
   .text-content {
     display: flex;

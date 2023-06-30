@@ -5,7 +5,6 @@ export const StyledCollectionsSection = styled.section`
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   background-image: url(${background_error});
@@ -17,8 +16,7 @@ export const StyledCollectionsSection = styled.section`
     justify-content: center;
     align-items: center;
     width: 85%;
-    height: 100%;
-    margin-top: 70px;
+    margin: 20px 0;
   }
   .content {
     display: flex;
@@ -27,7 +25,6 @@ export const StyledCollectionsSection = styled.section`
     flex-wrap: wrap;
     gap: 50px;
     width: 100%;
-    height: 100%;
     overflow-y: scroll;
   }
 `;
