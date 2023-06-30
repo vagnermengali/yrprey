@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
-export const HomeButtonContainer = styled.button`
+export const HomeButtonContainer = styled.div`
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
   .btn-top {
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 0;
-    right: 0;
     width: 40px;
     height: 40px;
     margin: 30px;
@@ -16,8 +18,6 @@ export const HomeButtonContainer = styled.button`
     color: var(--white);
     font-family: inherit;
     cursor: pointer;
-    position: fixed;
-    z-index: 3;
     border-radius: 16px;
     font-weight: 700;
     font-size: 46px;
