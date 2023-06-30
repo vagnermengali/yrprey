@@ -3,6 +3,9 @@ import { StyledAboutSection } from "./style";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HomeButton from "@/components/HomeButton";
+import Counter from "./Counter";
+import OurGoals from "./OurGoals";
+import WhoWeAre from "./WhoWeAre";
 
 const About = () => {
 
@@ -17,7 +20,9 @@ const About = () => {
       <StyledAboutSection>
         <div className="container">
           <div className="content">
-            <h1>Page under development...</h1>
+            <WhoWeAre />
+            <Counter />
+            <OurGoals />
           </div>
         </div>
       </StyledAboutSection>
