@@ -4,7 +4,7 @@ export const CardBlogPageContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 60px 0 60px 0;
+  padding: 0 0 60px 0;
 `;
 
 export const CardBlogPageItem = styled.li`
@@ -14,16 +14,48 @@ export const CardBlogPageItem = styled.li`
     border-radius: 5px;
 `;
 
-export const CardBlogPageItemContent = styled.div`
-    
+export const CardBlogPageItemContent = styled.div` 
 `;
 
 export const CardBlogPageItemContainer = styled.div`
-    
+    .card-blog-page-main-link {
+      text-decoration: none;
+      text-transform: none;
+    }
 `;
 
 export const CardBlogPageItemMainContent = styled.div`
-    
+    width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+
+    .card-blog-page-main-img {
+      position: absolute;
+      width: inherit;
+      height: auto;
+    }
+    .content-top-details-main {
+      display: flex;
+      gap: 20px;
+    }
+    .content-details-main {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 0;
+      justify-content: flex-end;
+      gap: 20px;
+      padding: 20px 40px;
+      z-index: 2;
+      color: var(--white);
+      background: linear-gradient(90deg, rgba(129,129,129,.3) 0%, rgba(78,78,78,.3) 100%);
+      backdrop-filter: blur( 13.5px );
+      -webkit-backdrop-filter: blur( 13.5px );
+    }
 `;
 
 export const CardBlogPageItemContentTop = styled.div`
@@ -114,6 +146,44 @@ export const CardBlogPageItemContentBottom = styled.div`
     }
     .card-blog-page-link:hover::before {
       width: 100%;
+    }
+`;
+
+export const LoadingContainer = styled.div`
+    width: 100vw;
+    height: 90vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    .loader {
+      border: 4px solid var(--primary-color);
+      border-left-color: transparent;
+      border-radius: 50%;
+    }
+
+    .loader {
+      border: 4px solid var(--primary-color);
+      border-left-color: transparent;
+      width: 36px;
+      height: 36px;
+    }
+
+    .loader {
+      border: 4px solid var(--primary-color);
+      border-left-color: transparent;
+      width: 36px;
+      height: 36px;
+      animation: spin89345 1s linear infinite;
+    }
+
+    @keyframes spin89345 {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 `;
 

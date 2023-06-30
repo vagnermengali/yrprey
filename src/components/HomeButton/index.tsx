@@ -21,13 +21,13 @@ const HomeButton = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-      <div>
+      <HomeButtonContainer>
         {showButton && (
-          <HomeButtonContainer onClick={handleScrollTop} data-aos="fade">
+          <button className="btn-top" onClick={handleScrollTop} data-aos="fade">
             <RxCaretUp />
-          </HomeButtonContainer>
+          </button>
         )}
-      </div>
+      </HomeButtonContainer>
   );
 }
 

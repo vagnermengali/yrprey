@@ -20,7 +20,7 @@ export const StyledBlogSection = styled.section`
   .content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
   .content h1 {
     color: var(--white);
@@ -29,6 +29,6 @@ export const StyledBlogSection = styled.section`
     line-height: 1.22;
     letter-spacing: 0;
     text-transform: none;
-    gap: 30px;
+    gap: 20px;
   }
 `;

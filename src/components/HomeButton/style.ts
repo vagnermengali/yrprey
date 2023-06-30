@@ -1,26 +1,28 @@
 import styled from "styled-components";
 
 export const HomeButtonContainer = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  margin: 30px;
-  padding: auto;
-  border: none;
-  outline: none;
-  color: var(--white);
-  font-family: inherit;
-  cursor: pointer;
-  position: fixed;
-  z-index: 3;
-  border-radius: 16px;
-  font-weight: 700;
-  font-size: 46px;
-  :after {
+  .btn-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin: 30px;
+    padding: auto;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-family: inherit;
+    cursor: pointer;
+    position: fixed;
+    z-index: 3;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 46px;
+  }
+  .btn-top:after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -31,7 +33,7 @@ export const HomeButtonContainer = styled.button`
     right: 0;
     border-radius: 6px;
   }
-  :before {
+  .btn-top:before {
     content: "";
     background: var(--gradient-color-animation);
     position: absolute;
@@ -61,8 +63,5 @@ export const HomeButtonContainer = styled.button`
   :hover::before {
     opacity: 1;
   }
-  :active {
-    color: var(--black);
-    font-weight: bold;
-  }
+
 `;

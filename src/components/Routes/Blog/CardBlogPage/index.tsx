@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { CardBlogPageItemContainer, CardBlogPageItemMainContent, CardBlogPageContainer, CardBlogPageItem, CardBlogPageItemContent, CardBlogPageItemContentBottom, CardBlogPageItemContentTop } from "./style";
+import { LoadingContainer, CardBlogPageItemContainer, CardBlogPageItemMainContent, CardBlogPageContainer, CardBlogPageItem, CardBlogPageItemContent, CardBlogPageItemContentBottom, CardBlogPageItemContentTop } from "./style";
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import { INews } from "@/interfaces/News/INews";
+import no_image from "@/assets/image/backgrounds/background-no-image.png"
 
 const CardBlogPage = () => {
   const [listNews, setListNews] = useState<INews[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,8 +26,10 @@ const CardBlogPage = () => {
         );
 
         setListNews(response.data.articles);
+        setIsLoading(false); // Atualiza o estado para indicar que a resposta da API foi recebida
       } catch (error) {
         console.error("Error fetching slides:", error);
+        setIsLoading(false); // Trata o erro e atualiza o estado mesmo em caso de falha
       }
     };
 
@@ -39,6 +43,12 @@ const CardBlogPage = () => {
     return date.toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true });
   }
 
+  if (isLoading) {
+    return <LoadingContainer>
+      <div className="loader"></div>
+    </LoadingContainer>;
+  }
+
   return (
     <>
       {listNews.length > 0 && (
@@ -47,23 +57,25 @@ const CardBlogPage = () => {
             <CardBlogPageItemMainContent>
               <Image
                 className="card-blog-page-main-img"
-                src={listNews[0].media}
+                src={listNews[0].media === null || listNews[0].media === "" ? no_image : listNews[0].media}
                 alt={listNews[0].title}
                 width={100}
                 height={100}
                 unoptimized
               />
-              <div className="content-top-details-main">
-                <p className="card-blog-page-main-font">{listNews[0].clean_url}</p>
-                <p className="card-blog-page-main-date">{formatDate(listNews[0].published_date)}</p>
+              <div className="content-details-main">
+                <div className="content-top-details-main">
+                  <p className="card-blog-page-main-font">{listNews[0].clean_url}</p>
+                  <p className="card-blog-page-main-date">{formatDate(listNews[0].published_date)}</p>
+                </div>
+                <h1 className="card-blog-page-main-title">{listNews[0].title}</h1>
+                <p className="card-blog-page-main-description">{listNews[0].summary}</p>
               </div>
-              <h2 className="card-blog-page-main-title">{listNews[0].title}</h2>
-              <p className="card-blog-page-main-description">{listNews[0].summary}</p>
             </CardBlogPageItemMainContent>
           </Link>
         </CardBlogPageItemContainer>
       )}
-      
+
       <CardBlogPageContainer>
         {listNews.slice(1).map((news, index) => {
           if (uniqueTitles.has(news.title)) {
@@ -78,7 +90,7 @@ const CardBlogPage = () => {
                 <CardBlogPageItemContentTop>
                   <Image
                     className="card-blog-page-img"
-                    src={news.media}
+                    src={news.media === null || news.media === "" ? no_image : news.media}
                     alt={news.title}
                     width={100}
                     height={100}
