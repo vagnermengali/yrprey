@@ -12,8 +12,6 @@ const CardShop = ({ image, title_image, title, name }: ICardShop) => {
           <div>
             <Image
               src={image}
-              width={1000}
-              height={1000}
               alt={title_image}
               className="img-card-shop"
             ></Image>

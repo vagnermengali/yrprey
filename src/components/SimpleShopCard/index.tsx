@@ -14,8 +14,6 @@ const CardShopClean = ({ image, title_image, title }: ICardShopClean) => {
         <Image
           className="card-img"
           src={image}
-          width="1000"
-          height="1000"
           alt={title_image}
         ></Image>
         <div className="card-details">

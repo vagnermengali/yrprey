@@ -47,7 +47,7 @@ const Carousel = () => {
           >
             <SwiperSlide>
               <div className="container-carousel">
-                <Image className="img-carousel" src={slide1} width="1000" height="1000" alt="img-carousel"></Image>
+                <Image className="img-carousel" src={slide1} alt="img-carousel"></Image>
                 <div className="content-carousel">
                   <button className="carousel-status" disabled>
                     <HiOutlineStatusOnline className="icon" />
@@ -64,7 +64,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="container-carousel">
-              <Image className="img-carousel" src={slide2} width="1000" height="1000" alt="img-carousel"></Image>
+              <Image className="img-carousel" src={slide2} alt="img-carousel"></Image>
                 <div className="content-carousel">
                   <button className="carousel-status" disabled>
                     <HiOutlineStatusOnline className="icon" />
@@ -81,7 +81,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="container-carousel">
-              <Image className="img-carousel" src={slide3} width="1000" height="1000" alt="img-carousel"></Image>
+              <Image className="img-carousel" src={slide3} alt="img-carousel"></Image>
                 <div className="content-carousel">
                   <button className="carousel-status" disabled>
                     <HiOutlineStatusOnline className="icon" />
@@ -98,7 +98,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="container-carousel">
-              <Image className="img-carousel" src={slide4} width="1000" height="1000" alt="img-carousel"></Image>
+              <Image className="img-carousel" src={slide4} alt="img-carousel"></Image>
                 <div className="content-carousel">
                   <button className="carousel-status" disabled>
                     <HiOutlineStatusOnline className="icon" />

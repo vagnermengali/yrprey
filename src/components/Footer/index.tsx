@@ -54,12 +54,7 @@ const Footer = () => {
       </DivOne>
       <DivTwo>
         <div className="content-left">
-          <Image
-            src={logo}
-            width="100"
-            height="100"
-            alt="logo-prey"
-          ></Image>
+          <Image src={logo} alt="logo-prey"/>
           <p>
             We provide the best vulnerability and security experiences on the
             market.
