@@ -22,7 +22,7 @@ const Footer = () => {
   } = useForm<IFormDrop>({
     resolver: yupResolver(formSchema),
   });
-
+  
   return (
     <StyledFooter>
       <DivOne>
@@ -54,31 +54,36 @@ const Footer = () => {
       </DivOne>
       <DivTwo>
         <div className="content-left">
-          <Image src={logo} alt="logo-prey"/>
+          <Image
+            src={logo}
+            width="100"
+            height="100"
+            alt="logo-prey"
+          ></Image>
           <p>
             We provide the best vulnerability and security experiences on the
             market.
           </p>
           <ul>
             <li>
-              <button id="facebook" title="Facebook">
-                <FaFacebookF />
-              </button>
+            <button id="facebook" title="Facebook">
+              <FaFacebookF />
+            </button>
             </li>
             <li>
-              <button id="twitter" title="Twitter">
-                <FaTwitter />
-              </button>
+            <button id="twitter" title="Twitter">
+              <FaTwitter />
+            </button>
             </li>
             <li>
-              <button id="instagram" title="Instagram">
-                <FaInstagram />
-              </button>
+            <button id="instagram" title="Instagram">
+              <FaInstagram />
+            </button>
             </li>
             <li>
-              <button>
-                <FaLinkedinIn id="linkedinIn" title="LinkedinIn" />
-              </button>
+            <button>
+              <FaLinkedinIn id="linkedinIn" title="LinkedinIn"/>
+            </button>
             </li>
           </ul>
         </div>

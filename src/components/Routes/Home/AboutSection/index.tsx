@@ -14,7 +14,7 @@ const AboutSection = () => {
     <StyledAboutSection>
       <div className="container">
         <div className="container-left" data-aos="fade-right">
-          <Image src={shield} alt="shield"></Image>
+          <Image src={shield} width={1000} height={1000} alt="shield"></Image>
         </div>
         <div className="container-right" data-aos="fade-left">
           <p className="title">About</p>
