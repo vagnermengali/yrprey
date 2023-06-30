@@ -22,7 +22,7 @@ const Footer = () => {
   } = useForm<IFormDrop>({
     resolver: yupResolver(formSchema),
   });
-  
+
   return (
     <StyledFooter>
       <DivOne>
@@ -65,18 +65,26 @@ const Footer = () => {
             market.
           </p>
           <ul>
-            <button id="facebook" title="Facebook">
-              <FaFacebookF />
-            </button>
-            <button id="twitter" title="Twitter">
-              <FaTwitter />
-            </button>
-            <button id="instagram" title="Instagram">
-              <FaInstagram />
-            </button>
-            <button>
-              <FaLinkedinIn id="linkedinIn" title="LinkedinIn"/>
-            </button>
+            <li>
+              <button id="facebook" title="Facebook">
+                <FaFacebookF />
+              </button>
+            </li>
+            <li>
+              <button id="twitter" title="Twitter">
+                <FaTwitter />
+              </button>
+            </li>
+            <li>
+              <button id="instagram" title="Instagram">
+                <FaInstagram />
+              </button>
+            </li>
+            <li>
+              <button>
+                <FaLinkedinIn id="linkedinIn" title="LinkedinIn" />
+              </button>
+            </li>
           </ul>
         </div>
         <div className="content-right">
