@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import InitialSection from "./InitialSection";
 import ContactSection from "./ContactSection";
 import HomeButton from "@/components/HomeButton";
+import SEO from "@/components/SEO";
 
 const Home = () => {
 
@@ -17,14 +18,19 @@ const Home = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-      > <HomeButton/>
-            <Header />
-            <InitialSection />
-            <AboutSection />
-            <ShopSection />
-            <BlogSection />
-            <ContactSection />
-            <Footer />
+      >
+        <SEO
+          title="Welcome to YRPrey"
+          description="Your Complete Vulnerability Site!"
+        />
+        <HomeButton />
+        <Header />
+        <InitialSection />
+        <AboutSection />
+        <ShopSection />
+        <BlogSection />
+        <ContactSection />
+        <Footer />
       </motion.div>
     </>
   );

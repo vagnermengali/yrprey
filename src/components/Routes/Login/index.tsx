@@ -5,9 +5,10 @@ import { StyledLoginSection } from "./style";
 import InfoBanner from "@/components/InfoBanner";
 import Footer from "@/components/Footer";
 import HomeButton from "@/components/HomeButton";
+import SEO from "@/components/SEO";
 
 const Login = () => {
-  
+
   return (
     <motion.div
       initial={{ opacity: 0.3 }}
@@ -15,6 +16,10 @@ const Login = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title="Login • YRPrey"
+        description="Join us in the search for bugs and vulnerabilities!"
+      />
       <StyledLoginSection>
         <Header />
         <div className="container">
@@ -29,9 +34,9 @@ const Login = () => {
           <div className="container-right">
             <InfoBanner />
           </div>
-        </div> 
-        <Footer/>
-        <HomeButton/>
+        </div>
+        <Footer />
+        <HomeButton />
       </StyledLoginSection>
     </motion.div>
   );

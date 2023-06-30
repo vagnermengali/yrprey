@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TopCollections from "./TopCollections";
 import HomeButton from "@/components/HomeButton";
+import SEO from "@/components/SEO";
 
 const Shop = () => {
 
@@ -15,11 +16,15 @@ const Shop = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-          <Header />
-          <Carousel />
-          <TopCollections />
-          <Footer />
-          <HomeButton/>
+      <SEO
+        title="Shop • YRPrey"
+        description="Buy here the most sought-after collectibles in the market!"
+      />
+      <Header />
+      <Carousel />
+      <TopCollections />
+      <Footer />
+      <HomeButton />
     </motion.div>
   );
 }

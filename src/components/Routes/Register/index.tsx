@@ -5,6 +5,7 @@ import { StyledRegisterSection } from "./style";
 import InfoBanner from "@/components/InfoBanner";
 import Footer from "@/components/Footer";
 import HomeButton from "@/components/HomeButton";
+import SEO from "@/components/SEO";
 
 const Register = () => {
 
@@ -15,6 +16,10 @@ const Register = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title="Sign up • YRPrey"
+        description="Join us in the search for bugs and vulnerabilities!"
+      />
       <StyledRegisterSection>
         <Header />
         <div className="container">
@@ -32,7 +37,7 @@ const Register = () => {
           </div>
         </div>
         <Footer />
-        <HomeButton/>
+        <HomeButton />
       </StyledRegisterSection>
     </motion.div>
   );

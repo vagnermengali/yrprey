@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HomeButton from "@/components/HomeButton";
 import CardBlogPage from "./CardBlogPage";
+import SEO from "@/components/SEO";
 
 const Blog = () => {
 
@@ -14,6 +15,10 @@ const Blog = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO
+        title="Blog • YRPrey"
+        description="You can find all news about security, new bugs, and new vulnerabilities here!"
+      />
       <Header />
       <StyledBlogSection>
         <div className="container">
