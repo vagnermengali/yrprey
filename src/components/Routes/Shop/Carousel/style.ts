@@ -3,7 +3,7 @@ import background from "@/assets/image/backgrounds/background-about.svg";
 
 export const ContainerCarousel = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   flex-direction: column;
