@@ -6,7 +6,7 @@ interface IHeaderBg {
 
 export const HeaderContainer = styled.header<IHeaderBg>`
   height: 5vw;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   position: sticky;
   display: flex;
