@@ -36,7 +36,7 @@ const ContactSection = () => {
               </div>
             </div>
             <div className="contact">
-              <button disabled>
+              <button disabled id="phoneAlt" title="PhoneAlt">
                 <FaPhoneAlt />
               </button>
               <div>
@@ -45,7 +45,7 @@ const ContactSection = () => {
               </div>
             </div>
             <div className="contact">
-              <button disabled>
+              <button disabled id="mailBulk" title="MailBulk">
                 <FaMailBulk />
               </button>
               <div>
