@@ -115,7 +115,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="container-carousel">
-              <Image className="img-carousel" src={slide5} width="1000" height="1000" alt="img-carousel"></Image>
+              <Image className="img-carousel" src={slide5} width={1000} height={1000} alt="img-carousel"></Image>
                 <div className="content-carousel">
                   <button className="carousel-status" disabled>
                     <HiOutlineStatusOnline className="icon" />
