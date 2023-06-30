@@ -65,17 +65,17 @@ const Footer = () => {
             market.
           </p>
           <ul>
-            <button>
+            <button id="facebook" title="Facebook">
               <FaFacebookF />
             </button>
-            <button>
+            <button id="twitter" title="Twitter">
               <FaTwitter />
             </button>
-            <button>
+            <button id="instagram" title="Instagram">
               <FaInstagram />
             </button>
             <button>
-              <FaLinkedinIn />
+              <FaLinkedinIn id="linkedinIn" title="LinkedinIn"/>
             </button>
           </ul>
         </div>

@@ -25,7 +25,7 @@ const ContactSection = () => {
           </div>
           <div className="content-down">
             <div className="contact">
-              <button disabled>
+              <button disabled id="mapMarker" title="MapMarker">
                 <FaMapMarkerAlt />
               </button>
               <div>
