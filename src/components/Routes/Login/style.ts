@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background_login from "@/assets/image/backgrounds/background-login.svg";
 
 export const StyledLoginSection = styled.div`
   width: 100vw;
@@ -7,9 +6,7 @@ export const StyledLoginSection = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(${background_login});
-  background-repeat: no-repeat;
-  background-size: cover;
+
   .container {
     display: flex;
     justify-content: center;

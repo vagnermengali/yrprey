@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background from "@/assets/image/backgrounds/background-blog.svg";
 
 export const ContainerTopCollections = styled.div`
   width: 100vw;
@@ -8,9 +7,6 @@ export const ContainerTopCollections = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(${background});
-  background-repeat: no-repeat;
-  background-size: cover;
   .content {
     display: flex;
     flex-direction: column;

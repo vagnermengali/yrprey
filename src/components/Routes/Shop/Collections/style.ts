@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background_error from "@/assets/image/backgrounds/background-shop-colletion.svg";
 
 export const StyledCollectionsSection = styled.section`
   width: 100vw;
@@ -7,9 +6,6 @@ export const StyledCollectionsSection = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url(${background_error});
-  background-repeat: no-repeat;
-  background-size: cover;
 
   .container {
     display: flex;

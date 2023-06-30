@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background_error from "@/assets/image/backgrounds/background-blog.svg";
 
 export const StyledBlogSection = styled.section`
   width: 100vw;
@@ -8,9 +7,6 @@ export const StyledBlogSection = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(${background_error});
-  background-repeat: no-repeat;
-  background-size: cover;
   .container {
     display: flex;
     justify-content: center;
