@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 76.8px);
   background-color: var(--quinternary-color);
 `;
 

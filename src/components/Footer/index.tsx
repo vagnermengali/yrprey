@@ -127,7 +127,7 @@ const Footer = () => {
         </div>
       </DivTwo>
       <DivTree>
-        <p>Copyright © 2022 YRPrey. All rights reserved.</p>
+        <p>Copyright © {new Date().getFullYear()} YRPrey. All rights reserved.</p>
       </DivTree>
     </StyledFooter>
   );
