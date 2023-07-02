@@ -43,7 +43,7 @@ const Carousel = () => {
     };
 
     fetchData();
-  }, []); F
+  }, []);
 
   return (
     <motion.div
