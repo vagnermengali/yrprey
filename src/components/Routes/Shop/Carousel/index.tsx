@@ -25,22 +25,25 @@ const Carousel = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get<{ results: Slide[] }>("http://yrprey.com/resposta", {
-          headers: {
-            "Content-Type": "application/json"
-          },
-          data: {
+        const response = await axios.post<{ results: Slide[] }>(
+          "http://yrprey.com/resposta",
+          {
             id: "2"
+          },
+          {
+            headers: {
+              "Content-Type": "application/json"
+            }
           }
-        });
+        );
         setSlides(response.data.results);
       } catch (error) {
         console.error("Error fetching slides:", error);
       }
     };
-  
+
     fetchData();
-  }, []);
+  }, []); F
 
   return (
     <motion.div
