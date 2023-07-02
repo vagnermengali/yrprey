@@ -25,9 +25,10 @@ const Carousel = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post<{ results: Slide[] }>("http://yrprey.com/resposta?id=1", {
-          id: "1",
-          nome: "teste"
+        const response = await axios.get<{ results: Slide[] }>("http://yrprey.com/resposta?id=1", {
+          params: {
+            id: "2"
+          }
         });
         setSlides(response.data.results);
       } catch (error) {
