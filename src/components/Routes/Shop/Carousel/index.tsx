@@ -25,8 +25,11 @@ const Carousel = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get<{ results: Slide[] }>("http://yrprey.com/resposta?id=1", {
-          params: {
+        const response = await axios.get<{ results: Slide[] }>("http://yrprey.com/resposta", {
+          headers: {
+            "Content-Type": "application/json"
+          },
+          data: {
             id: "2"
           }
         });
