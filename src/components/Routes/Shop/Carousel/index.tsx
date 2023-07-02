@@ -25,7 +25,10 @@ const Carousel = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get<{ results: Slide[] }>("http://yrprey.com/resposta?id=1");
+        const response = await axios.post<{ results: Slide[] }>("http://yrprey.com/resposta?id=1", {
+          id: "1",
+          nome: "teste"
+        });
         setSlides(response.data.results);
       } catch (error) {
         console.error("Error fetching slides:", error);
