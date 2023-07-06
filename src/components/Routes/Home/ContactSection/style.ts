@@ -65,11 +65,11 @@ export const StyledContactSection = styled.div`
     gap: 20px;
   }
   .contact button {
-    background: var(--primary-color);
+    background: var(--gradient-color-3);
     color: var(--white);
     border-radius: 50%;
     outline: none;
-    border: none;
+    border: outset var(--tertiary-color) 3px;
     gap: 20px;
     width: 56px;
     height: 56px;
@@ -79,6 +79,7 @@ export const StyledContactSection = styled.div`
     justify-content: center;
     align-items: center;
   }
+  
   .contact div {
     display: flex;
     flex-direction: column;

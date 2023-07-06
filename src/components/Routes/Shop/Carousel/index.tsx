@@ -54,10 +54,6 @@ const Carousel = () => {
     >
       <ContainerCarousel>
         <div className="content">
-          <div className="content-text">
-            <h1 className="content-title">Buy the collectibles</h1>
-            <p className="content-details">from the best creators and brands</p>
-          </div>
           <Swiper
             spaceBetween={30}
             effect="fade"
@@ -88,7 +84,9 @@ const Carousel = () => {
                     </h2>
                     <p className="carousel-details">{slide.id}</p>
                     <Link href={slide.image} className="carousel-button">
-                      See drop
+                      <button className="carousel-button-inside">
+                        See drop
+                      </button>
                     </Link>
                   </div>
                 </div>

@@ -60,9 +60,11 @@ const FormContact = () => {
         placeholder="Your Message"
         {...register("textMessage")}
       ></textarea>
-      <button type="submit" className="btn">
+      <div className="btn-send-message">
+        <button  type="submit" className="btn-send-message-inside">
         Send Message
-      </button>
+        </button>
+      </div>
     </Form>
   );
 };

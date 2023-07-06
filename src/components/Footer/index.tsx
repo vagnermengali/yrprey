@@ -22,7 +22,7 @@ const Footer = () => {
   } = useForm<IFormDrop>({
     resolver: yupResolver(formSchema),
   });
-  
+
   return (
     <StyledFooter>
       <DivOne>
@@ -36,18 +36,21 @@ const Footer = () => {
           <form className="content-right" onSubmit={handleSubmit(() => { })}>
             <label className={errors.email ? "error" : "no-error"}>
               {errors.email?.message}
-            </label>{" "}
+            </label>
             <div>
-              {" "}
-              <input
+              <div className="input-subscribe">
+                 <input className="input-subscribe-inside"
                 type="text"
                 placeholder="Email Address"
                 {...register("email")}
-              />{" "}
-              <button type="submit">
-                Subscribe Nowﾠ
-                <FaExternalLinkAlt />
-              </button>
+              />
+              </div>
+              <div className="btn-subscribe">
+                <button type="submit" className="btn-subscribe-inside">
+                  Subscribe Nowﾠ
+                  <FaExternalLinkAlt />
+                </button>
+              </div>
             </div>
           </form>
         </div>
@@ -67,24 +70,24 @@ const Footer = () => {
           </p>
           <ul>
             <li>
-            <button id="facebook" title="Facebook">
-              <FaFacebookF />
-            </button>
+              <button id="facebook" title="Facebook">
+                <FaFacebookF />
+              </button>
             </li>
             <li>
-            <button id="twitter" title="Twitter">
-              <FaTwitter />
-            </button>
+              <button id="twitter" title="Twitter">
+                <FaTwitter />
+              </button>
             </li>
             <li>
-            <button id="instagram" title="Instagram">
-              <FaInstagram />
-            </button>
+              <button id="instagram" title="Instagram">
+                <FaInstagram />
+              </button>
             </li>
             <li>
-            <button>
-              <FaLinkedinIn id="linkedinIn" title="LinkedinIn"/>
-            </button>
+              <button>
+                <FaLinkedinIn id="linkedinIn" title="LinkedinIn" />
+              </button>
             </li>
           </ul>
         </div>

@@ -5,7 +5,7 @@ interface IHeaderBg {
 }
 
 export const HeaderContainer = styled.header<IHeaderBg>`
-  height: 5vw;
+  height: 5rem;
   z-index: 100;
   top: 0;
   position: sticky;
@@ -19,7 +19,8 @@ export const HeaderContainer = styled.header<IHeaderBg>`
 `;
 
 export const DivHeader = styled.div`
-  width: 85%;
+  width: 90%;
+  height: min-content;
   .content {
     width: 100%;
     display: flex;
@@ -27,12 +28,13 @@ export const DivHeader = styled.div`
     justify-content: space-between;
   }
   .content img {
-    width: 9vw;
+    width: 8.125rem;
   }
   .content nav {
     display: flex;
-    gap: 4.7vw;
+    gap: 67.5px;
   }
+
   .link {
     background-color: transparent;
     text-decoration: none;
@@ -86,69 +88,41 @@ export const DivHeader = styled.div`
     align-items: center;
     gap: 10px;
   }
-  .btn {
-    border: none;
+  .btn-register, .btn-register:not(:hover) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 165px;
+    height: 60px;
+    border: outset var(--tertiary-color) 3px;
+    background: var(--gradient-color-2);
+    padding: 0;
+    margin: 0;
+    transition: all ease .3s;
+  }
+
+    .btn-register-inside, .btn-register-inside:not(:hover) {
+    border: outset var(--septenary-color) 6px;
+    background: var(--gradient-color-2);
+    width: calc(165px - 6px);
+    height: calc(60px - 6px);
     outline: none;
     color: var(--white);
-    font-family: inherit;
     cursor: pointer;
-    position: relative;
     z-index: 0;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 16px;
-    padding: 20px 24px;
-    gap: 10px;
-    width: 163px;
-    height: 56px;
-    background: var(--gradient-color);
-    border-radius: 6px;
+    font: normal 700 16px/16px 'Norse', sans-serif;
   }
-  .btn:after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-color);
-    left: 0;
-    top: 0;
-    border-radius: 6px;
+
+  .btn-register-inside:active {
+    transform: scale(0.985);
   }
-  .btn:before {
-    content: "";
-    background: var(--gradient-color-animation);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 600%;
-    z-index: -1;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-    opacity: 0;
+  .btn-register:hover {
+    border: outset var(--quartenary-color) 3px;
+    background: var(--gradient-color-2);
   }
-  @keyframes glowing {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
-  .btn:hover::before {
-    opacity: 1;
-  }
-  .btn:active:after {
-    background: transparent;
-  }
-  .btn:active {
-    font-weight: bold;
+  .btn-register:hover .btn-register-inside {
+    background: var(--gradient-color-4);
+    color: var(--white);
+    border: outset var(--primary-color) 6px;
   }
 `;

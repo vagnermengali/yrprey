@@ -47,7 +47,11 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/red" className="btn-top-collections">Purchase</Link>
+            <Link href="/shop/collection/red" className="btn-top-collections">
+              <button className="btn-top-collections-inside">
+                Purchase
+              </button>
+            </Link>
           </li>
           <li>
             <div className="card-table">
@@ -74,7 +78,11 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/blue" className="btn-top-collections">Purchase</Link>
+            <Link href="/shop/collection/blue" className="btn-top-collections">
+              <button className="btn-top-collections-inside">
+                Purchase
+              </button>
+            </Link>
           </li>
           <li>
             <div className="card-table">
@@ -101,7 +109,11 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/white" className="btn-top-collections">Purchase</Link>
+            <Link href="/shop/collection/white" className="btn-top-collections">
+              <button className="btn-top-collections-inside">
+                Purchase
+              </button>
+            </Link>
           </li>
           <li>
             <div className="card-table">
@@ -128,7 +140,11 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/cian" className="btn-top-collections">Purchase</Link>
+            <Link href="/shop/collection/cian" className="btn-top-collections">
+              <button className="btn-top-collections-inside">
+                Purchase
+              </button>
+            </Link>
           </li>
           <li>
             <div className="card-table">
@@ -155,7 +171,11 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/beige" className="btn-top-collections">Purchase</Link>
+            <Link href="/shop/collection/beige" className="btn-top-collections">
+              <button className="btn-top-collections-inside">
+                Purchase
+              </button>
+            </Link>
           </li>
         </ul>
       </div>

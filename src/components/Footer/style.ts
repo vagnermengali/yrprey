@@ -59,84 +59,110 @@ export const DivOne = styled.div`
     width: 90%;
     min-height: 30px;
   }
-  .content-right input {
+  .input-subscribe, .input-subscribe:not(:hover) {
     width: 282px;
-    height: 56px;
-    padding: 18px 24px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
+    height: 60px;
     display: flex;
     align-items: center;
-    color: rgba(5, 10, 18, 0.6);
-    border-bottom-left-radius: 6px;
-    border-top-left-radius: 6px;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    font-family: "Norse", sans-serif;
+    justify-content: center;
+    border-left: outset var(--tertiary-color) 3px;
+    border-right: none;
+    border-top: outset var(--tertiary-color) 3px;
+    border-bottom: outset var(--tertiary-color) 3px;
+    padding: 0;
+    margin: 0;
+    transition: all ease .3s;
   }
-  .content-right button {
-    padding: 20px 24px;
-    border: none;
+
+  .input-subscribe:hover {
+    border-right:none;
+    border-left: outset var(--quartenary-color) 3px;
+    border-top: outset var(--quartenary-color) 3px;
+    border-bottom: outset var(--quartenary-color) 3px;
+  }
+
+  .input-subscribe:hover .input-subscribe-inside{
+    border-left:outset var(--grey-2) 6px;
+    border-right: none;
+    border-top: outset var(--white) 6px;
+    border-bottom: outset var(--white) 6px;
+    background: var(--gradient-color-6);
+    backdrop-filter: brightness(0%);
+  }
+
+  .input-subscribe-inside, .input-subscribe-inside:not(:hover) {
+    border: outset var(--grey-8) 6px;
+    border-left:outset var(--grey-2) 6px;
+    border-right: none;
+    border-top: outset var(--grey-8) 6px;
+    border-bottom: outset var(--grey-8) 6px;
+    background: var(--gradient-color-5);
+    width: 100%;
+    padding-left: 20px;
+    height: calc(60px - 6px);
+    outline: none;
+    color: var(--grey-4);
+    cursor: pointer;
+    z-index: 0;
+    font: normal 700 16px/16px 'Norse', sans-serif;
+    transition: all ease .3s;
+  }
+
+  .input-subscribe-inside::placeholder {
+      color: var(--grey-4);
+  }
+  
+  .btn-subscribe, .btn-subscribe:not(:hover) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 222px;
+    height: 60px;
+    border-left:none;
+    border-right: outset var(--tertiary-color) 3px;
+    border-top: outset var(--tertiary-color) 3px;
+    border-bottom: outset var(--tertiary-color) 3px;
+    background: var(--gradient-color-2);
+    padding: 0;
+    margin: 0;
+    transition: all ease .3s;
+  }
+
+  .btn-subscribe:hover {
+    border-left:none;
+    border-right: outset var(--quartenary-color) 3px;
+    border-top: outset var(--quartenary-color) 3px;
+    border-bottom: outset var(--quartenary-color) 3px;
+    background: var(--gradient-color-2);
+  }
+
+  .btn-subscribe:hover .btn-subscribe-inside {
+    background: var(--gradient-color-4);
+    color: var(--white);
+    border-left:none;
+    border-right: outset var(--primary-color) 6px;
+    border-top: outset var(--primary-color) 6px;
+    border-bottom: outset var(--primary-color) 6px;
+  }
+
+  .btn-subscribe-inside, .btn-subscribe-inside:not(:hover) {
+    border-left:none;
+    border-right: outset var(--septenary-color) 6px;
+    border-top: outset var(--septenary-color) 6px;
+    border-bottom: outset var(--septenary-color) 6px;
+    background: var(--gradient-color-2);
+    width: calc(222px - 6px);
+    height: calc(60px - 6px);
     outline: none;
     color: var(--white);
-    font-family: inherit;
     cursor: pointer;
-    position: relative;
     z-index: 0;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 16px;
-    width: 222px;
-    height: 56px;
+    font: normal 700 16px/16px 'Norse', sans-serif;
+    transition: all ease .3s;
   }
-  .content-right button:after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-color-1);
-    left: 0;
-    top: 0;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-  }
-  .content-right button:before {
-    content: "";
-    background: var(--gradient-color-animation-1);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 600%;
-    z-index: -1;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-    opacity: 0;
-  }
-  @keyframes glowing {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
-  .content-right button:hover::before {
-    opacity: 1;
-  }
-  .content-right button:active {
-    font-weight: bold;
+
+  .btn-subscribe-inside:active {
+    transform: scale(0.985);
   }
 `;
 
@@ -173,11 +199,11 @@ export const DivTwo = styled.div`
     gap: 10px;
   }
   .content-left ul button {
-    background: var(--grey-0);
-    color: var(--primary-color);
+    background: var(--gradient-color-3);
+    color: var(--quinternary-color);
     border-radius: 50%;
     outline: none;
-    border: none;
+    border: outset var(--tertiary-color) 3px;
     gap: 20px;
     width: 34px;
     height: 34px;
@@ -187,10 +213,17 @@ export const DivTwo = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all ease .3s;
   }
+
+  .content-left ul button:active {
+    transform: scale(0.95);
+  }
+
   .content-left ul button:hover {
-    background: var(--gradient-color);
+    background: var(--gradient-color-3);
     color: var(--white);
+    border: outset var(--quartenary-color) 3px;
   }
   .content-right {
     display: flex;
@@ -218,6 +251,10 @@ export const DivTwo = styled.div`
     font-size: 16px;
     line-height: 16px;
     color: var(--grey-2);
+    transition: all ease .3s;
+  }
+  .content-right div .link:hover {
+    color: var(--quartenary-color);
   }
 `;
 

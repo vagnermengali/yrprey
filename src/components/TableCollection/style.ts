@@ -95,67 +95,51 @@ export const StyledTableCollection = styled.div`
   .btc {
     color: var(--orange-1);
   }
-  .btn-top-collections {
-    border: none;
-    outline: none;
-    color: var(--white);
-    font-family: inherit;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 16px;
+  .btn-top-collections, .btn-top-collections:not(:hover){
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 132px;
-    height: 100%;
-    text-decoration:none;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    height: 60px;
+    border: outset var(--tertiary-color) 3px;
+    background: var(--gradient-color-2);
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: all ease .3s;
+    text-decoration: none;
+    text-transform: none;
   }
-  .btn-top-collections:after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-color);
-    left: 0;
-    top: 0;
-    border-radius: 6px;
+
+  .btn-top-collections:hover {
+    border: outset var(--quartenary-color) 3px;
+    background: var(--gradient-color-2);
   }
-  .btn-top-collections:before {
-    content: "";
-    background: var(--gradient-color-animation);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 600%;
-    z-index: -1;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-    opacity: 0;
+
+  .btn-top-collections:hover .btn-top-collections-inside{
+    background: var(--gradient-color-4);
+    color: var(--white);
+    border: outset var(--primary-color) 6px;
   }
-  @keyframes glowing {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
+
+  .btn-top-collections-inside, .btn-top-collections-inside:not(:hover) {
+    border: outset var(--septenary-color) 6px;
+    background: var(--gradient-color-2);
+    width: calc(132px - 6px);
+    height: calc(60px - 6px);
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 0;
+    font-size: 29px;
+    transition: all ease .3s;
+    font: normal 700 16px/16px 'Norse', sans-serif;
   }
-  .btn-top-collections:hover::before {
-    opacity: 1;
-  }
-  .btn-top-collections:active {
-    font-weight: bold;
+
+  .btn-top-collections-inside:active {
+    transform: scale(0.95);
   }
 `;

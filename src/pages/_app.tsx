@@ -73,8 +73,15 @@ const GlobalStyles = createGlobalStyle`
       --quartenary-color: #E1BC5A;
       --quinternary-color: #1A1313;
       --senary-color: #201717;
+      --septenary-color: #795a49;
+      --octonary-color: #6e5a4f;
       --gradient-color: linear-gradient(90deg, #88583F 0%, #50322C 100%);
       --gradient-color-1: linear-gradient(90deg, #50322C 0%, #1A1313 100%);
+      --gradient-color-2: linear-gradient(319deg, #241b16 0%, #795a49 100%);
+      --gradient-color-3: linear-gradient(130deg, #88583F 40%, #50322C 100%);
+      --gradient-color-4: linear-gradient(130deg, #88583F 0%, #342118 100%);
+      --gradient-color-5: linear-gradient(45deg, #cccccc 0%, #e7e7e7 100%);
+      --gradient-color-6: linear-gradient(45deg, #e2e2e2 0%, #f5f5f5 100%);
       --gradient-color-animation: linear-gradient(45deg, #88583F, #50322C, #88583F, #50322C, #88583F, #50322C);
       --gradient-color-animation-1: linear-gradient(45deg, #50322C, #1A1313, #50322C, #1A1313, #50322C, #1A1313);
       --grey-0: #28292A;
@@ -84,6 +91,9 @@ const GlobalStyles = createGlobalStyle`
       --grey-4: #404141;
       --grey-5: #101112;
       --grey-6: #2F2A2C;
+      --grey-7: #e7e7e7;
+      --grey-8: #e6e6e6;
+      --grey-9: #f7f7f7;
       --yellow-0: #ecb244;
       --blue-0: #335c9c;
       --blue-1: #008ce7;

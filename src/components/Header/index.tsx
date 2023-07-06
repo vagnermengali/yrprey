@@ -33,10 +33,11 @@ const Header = () => {
               <Link href="/">
                 <Image
                   src={logo}
-                  width="100"
-                  height="100"
+                  width={130}
+                  height={40}
                   sizes="100"
                   alt="logo-letter"
+                  className="logo-header"
                 ></Image>
               </Link>
             </div>
@@ -58,9 +59,11 @@ const Header = () => {
               <button className="login" onClick={() => router.push("/login")}>
                 Login
               </button>
-              <button className="btn" onClick={() => router.push("/register")}>
+              <div className="btn-register" onClick={() => router.push("/register")}>
+                <button className="btn-register-inside" onClick={() => router.push("/register")}>
                 Get started
-              </button>
+                </button>
+              </div>
             </div>
           </div>
         </DivHeader>

@@ -15,9 +15,12 @@ const InitialSection = () => {
             Your Complete <span>Vulnerability</span> Site.
           </h1>
           <p>Find the most beautiful collectibles in one place!</p>
-          <button className="btn" onClick={() => router.push("/register")}>
-            Request free access
-          </button>
+          <div className="btn-initial" onClick={() => router.push("/register")}>
+            <button className="btn-initial-inside" onClick={() => router.push("/register")}>
+              Request free access
+            </button>
+          </div>
+
         </div>
         <div className="container-right">
           <Image
