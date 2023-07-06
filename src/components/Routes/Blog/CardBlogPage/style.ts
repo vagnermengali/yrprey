@@ -37,6 +37,7 @@ export const CardBlogPageItemMainContent = styled.div`
       position: absolute;
       width: inherit;
       height: auto;
+      background-color: var(--quinternary-color);
     }
     .content-top-details-main {
       display: flex;
@@ -56,6 +57,23 @@ export const CardBlogPageItemMainContent = styled.div`
       backdrop-filter: blur( 13.5px );
       -webkit-backdrop-filter: blur( 13.5px );
     }
+    .card-blog-page-main-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+    .card-blog-page-main-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp:2;
+      -webkit-box-orient: vertical;
+    }
 `;
 
 export const CardBlogPageItemContentTop = styled.div`
@@ -68,6 +86,7 @@ export const CardBlogPageItemContentTop = styled.div`
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     height: 250px;
+    background-color: var(--quinternary-color);
     .content-top-details {
       width: 100%;
       padding: 20px;
@@ -83,6 +102,7 @@ export const CardBlogPageItemContentTop = styled.div`
       width: inherit;
       height: min-content;
       object-fit: cover;
+      background-color: var(--quinternary-color);
     }
     .card-blog-page-font {
       color: var(--white);
