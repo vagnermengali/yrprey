@@ -75,6 +75,7 @@ const GlobalStyles = createGlobalStyle`
       --senary-color: #201717;
       --septenary-color: #795a49;
       --octonary-color: #6e5a4f;
+      --nonary-color: #997245;
       --gradient-color: linear-gradient(90deg, #88583F 0%, #50322C 100%);
       --gradient-color-1: linear-gradient(90deg, #50322C 0%, #1A1313 100%);
       --gradient-color-2: linear-gradient(319deg, #241b16 0%, #795a49 100%);

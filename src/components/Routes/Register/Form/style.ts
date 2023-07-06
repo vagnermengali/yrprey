@@ -20,26 +20,30 @@ export const Form = styled.form`
     line-height: 16px;
     color: var(--grey-2);
   }
-  .link {
+  .link, .link:not(:hover) {
     font-weight: 600;
     font-size: 16px;
     line-height: 16px;
     color: var(--primary-color);
     text-decoration:none;
-    :hover {
-      color: var(--secondary-color);
-    }
+    transition: all ease .3s;
   }
-  .link-signup {
+
+  .link:hover {
+      color: var(--quartenary-color);
+  }
+  .link-signup, .link-signup:not(:hover) {
     font-weight: 600;
     font-size: 16px;
     line-height: 16px;
     color: var(--primary-color);
     text-decoration:none;
     margin-top:30px;
-    :hover {
-      color: var(--secondary-color);
-    }
+    transition: all ease .3s;
+  }
+
+  .link-signup:hover {
+      color: var(--quartenary-color);
   }
   .error {
     width: 90%;

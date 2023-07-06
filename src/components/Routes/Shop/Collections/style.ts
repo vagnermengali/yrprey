@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledCollectionsSection = styled.section`
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -11,16 +11,12 @@ export const StyledCollectionsSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 90%;
     margin: 20px 0;
   }
   .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    width: 100%;
-    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 `;

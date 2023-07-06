@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const StyledCardShop = styled.div`
-  background-color: transparent;
-  width: 295px;
-  height: 285px;
-  perspective: 1000px;
-  :hover .flip-card-inner {
+  .card-container-shop {
+    background-color: transparent;
+    width: 258px;
+    height: 258px;
+    perspective: 1000px;
+    list-style: none;
+  }
+  .card-container-shop:hover .flip-card-inner{
     transform: rotateY(180deg);
   }
   .img-card-shop {
@@ -104,7 +107,7 @@ export const StyledCardShop = styled.div`
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width: 275px;
+    
     border-radius: 3px;
   }
   .flip-card-front div img {
@@ -130,67 +133,41 @@ export const StyledCardShop = styled.div`
     background-color: var(--transparent);
     transform: rotateY(180deg);
   }
-  .puschase-button-item {
-    border: none;
-    outline: none;
-    color: var(--white);
-    font-family: inherit;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 16px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 16px;
-    width: 100%;
-    height: 45px;
-    text-decoration: none;
+  .btn-puschase-item, .btn-puschase-item:not(:hover) {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .puschase-button-item:after {
-    content: "";
-    z-index: -1;
-    position: absolute;
     width: 100%;
-    height: 100%;
-    background: var(--gradient-color);
-    left: 0;
-    top: 0;
-    border-radius: 6px;
+    height: 45px;
+    border: outset var(--tertiary-color) 3px;
+    background: var(--gradient-color-2);
+    padding: 0;
+    margin: 0;
+    transition: all ease .3s;
   }
-  .puschase-button-item:before {
-    content: "";
-    background: var(--gradient-color-animation);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 600%;
-    z-index: -1;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-    opacity: 0;
+
+    .btn-puschase-item-inside, .btn-puschase-item-inside:not(:hover) {
+    border: outset var(--septenary-color) 6px;
+    background: var(--gradient-color-2);
+    width: 100%;
+    height: calc(45px - 6px);
+    outline: none;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 0;
+    font: normal 700 16px/16px 'Norse', sans-serif;
   }
-  @keyframes glowing {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
+
+  .btn-puschase-item-inside:active {
+    transform: scale(0.985);
   }
-  .puschase-button-item:hover::before {
-    opacity: 1;
+  .btn-puschase-item:hover {
+    border: outset var(--quartenary-color) 3px;
+    background: var(--gradient-color-2);
   }
-  .puschase-button-item:active {
-    font-weight: bold;
+  .btn-puschase-item:hover .btn-puschase-item-inside {
+    background: var(--gradient-color-4);
+    color: var(--white);
+    border: outset var(--primary-color) 6px;
   }
 `;

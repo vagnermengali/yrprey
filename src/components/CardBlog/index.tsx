@@ -14,6 +14,8 @@ const Card = ({
   image,
 }: ICardBlog) => {
 
+  const token = false;
+  
   return (
     <StyledCard
       background_color={background_color}

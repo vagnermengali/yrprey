@@ -12,7 +12,7 @@ export const ContainerTopCollections = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 90%;
     gap: 30px;
   }
   .content-title {

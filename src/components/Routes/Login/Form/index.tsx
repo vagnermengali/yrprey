@@ -46,7 +46,7 @@ const FormLogin = () => {
       <div className="container-button">
       <div className="btn-login">
           <button type="submit" className="btn-login-inside">
-            Sign up
+          Log in
           </button>
         </div>
         <Link href="/register" className="link-signup">

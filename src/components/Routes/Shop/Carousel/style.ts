@@ -231,4 +231,23 @@ export const ContainerCarousel = styled.div`
   .swiper-button-next::after:active {
     transform: scale(0.95);
   }
+
+  .swiper-pagination-bullet {
+    border-radius: 0;
+    opacity: 1;
+    transform: rotate(90deg);
+    margin: 0 10px 0 10px !important;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border: outset var(--primary-color) 3px;
+    background: var(--nonary-color);
+    transition: all ease 0.3s;
+    rotate: 45deg;
+  }
+
+  .swiper-pagination-bullet-active {
+    border: outset var(--tertiary-color) 3px;
+    background: var(--quartenary-color);
+  }
 `;

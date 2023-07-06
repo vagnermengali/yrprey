@@ -49,7 +49,7 @@ const Collections = () => {
       <Header />
       <StyledCollectionsSection>
         <div className="container">
-          <div className="content">
+          <li className="content">
             {id == "red" ? (
               <>
                 <CardShop
@@ -250,7 +250,7 @@ const Collections = () => {
                 />
               </>
             ) : null}
-          </div>
+          </li>
         </div>
       </StyledCollectionsSection>
       <Footer />
