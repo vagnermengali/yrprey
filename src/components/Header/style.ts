@@ -44,11 +44,12 @@ export const DivHeader = styled.div`
     font-size: 16px;
     line-height: 26px;
     cursor: pointer;
+    transition: all ease .3s;
   }
   .link:hover {
-    color: var(--primary-color);
+    color: var(--quartenary-color);
   }
-  .login {
+  .login, .login:not(:hover) {
     font-weight: bold;
     text-decoration: none;
     position: relative;
@@ -62,7 +63,8 @@ export const DivHeader = styled.div`
     line-height: 26px;
     cursor: pointer;
     font-family: 'Norse', sans-serif;
-    :after {
+  }
+  .login:after, .login::after {
       content: "";
       position: absolute;
       width: 100%;
@@ -74,14 +76,14 @@ export const DivHeader = styled.div`
       transform-origin: bottom right;
       transition: transform 0.25s ease-out;
     }
-    :hover:after {
+    .login:hover {
+      color: var(--quartenary-color);
+    }
+    .login:hover:after {
       transform: scaleX(1);
       transform-origin: bottom left;
+      background-color: var(--quartenary-color);
     }
-    .login {
-      color: var(--white);
-    }
-  }
   .login-register {
     display: flex;
     justify-content: center;

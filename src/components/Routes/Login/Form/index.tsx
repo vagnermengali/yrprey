@@ -44,9 +44,11 @@ const FormLogin = () => {
         Forgot your password?
       </a>
       <div className="container-button">
-        <button type="submit" className="btn">
-          Log in
-        </button>
+      <div className="btn-login">
+          <button type="submit" className="btn-login-inside">
+            Sign up
+          </button>
+        </div>
         <Link href="/register" className="link-signup">
           Sign up
         </Link>

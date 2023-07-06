@@ -15,7 +15,7 @@ const FormRegister = () => {
   });
 
   return (
-    <Form onSubmit={handleSubmit(() => {})}>
+    <Form onSubmit={handleSubmit(() => { })}>
       <div className="container-input ">
         <label className={"label"}>Email</label>
         <input
@@ -46,9 +46,11 @@ const FormRegister = () => {
         <span className="fictitious-terms">Privacy Policy</span>.
       </p>
       <div className="container-button">
-        <button type="submit" className="btn">
-          Sign up
-        </button>
+        <div className="btn-sign-up">
+          <button type="submit" className="btn-sign-up-inside">
+            Sign up
+          </button>
+        </div>
         <Link href="/login" className="link-signup">
           Log in
         </Link>
