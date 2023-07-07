@@ -10,7 +10,7 @@ export const StyledRegisterSection = styled.div`
   .container {
     display: flex;
     justify-content: center;
-    width: 85%;
+    width: 90%;
     padding: 140px 0;
   }
   .container-left {
@@ -43,8 +43,6 @@ export const StyledRegisterSection = styled.div`
   .container-right {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 50%;
   }
 `;
