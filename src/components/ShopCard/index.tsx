@@ -6,7 +6,8 @@ import { useContext } from "react";
 import { Context } from "@/context/context";
 
 const CardShop = ({ image, title_image, title, name }: ICardShop) => {
-  const { router } = useContext(Context);
+  const { router, token } = useContext(Context);
+
   return (
     <StyledCardShop>
       <li className="card-container-shop">
@@ -43,8 +44,8 @@ const CardShop = ({ image, title_image, title, name }: ICardShop) => {
               <p>Price</p>
               <p>2.5 ETH</p>
             </div>
-            <div className="btn-puschase-item" onClick={() => alert("abrir modal e perguntar se quer continuar comprar ou ir para o carrinho")}>
-              <button className="btn-puschase-item-inside" onClick={() => alert("abrir modal e perguntar se quer continuar comprar ou ir para o carrinho")}>Puschase</button>
+            <div className="btn-puschase-item" onClick={() => (token ? alert("vai adicionando ao carrinho") : router.push("/login"))}>
+              <button className="btn-puschase-item-inside" onClick={() => (token ? alert("vai adicionando ao carrinho") : router.push("/login"))}>Puschase</button>
             </div>
           </div>
         </div>

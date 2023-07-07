@@ -13,8 +13,6 @@ const Card = ({
   route,
   image,
 }: ICardBlog) => {
-
-  const token = false;
   
   return (
     <StyledCard

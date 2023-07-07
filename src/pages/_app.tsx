@@ -4,6 +4,7 @@ import Provider from "@/context/context";
 import 'aos/dist/aos.css';
 import "swiper/css/bundle";
 import "animate.css/animate.min.css";
+import { AnimatePresence } from "framer-motion"
 
 const ResetStyles = createGlobalStyle`
   ${() => css`
@@ -83,6 +84,8 @@ const GlobalStyles = createGlobalStyle`
       --gradient-color-4: linear-gradient(130deg, #88583F 0%, #342118 100%);
       --gradient-color-5: linear-gradient(45deg, #cccccc 0%, #e7e7e7 100%);
       --gradient-color-6: linear-gradient(45deg, #e2e2e2 0%, #f5f5f5 100%);
+      --gradient-color-7: linear-gradient(130deg, #7b7b7e 0%, #000000 100%);
+      --gradient-color-8: linear-gradient(130deg, #5b6066 0%, #000000 100%);
       --gradient-color-animation: linear-gradient(45deg, #88583F, #50322C, #88583F, #50322C, #88583F, #50322C);
       --gradient-color-animation-1: linear-gradient(45deg, #50322C, #1A1313, #50322C, #1A1313, #50322C, #1A1313);
       --grey-0: #28292A;
@@ -132,11 +135,13 @@ const GlobalStyles = createGlobalStyle`
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
+    <AnimatePresence>
     <Provider>
       <Component {...pageProps} />
       <GlobalStyles />
       <ResetStyles />
     </Provider>
+    </AnimatePresence>
   );
 };
 
