@@ -9,7 +9,7 @@ export const Context = createContext<IContext>({} as IContext)
 const Provider = ({ children }: IChildren) => {
   const [cartVisible, setCartVisible] = useState(false);
   const router = useRouter();
-  const token = true
+  const token = false
   
   return (
   <Context.Provider value={{ router, token,cartVisible, setCartVisible }}>

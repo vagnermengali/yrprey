@@ -7,7 +7,7 @@ export const StyledCart = styled(motion.div)`
     width: 100vw;
     height: 100vh;
     top: 0;
-      right:0;
+    right:0;
     background: #88583f37;
     backdrop-filter: blur( .5px );
     -webkit-backdrop-filter: blur( .5px );

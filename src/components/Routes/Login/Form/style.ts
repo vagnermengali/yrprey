@@ -59,34 +59,102 @@ export const Form = styled.form`
     width: 90%;
     min-height: 30px;
   }
-  .input-email {
-    box-sizing: border-box;
-    width: 65%;
-    height: 56px;
-    border: 1px solid var(--grey-6);
-    border-radius: 2px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    padding-left: 20px;
-    background-color: transparent;
-    color: var(--grey-2);
-    outline: none;
+
+  .input-email, .input-email:not(:hover) {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: outset var(--tertiary-color) 3px;
+    padding: 0;
+    margin: 0;
+    transition: all ease .3s;
   }
-  .input-password {
-    box-sizing: border-box;
-    width: 65%;
-    height: 56px;
-    border: 1px solid var(--grey-6);
-    border-radius: 2px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    padding-left: 20px;
-    background-color: transparent;
-    color: var(--grey-2);
-    outline: none;
+
+  .input-email:hover, .input-email:focus {
+    border: outset var(--quartenary-color) 3px;
   }
+
+  .input-email:hover .input-email-inside, .input-email:focus .input-email-inside{
+    border-left:outset var(--grey-2) 6px;
+    border-top: outset var(--white) 6px;
+    border-top: outset var(--white) 6px;
+    border-bottom: outset var(--white) 6px;
+    background: var(--gradient-color-6);
+    backdrop-filter: brightness(0%);
+  }
+
+  .input-email-inside, .input-email-inside:not(:hover) {
+    border: outset var(--grey-8) 6px;
+    border-left:outset var(--grey-2) 6px;
+    border-left:outset var(--grey-2) 6px;
+    border-top: outset var(--grey-8) 6px;
+    border-bottom: outset var(--grey-8) 6px;
+    background: var(--gradient-color-5);
+    width: 100%;
+    padding-left: 20px;
+    height: calc(60px - 6px);
+    outline: none;
+    color: var(--grey-4);
+    cursor: pointer;
+    z-index: 0;
+    font: normal 700 16px/16px 'Norse', sans-serif;
+    transition: all ease .3s;
+  }
+
+  .input-email-inside::placeholder {
+      color: var(--grey-4);
+  }
+
+  .input-password, .input-password:not(:hover) {
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: outset var(--tertiary-color) 3px;
+    padding: 0;
+    margin: 0;
+    transition: all ease .3s;
+  }
+
+  .input-password:hover, .input-password:focus {
+    border: outset var(--quartenary-color) 3px;
+  }
+
+  .input-password:hover .input-password-inside,
+  .input-password:focus .input-password-inside{
+    border-left:outset var(--grey-2) 6px;
+    border-top: outset var(--white) 6px;
+    border-top: outset var(--white) 6px;
+    border-bottom: outset var(--white) 6px;
+    background: var(--gradient-color-6);
+    backdrop-filter: brightness(0%);
+  }
+
+  .input-password-inside, .input-password-inside:not(:hover) {
+    border: outset var(--grey-8) 6px;
+    border-left:outset var(--grey-2) 6px;
+    border-left:outset var(--grey-2) 6px;
+    border-top: outset var(--grey-8) 6px;
+    border-bottom: outset var(--grey-8) 6px;
+    background: var(--gradient-color-5);
+    width: 100%;
+    padding-left: 20px;
+    height: calc(60px - 6px);
+    outline: none;
+    color: var(--grey-4);
+    cursor: pointer;
+    z-index: 0;
+    font: normal 700 16px/16px 'Norse', sans-serif;
+    transition: all ease .3s;
+  }
+
+  .input-password-inside::placeholder {
+      color: var(--grey-4);
+  }
+
   .btn-login, .btn-login:not(:hover) {
     display: flex;
     align-items: center;

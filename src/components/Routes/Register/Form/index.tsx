@@ -18,24 +18,28 @@ const FormRegister = () => {
     <Form onSubmit={handleSubmit(() => { })}>
       <div className="container-input ">
         <label className={"label"}>Email</label>
-        <input
-          className="input-email"
-          type="text"
-          placeholder="example@gmail.com"
-          {...register("email")}
-        />
+        <div className="input-email">
+          <input
+            className="input-email-inside"
+            type="text"
+            placeholder="example@gmail.com"
+            {...register("email")}
+          />
+        </div>
       </div>
       <label className={errors.email ? "error" : "no-error"}>
         {errors.email?.message}
       </label>
       <div className="container-input ">
         <label className={"label"}>Password</label>
-        <input
-          type="password"
-          className="input-password"
-          placeholder="***********"
-          {...register("password")}
-        />
+        <div className="input-password">
+          <input
+            className="input-password-inside"
+            type="password"
+            placeholder="***********"
+            {...register("password")}
+          />
+        </div>
       </div>
       <label className={errors.password ? "error" : "no-error"}>
         {errors.password?.message}
