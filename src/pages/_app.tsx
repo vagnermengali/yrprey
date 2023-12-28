@@ -26,7 +26,7 @@ const ResetStyles = createGlobalStyle`
       border: 0;
       font-size: 100%;
       font: inherit;
-      font-family: 'Norse', sans-serif;
+      font-family: 'Gilroy', sans-serif;
       vertical-align: baseline;
       scroll-behavior: smooth;
     }
@@ -62,32 +62,27 @@ const ResetStyles = createGlobalStyle`
 const GlobalStyles = createGlobalStyle`
   ${() => css`
     @font-face {
-      font-family: 'Norse';
-      src: local('Norse'), url(/font/Norse.otf) format('truetype');
+      font-family: 'Gilroy';
+      src: local('Gilroy'), url(/font/Gilroy.ttf) format('truetype');
       font-display: swap;
     }
     
     :root {
-      --primary-color: #88583F;
-      --secondary-color: #50322C;
-      --tertiary-color: #BA864C;
-      --quartenary-color: #E1BC5A;
-      --quinternary-color: #1A1313;
-      --senary-color: #201717;
-      --septenary-color: #795a49;
-      --octonary-color: #6e5a4f;
-      --nonary-color: #997245;
-      --gradient-color: linear-gradient(90deg, #88583F 0%, #50322C 100%);
-      --gradient-color-1: linear-gradient(90deg, #50322C 0%, #1A1313 100%);
-      --gradient-color-2: linear-gradient(319deg, #241b16 0%, #795a49 100%);
-      --gradient-color-3: linear-gradient(130deg, #88583F 40%, #50322C 100%);
-      --gradient-color-4: linear-gradient(130deg, #88583F 0%, #342118 100%);
-      --gradient-color-5: linear-gradient(45deg, #cccccc 0%, #e7e7e7 100%);
-      --gradient-color-6: linear-gradient(45deg, #e2e2e2 0%, #f5f5f5 100%);
-      --gradient-color-7: linear-gradient(130deg, #7b7b7e 0%, #000000 100%);
-      --gradient-color-8: linear-gradient(130deg, #5b6066 0%, #000000 100%);
-      --gradient-color-animation: linear-gradient(45deg, #88583F, #50322C, #88583F, #50322C, #88583F, #50322C);
-      --gradient-color-animation-1: linear-gradient(45deg, #50322C, #1A1313, #50322C, #1A1313, #50322C, #1A1313);
+      --primary-color: #FF1A56;
+      --secondary-color: #D80B4B;
+      --tertiary-color: #a1103e;
+      --quartenary-color: #F988A7;
+      --quinternary-color: #101112;
+      --senary-color: #101112;
+      --septenary-color: yellow;
+      --octonary-color: pink;
+      --nonary-color: blue;
+      --gradient-color: linear-gradient(90deg, #FF1A56 0%, #D80B4B 100%);
+      --gradient-color-1: linear-gradient(90deg, #D80B4B 0%, #1A1313 100%);
+      --gradient-color-2: linear-gradient(90deg, #FF1A56 0%, #af1747 100%);
+      --gradient-color-3: linear-gradient(130deg, #FF1A56 40%, #D80B4B 100%);
+      --gradient-color-4: linear-gradient(130deg, #FF1A56 0%, #342118 100%);
+      --gradient-color-animation: linear-gradient(45deg, #FF1A56, #ff2c6f, #ff4375, #FF1A56, #ff2c6f, #ff4375);
       --grey-0: #28292A;
       --grey-1: #3D3E3F;
       --grey-2: #B7B8B8;

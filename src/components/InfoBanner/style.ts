@@ -6,14 +6,7 @@ export const StyledInfoBanner = styled.div`
   gap: 20px;
   border-radius: 6px;
   animation: shakeY 40s ease-in-out infinite alternate-reverse both;
-  .img-3d-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-  }
+  background: var(--grey-0);
 `;
 export const DivInfoBanner = styled.div`
   display: flex;
@@ -36,8 +29,8 @@ export const DivInfoBanner = styled.div`
   }
   h2 {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 32px;
+    line-height: 32px;
     color: var(--white);
     opacity: .8;
     padding-bottom: 14px;
@@ -48,16 +41,12 @@ export const DivInfoBanner = styled.div`
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 26px;
     text-align: start;
     color: var(--grey-2);
     opacity: .8;
     gap: 10px;
-  }
-
-  p:last-child {
-    padding-top: 15px;
   }
   .icon {
     color: var(--quartenary-color);

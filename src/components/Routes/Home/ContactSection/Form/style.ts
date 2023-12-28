@@ -48,7 +48,7 @@ export const Form = styled.form`
     background-color: transparent;
     color: var(--grey-2);
     outline: none;
-    font-family: 'Norse', sans-serif;
+    font-family: 'Gilroy', sans-serif;
   }
   .input-subject {
     box-sizing: border-box;
@@ -63,7 +63,7 @@ export const Form = styled.form`
     background-color: transparent;
     color: var(--grey-2);
     outline: none;
-    font-family: 'Norse', sans-serif;
+    font-family: 'Gilroy', sans-serif;
   }
   textarea {
     box-sizing: border-box;
@@ -81,48 +81,74 @@ export const Form = styled.form`
     color: var(--grey-2);
     outline: none;
     resize: none;
-    font-family: 'Norse', sans-serif;
+    font-family: 'Gilroy', sans-serif;
     transition: all ease .3s;
   }
-  .btn-send-message, .btn-send-message:not(:hover) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: 60px;
-    margin-top: 30px;
-    border: outset var(--tertiary-color) 3px;
-    background: var(--gradient-color-2);
-    padding: 0;
-    transition: all ease .3s;
+  .btn-send-message {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: var(--gradient-color);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 4px;
+  margin-top: 30px;
+  width: 90%;
+  height: 56px;
+  font: normal 700 16px/16px 'Gilroy', sans-serif;
+}
+
+.btn-send-message:before {
+  content: '';
+  background: var(--gradient-color-animation);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 4px;
+}
+
+.btn-send-message:active:after {
+  background: transparent;
+}
+
+.btn-send-message:hover:before {
+  opacity: 1;
+}
+
+.btn-send-message:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
   }
 
-    .btn-send-message-inside, .btn-send-message-inside:not(:hover) {
-    border: outset var(--septenary-color) 6px;
-    background: var(--gradient-color-2);
-    width: 100%;
-    height: calc(60px - 6px);
-    outline: none;
-    color: var(--white);
-    cursor: pointer;
-    z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
+  50% {
+    background-position: 400% 0;
   }
 
-  .btn-send-message-inside:active {
-    transform: scale(0.985);
+  100% {
+    background-position: 0 0;
   }
-
-  .btn-send-message:hover {
-    border: outset var(--quartenary-color) 3px;
-    background: var(--gradient-color-2);
-  }
-
-  .btn-send-message:hover .btn-send-message-inside {
-    background: var(--gradient-color-4);
-    color: var(--white);
-    border: outset var(--primary-color) 6px;
-  }
+}
 
   .input-contact {
     display: flex;
@@ -130,6 +156,7 @@ export const Form = styled.form`
     align-items: center;
     width: 90%;
     gap: 20px;
+    outline: none;
   }
   .input-contact div {
     display: flex;
@@ -150,7 +177,7 @@ export const Form = styled.form`
     background-color: transparent;
     color: var(--grey-2);
     outline: none;
-    font-family: 'Norse', sans-serif;
+    font-family: 'Gilroy', sans-serif;
   }
   input[type="number"]::-webkit-outer-spin-button,
   input[type="number"]::-webkit-inner-spin-button {

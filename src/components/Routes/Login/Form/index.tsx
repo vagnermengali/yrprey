@@ -18,28 +18,24 @@ const FormLogin = () => {
     <Form onSubmit={handleSubmit(() => { })}>
       <div className="container-input ">
         <label className={"label"}>Email</label>
-        <div className="input-email">
           <input
-            className="input-email-inside"
+            className="input-email"
             type="text"
             placeholder="Your Email"
             {...register("email")}
           />
-        </div>
       </div>
       <label className={errors.email ? "error" : "no-error"}>
         {errors.email?.message}
       </label>
       <div className="container-input ">
         <label className={"label"}>Password</label>
-        <div className="input-password">
           <input
             type="password"
-            className="input-password-inside"
+            className="input-password"
             placeholder="Your Password"
             {...register("password")}
           />
-        </div>
       </div>
       <label className={errors.password ? "error" : "no-error"}>
         {errors.password?.message}
@@ -48,11 +44,9 @@ const FormLogin = () => {
         Forgot your password?
       </a>
       <div className="container-button">
-        <div className="btn-login">
-          <button type="submit" className="btn-login-inside">
+          <button type="submit" className="btn-login">
             Log in
           </button>
-        </div>
         <Link href="/register" className="link-signup">
           Sign up
         </Link>

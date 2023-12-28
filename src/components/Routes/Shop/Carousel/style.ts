@@ -62,7 +62,7 @@ export const ContainerCarousel = styled.div`
     border-radius: 30px;
     text-transform: uppercase;
     background: var(--gradient-color-3);
-    border: outset var(--tertiary-color) 3px;
+    border: 0;
   }
 
   .icon {
@@ -90,49 +90,70 @@ export const ContainerCarousel = styled.div`
     color: var(--primary-color);
   }
 
-  .carousel-button,
-  .carousel-button:not(:hover) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 165px;
-    height: 60px;
-    border: outset var(--tertiary-color) 3px;
-    background: var(--gradient-color-2);
-    padding: 0;
-    margin: 0;
-    transition: all ease 0.3s;
-    text-decoration: none;
-    text-transform: none;
+  .carousel-button {
+  border: none;
+  outline: none;
+  color: var(--white);
+  background: var(--gradient-color);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 4px;
+  width: 165px;
+  height: 50px;
+  font: normal 700 16px/16px 'Gilroy', sans-serif;
+}
+
+.carousel-button:before {
+  content: '';
+  background: var(--gradient-color-animation);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 4px;
+}
+
+.carousel-button:active:after {
+  background: transparent;
+}
+
+.carousel-button:hover:before {
+  opacity: 1;
+}
+
+.carousel-button:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
   }
 
-  .carousel-button-inside,
-  .carousel-button-inside:not(:hover) {
-    border: outset var(--septenary-color) 6px;
-    background: var(--gradient-color-2);
-    width: calc(165px - 6px);
-    height: calc(60px - 6px);
-    outline: none;
-    color: var(--white);
-    cursor: pointer;
-    z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
+  50% {
+    background-position: 400% 0;
   }
 
-  .carousel-button-inside:active {
-    transform: scale(0.985);
+  100% {
+    background-position: 0 0;
   }
-
-  .carousel-button:hover {
-    border: outset var(--quartenary-color) 3px;
-    background: var(--gradient-color-2);
-  }
-
-  .carousel-button:hover .carousel-button-inside {
-    background: var(--gradient-color-4);
-    color: var(--white);
-    border: outset var(--primary-color) 6px;
-  }
+}
 
   .container-right {
     width: 65%;
@@ -173,81 +194,36 @@ export const ContainerCarousel = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    border: outset var(--tertiary-color) 3px;
+    width: 40px;
+    height: 40px;
     background: var(--gradient-color-2);
     padding: 0;
     margin: 0;
     cursor: pointer;
     transition: all ease 0.3s;
+    border-radius: 4px;
   }
 
-  .swiper-button-prev:hover,
-  .swiper-button-next:hover {
-    border: outset var(--quartenary-color) 3px;
-    background: var(--gradient-color-2);
-  }
-
-  .swiper-button-prev:hover::after,
-  .swiper-button-next:hover:after {
-    background-color: var(--gradient-color-4);
-    color: var(--white);
-    border: outset var(--primary-color) 6px;
-  }
-
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    position: absolute;
-    content: "";
-    border: outset var(--septenary-color) 6px;
-    background-color: var(--gradient-color-2);
-    background-image: url("/icons/arrow-slide.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: calc(39px - 6px);
-    height: calc(39px - 6px);
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    cursor: pointer;
-    z-index: 0;
-    font-size: 29px;
-    transition: all ease 0.3s;
-  }
-
-  .swiper-button-prev::after {
-    transform: rotate(-90deg)
-  }
-
-  .swiper-button-next::after {
-    transform: rotate(90deg)
-  }
-
-  .swiper-button-prev::after:active,
-  .swiper-button-next::after:active {
-    transform: scale(0.95);
+  .swiper-button-prev::after, .swiper-button-next::after {
+    filter: sepia(100%) brightness(200%) saturate(0%) contrast(1000%);
+    font-size: 20px;
   }
 
   .swiper-pagination-bullet {
-    border-radius: 0;
-    opacity: 1;
-    transform: rotate(90deg);
-    margin: 0 10px 0 10px !important;
+    border-radius: 4px;
+    margin: 0 8px 0 8px !important;
     padding: 0;
-    width: 15px;
-    height: 15px;
-    border: outset var(--primary-color) 3px;
-    background: var(--nonary-color);
+    width: 32px;
+    height: 6px;
+    border: 0.;
+    background: var(--secondary-color);
     transition: all ease 0.3s;
-    rotate: 45deg;
+    opacity: .5;
   }
 
   .swiper-pagination-bullet-active {
-    border: outset var(--tertiary-color) 3px;
-    background: var(--quartenary-color);
+    border: 0;
+    opacity: 1;
+    background: var(--primary-color);
   }
 `;

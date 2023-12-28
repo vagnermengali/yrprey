@@ -59,100 +59,7 @@ export const Form = styled.form`
     width: 90%;
     min-height: 30px;
   }
-  .input-email, .input-email:not(:hover) {
-    width: 50%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: outset var(--tertiary-color) 3px;
-    padding: 0;
-    margin: 0;
-    transition: all ease .3s;
-  }
 
-  .input-email:hover, .input-email:focus {
-    border: outset var(--quartenary-color) 3px;
-  }
-
-  .input-email:hover .input-email-inside, .input-email:focus .input-email-inside{
-    border-left:outset var(--grey-2) 6px;
-    border-top: outset var(--white) 6px;
-    border-top: outset var(--white) 6px;
-    border-bottom: outset var(--white) 6px;
-    background: var(--gradient-color-6);
-    backdrop-filter: brightness(0%);
-  }
-
-  .input-email-inside, .input-email-inside:not(:hover) {
-    border: outset var(--grey-8) 6px;
-    border-left:outset var(--grey-2) 6px;
-    border-left:outset var(--grey-2) 6px;
-    border-top: outset var(--grey-8) 6px;
-    border-bottom: outset var(--grey-8) 6px;
-    background: var(--gradient-color-5);
-    width: 100%;
-    padding-left: 20px;
-    height: calc(60px - 6px);
-    outline: none;
-    color: var(--grey-4);
-    cursor: pointer;
-    z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
-    transition: all ease .3s;
-  }
-
-  .input-email-inside::placeholder {
-      color: var(--grey-4);
-  }
-
-  .input-password, .input-password:not(:hover) {
-    width: 50%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: outset var(--tertiary-color) 3px;
-    padding: 0;
-    margin: 0;
-    transition: all ease .3s;
-  }
-
-  .input-password:hover, .input-password:focus {
-    border: outset var(--quartenary-color) 3px;
-  }
-
-  .input-password:hover .input-password-inside,
-  .input-password:focus .input-password-inside{
-    border-left:outset var(--grey-2) 6px;
-    border-top: outset var(--white) 6px;
-    border-top: outset var(--white) 6px;
-    border-bottom: outset var(--white) 6px;
-    background: var(--gradient-color-6);
-    backdrop-filter: brightness(0%);
-  }
-
-  .input-password-inside, .input-password-inside:not(:hover) {
-    border: outset var(--grey-8) 6px;
-    border-left:outset var(--grey-2) 6px;
-    border-left:outset var(--grey-2) 6px;
-    border-top: outset var(--grey-8) 6px;
-    border-bottom: outset var(--grey-8) 6px;
-    background: var(--gradient-color-5);
-    width: 100%;
-    padding-left: 20px;
-    height: calc(60px - 6px);
-    outline: none;
-    color: var(--grey-4);
-    cursor: pointer;
-    z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
-    transition: all ease .3s;
-  }
-
-  .input-password-inside::placeholder {
-      color: var(--grey-4);
-  }
   p {
     font-weight: 500;
     font-size: 13px;
@@ -165,42 +72,108 @@ export const Form = styled.form`
     line-height: 26px;
     color: var(--primary-color);
   }
-  .btn-sign-up, .btn-sign-up:not(:hover) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 165px;
-    height: 60px;
-    border: outset var(--tertiary-color) 3px;
-    background: var(--gradient-color-2);
-    padding: 0;
-    margin: 0;
-    transition: all ease .3s;
-    margin-top: 30px;
-  }
 
-    .btn-sign-up-inside, .btn-sign-up-inside:not(:hover) {
-    border: outset var(--septenary-color) 6px;
-    background: var(--gradient-color-2);
-    width: calc(165px - 6px);
-    height: calc(60px - 6px);
-    outline: none;
-    color: var(--white);
+  .input-email, .input-email:not(:hover) {
+    width: 50%;
+    height: 60px;
+    padding-left: 20px;
     cursor: pointer;
     z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
+    font: normal 700 16px/16px 'Gilroy', sans-serif;
+    transition: all ease .3s;
+    border: 1px solid var(--grey-6);
+    border-radius: 2px;
+    background-color: transparent;
+    color: var(--grey-2);
+    outline: none;
   }
 
-  .btn-sign-up-inside:active {
-    transform: scale(0.985);
+  .input-email::placeholder {
+    color: var(--grey-2);
   }
-  .btn-sign-up:hover {
-    border: outset var(--quartenary-color) 3px;
-    background: var(--gradient-color-2);
+
+  .input-password, .input-password:not(:hover) {
+    width: 50%;
+    height: 60px;
+    padding-left: 20px;
+    cursor: pointer;
+    z-index: 0;
+    font: normal 700 16px/16px 'Gilroy', sans-serif;
+    transition: all ease .3s;
+    border: 1px solid var(--grey-6);
+    border-radius: 2px;
+    background-color: transparent;
+    color: var(--grey-2);
+    outline: none;
   }
-  .btn-sign-up:hover .btn-sign-up-inside {
-    background: var(--gradient-color-4);
-    color: var(--white);
-    border: outset var(--primary-color) 6px;
+
+  .input-password::placeholder {
+    color: var(--grey-2);
+  }
+
+  .btn-sign-up {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: var(--gradient-color);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 4px;
+  margin-top: 30px;
+  width: 165px;
+  height: 56px;
+  font: normal 700 16px/16px 'Gilroy', sans-serif;
+}
+
+.btn-sign-up:before {
+  content: '';
+  background: var(--gradient-color-animation);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 4px;
+}
+
+.btn-sign-up:active:after {
+  background: transparent;
+}
+
+.btn-sign-up:hover:before {
+  opacity: 1;
+}
+
+.btn-sign-up:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
   }
 `;

@@ -69,7 +69,6 @@ export const StyledContactSection = styled.div`
     color: var(--white);
     border-radius: 50%;
     outline: none;
-    border: outset var(--tertiary-color) 3px;
     gap: 20px;
     width: 56px;
     height: 56px;
@@ -78,6 +77,7 @@ export const StyledContactSection = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0 ;
   }
   
   .contact div {

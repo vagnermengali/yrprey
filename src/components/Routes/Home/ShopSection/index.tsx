@@ -45,11 +45,9 @@ const ShopSection = () => {
             />
           </div>
         </div>
-        <div className="btn-view-more" onClick={() => router.push("/shop")}>
-          <button className="btn-view-more-inside" onClick={() => router.push("/shop")}>
+          <button className="btn-view-more" onClick={() => router.push("/shop")}>
             View more
           </button>
-        </div>
       </div>
     </StyledShopSection>
   );

@@ -55,11 +55,11 @@ export const StyledAboutSection = styled.div`
     opacity: 0.7;
   }
   .container-left {
-    width: 65%;
+    width: 70%;
     height: 100%;
   }
   .container-left img {
-    width: 75%;
-    height: max-content;
+    width: 100%;
+    height: 100%;
   }
 `;

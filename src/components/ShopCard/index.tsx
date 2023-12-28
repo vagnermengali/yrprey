@@ -44,9 +44,7 @@ const CardShop = ({ image, title_image, title, name }: ICardShop) => {
               <p>Price</p>
               <p>2.5 ETH</p>
             </div>
-            <div className="btn-puschase-item" onClick={() => (token ? alert("vai adicionando ao carrinho") : router.push("/login"))}>
-              <button className="btn-puschase-item-inside" onClick={() => (token ? alert("vai adicionando ao carrinho") : router.push("/login"))}>Puschase</button>
-            </div>
+              <button className="btn-puschase-item" onClick={() => (token ? alert("vai adicionando ao carrinho") : router.push("/login"))}>Puschase</button>
           </div>
         </div>
       </div>

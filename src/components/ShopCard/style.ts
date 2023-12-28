@@ -133,41 +133,68 @@ export const StyledCardShop = styled.div`
     background-color: var(--transparent);
     transform: rotateY(180deg);
   }
-  .btn-puschase-item, .btn-puschase-item:not(:hover) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 45px;
-    border: outset var(--tertiary-color) 3px;
-    background: var(--gradient-color-2);
-    padding: 0;
-    margin: 0;
-    transition: all ease .3s;
+  .btn-puschase-item {
+  border: none;
+  outline: none;
+  color: var(--white);
+  background: var(--gradient-color);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 4px;
+  width: 100%;
+  height: 45px;
+  font: normal 700 16px/16px 'Gilroy', sans-serif;
+}
+
+.btn-puschase-item:before {
+  content: '';
+  background: var(--gradient-color-animation);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 4px;
+}
+
+.btn-puschase-item:active:after {
+  background: transparent;
+}
+
+.btn-puschase-item:hover:before {
+  opacity: 1;
+}
+
+.btn-puschase-item:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
   }
 
-    .btn-puschase-item-inside, .btn-puschase-item-inside:not(:hover) {
-    border: outset var(--septenary-color) 6px;
-    background: var(--gradient-color-2);
-    width: 100%;
-    height: calc(45px - 6px);
-    outline: none;
-    color: var(--white);
-    cursor: pointer;
-    z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
+  50% {
+    background-position: 400% 0;
   }
 
-  .btn-puschase-item-inside:active {
-    transform: scale(0.985);
+  100% {
+    background-position: 0 0;
   }
-  .btn-puschase-item:hover {
-    border: outset var(--quartenary-color) 3px;
-    background: var(--gradient-color-2);
-  }
-  .btn-puschase-item:hover .btn-puschase-item-inside {
-    background: var(--gradient-color-4);
-    color: var(--white);
-    border: outset var(--primary-color) 6px;
-  }
+}
 `;

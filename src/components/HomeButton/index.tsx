@@ -26,11 +26,9 @@ const HomeButton = () => {
   return (
       <HomeButtonContainer>
         {showButton && (
-          <div className="btn-top" onClick={handleScrollTop} data-aos="fade">
-            <button className="btn-top1" onClick={handleScrollTop} data-aos="fade">
+            <button className="btn-top" onClick={handleScrollTop} data-aos="fade">
             <RxCaretUp />
             </button>
-          </div>
         )}
       </HomeButtonContainer>
   );

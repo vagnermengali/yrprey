@@ -61,54 +61,27 @@ export const DivOne = styled.div`
   }
   .input-subscribe, .input-subscribe:not(:hover) {
     width: 282px;
-    height: 60px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: outset var(--tertiary-color) 3px;
-    border-right: none;
-    border-top: outset var(--tertiary-color) 3px;
-    border-bottom: outset var(--tertiary-color) 3px;
+    border: 0;
     padding: 0;
     margin: 0;
     transition: all ease .3s;
+    border-radius: 8px 0 0 8px;
+    background: #FFF;
+    padding-left: 20px;
+    cursor: pointer;
+    font: normal 700 16px/16px 'Gilroy', sans-serif;
+    outline: none;
   }
 
   .input-subscribe:hover {
-    border-right:none;
-    border-left: outset var(--quartenary-color) 3px;
-    border-top: outset var(--quartenary-color) 3px;
-    border-bottom: outset var(--quartenary-color) 3px;
+    filter: brightness(95%);
   }
 
-  .input-subscribe:hover .input-subscribe-inside{
-    border-left:outset var(--grey-2) 6px;
-    border-right: none;
-    border-top: outset var(--white) 6px;
-    border-bottom: outset var(--white) 6px;
-    background: var(--gradient-color-6);
-    backdrop-filter: brightness(0%);
-  }
-
-  .input-subscribe-inside, .input-subscribe-inside:not(:hover) {
-    border: outset var(--grey-8) 6px;
-    border-left:outset var(--grey-2) 6px;
-    border-right: none;
-    border-top: outset var(--grey-8) 6px;
-    border-bottom: outset var(--grey-8) 6px;
-    background: var(--gradient-color-5);
-    width: 100%;
-    padding-left: 20px;
-    height: calc(60px - 6px);
-    outline: none;
-    color: var(--grey-4);
-    cursor: pointer;
-    z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
-    transition: all ease .3s;
-  }
-
-  .input-subscribe-inside::placeholder {
+  .input-subscribe::placeholder {
       color: var(--grey-4);
   }
   
@@ -116,53 +89,21 @@ export const DivOne = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 222px;
-    height: 60px;
-    border-left:none;
-    border-right: outset var(--tertiary-color) 3px;
-    border-top: outset var(--tertiary-color) 3px;
-    border-bottom: outset var(--tertiary-color) 3px;
-    background: var(--gradient-color-2);
+    width: 182px;
+    height: 56px;
+    border: 0;
     padding: 0;
     margin: 0;
     transition: all ease .3s;
+    border-radius: 0 6px 6px 0;
+    background: #050A12;  
+    font: normal 700 16px/16px 'Gilroy', sans-serif;
+    color: var(--white);
+    cursor: pointer;
   }
 
   .btn-subscribe:hover {
-    border-left:none;
-    border-right: outset var(--quartenary-color) 3px;
-    border-top: outset var(--quartenary-color) 3px;
-    border-bottom: outset var(--quartenary-color) 3px;
-    background: var(--gradient-color-2);
-  }
-
-  .btn-subscribe:hover .btn-subscribe-inside {
-    background: var(--gradient-color-4);
-    color: var(--white);
-    border-left:none;
-    border-right: outset var(--primary-color) 6px;
-    border-top: outset var(--primary-color) 6px;
-    border-bottom: outset var(--primary-color) 6px;
-  }
-
-  .btn-subscribe-inside, .btn-subscribe-inside:not(:hover) {
-    border-left:none;
-    border-right: outset var(--septenary-color) 6px;
-    border-top: outset var(--septenary-color) 6px;
-    border-bottom: outset var(--septenary-color) 6px;
-    background: var(--gradient-color-2);
-    width: calc(222px - 6px);
-    height: calc(60px - 6px);
-    outline: none;
-    color: var(--white);
-    cursor: pointer;
-    z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
-    transition: all ease .3s;
-  }
-
-  .btn-subscribe-inside:active {
-    transform: scale(0.985);
+    background: var(--quinternary-color);
   }
 `;
 
@@ -199,11 +140,10 @@ export const DivTwo = styled.div`
     gap: 10px;
   }
   .content-left ul button {
-    background: var(--gradient-color-3);
-    color: var(--quinternary-color);
+    background: var(--grey-0);
+    color: var(--primary-color);
     border-radius: 50%;
     outline: none;
-    border: outset var(--tertiary-color) 3px;
     gap: 20px;
     width: 34px;
     height: 34px;
@@ -214,16 +154,13 @@ export const DivTwo = styled.div`
     align-items: center;
     cursor: pointer;
     transition: all ease .3s;
-  }
-
-  .content-left ul button:active {
-    transform: scale(0.95);
+    border: 0;
   }
 
   .content-left ul button:hover {
-    background: var(--gradient-color-3);
+    background: var(--gradient-color-2);
     color: var(--white);
-    border: outset var(--quartenary-color) 3px;
+    
   }
   .content-right {
     display: flex;

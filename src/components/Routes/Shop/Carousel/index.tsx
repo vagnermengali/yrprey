@@ -13,7 +13,7 @@ import axios from "axios";
 import { ContainerCarousel } from "./style";
 import "swiper/swiper-bundle.css";
 
-SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]); // Configuração dos módulos do Swiper
+SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 interface Slide {
   image: string;
@@ -87,7 +87,7 @@ const Carousel = () => {
                     </h2>
                     <p className="carousel-details">{slide.id}</p>
                     <Link href={slide.image} className="carousel-button">
-                      <button className="carousel-button-inside">
+                      <button className="carousel-button">
                         See drop
                       </button>
                     </Link>
@@ -117,7 +117,7 @@ const Carousel = () => {
                     </h2>
                     <p className="carousel-details">{slide.id}</p>
                     <Link href={slide.image} className="carousel-button">
-                      <button className="carousel-button-inside">
+                      <button className="carousel-button">
                         See drop
                       </button>
                     </Link>
@@ -147,7 +147,7 @@ const Carousel = () => {
                     </h2>
                     <p className="carousel-details">{slide.id}</p>
                     <Link href={slide.image} className="carousel-button">
-                      <button className="carousel-button-inside">
+                      <button className="carousel-button">
                         See drop
                       </button>
                     </Link>

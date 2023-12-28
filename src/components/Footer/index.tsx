@@ -38,19 +38,15 @@ const Footer = () => {
               {errors.email?.message}
             </label>
             <div>
-              <div className="input-subscribe">
-                 <input className="input-subscribe-inside"
+                 <input className="input-subscribe"
                 type="text"
                 placeholder="Email Address"
                 {...register("email")}
               />
-              </div>
-              <div className="btn-subscribe">
-                <button type="submit" className="btn-subscribe-inside">
+                <button type="submit" className="btn-subscribe">
                   Subscribe Nowﾠ
                   <FaExternalLinkAlt />
                 </button>
-              </div>
             </div>
           </form>
         </div>

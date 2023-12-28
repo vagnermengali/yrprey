@@ -4,10 +4,9 @@ import { Context } from "@/context/context";
 import logo from "@/assets/image/logos/logo-letter.svg";
 import Image from "next/image";
 import Link from "next/link";
-import Cart from "../Cart";
 
 const Header = () => {
-  const { router, token, setCartVisible, cartVisible } = useContext(Context);
+  const { router, token } = useContext(Context);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -58,31 +57,26 @@ const Header = () => {
             </nav>
             {token ? (
               <div className="login-register">
-                <button className="login" onClick={() => (setCartVisible(!cartVisible))}>
+                <button className="login" onClick={() => ({})}>
                   Cart ( 0 )
                 </button>
-                <div className="btn-register" onClick={() => router.push("/profile")}>
-                  <button className="btn-register-inside" onClick={() => router.push("/profile")}>
+                  <button className="btn-register" onClick={() => router.push("/profile")}>
                     My account
                   </button>
-                </div>
               </div>
             ) : (
               <div className="login-register">
                 <button className="login" onClick={() => router.push("/login")}>
                   Login
                 </button>
-                <div className="btn-register" onClick={() => router.push("/register")}>
-                  <button className="btn-register-inside" onClick={() => router.push("/register")}>
+                  <button className="btn-register" onClick={() => router.push("/register")}>
                     Get started
                   </button>
-                </div>
               </div>
             )}
           </div>
         </DivHeader>
       </HeaderContainer>
-      {cartVisible && <Cart/>}
     </>
   );
 };

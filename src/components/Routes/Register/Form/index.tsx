@@ -18,28 +18,24 @@ const FormRegister = () => {
     <Form onSubmit={handleSubmit(() => { })}>
       <div className="container-input ">
         <label className={"label"}>Email</label>
-        <div className="input-email">
           <input
-            className="input-email-inside"
+            className="input-email"
             type="text"
             placeholder="example@gmail.com"
             {...register("email")}
           />
-        </div>
       </div>
       <label className={errors.email ? "error" : "no-error"}>
         {errors.email?.message}
       </label>
       <div className="container-input ">
         <label className={"label"}>Password</label>
-        <div className="input-password">
           <input
-            className="input-password-inside"
+            className="input-password"
             type="password"
             placeholder="***********"
             {...register("password")}
           />
-        </div>
       </div>
       <label className={errors.password ? "error" : "no-error"}>
         {errors.password?.message}
@@ -50,11 +46,9 @@ const FormRegister = () => {
         <span className="fictitious-terms">Privacy Policy</span>.
       </p>
       <div className="container-button">
-        <div className="btn-sign-up">
-          <button type="submit" className="btn-sign-up-inside">
+          <button type="submit" className="btn-sign-up">
             Sign up
           </button>
-        </div>
         <Link href="/login" className="link-signup">
           Log in
         </Link>

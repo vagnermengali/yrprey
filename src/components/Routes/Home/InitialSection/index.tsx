@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { StyledInitialSection } from "./style";
 import { Context } from "@/context/context";
-import padclock from "@/assets/image/Illustrations/altar-1.png";
+import padclock from "@/assets/image/Illustrations/hacker-1.png";
 import Image from "next/image";
 
 const InitialSection = () => {
@@ -15,12 +15,9 @@ const InitialSection = () => {
             Your Complete <span>Vulnerability</span> Site.
           </h1>
           <p>Find the most beautiful collectibles in one place!</p>
-          <div className="btn-initial" onClick={() => router.push("/register")}>
-            <button className="btn-initial-inside" onClick={() => router.push("/register")}>
+            <button className="btn-initial" onClick={() => router.push("/register")}>
               Request free access
             </button>
-          </div>
-
         </div>
         <div className="container-right">
           <Image

@@ -45,56 +45,82 @@ export const StyledInitialSection = styled.div`
     color: var(--white);
     opacity: 0.7;
   }
-  .btn-initial, .btn-initial:not(:hover) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 222px;
-    height: 60px;
-    margin-top: 30px;
-    border: outset var(--tertiary-color) 3px;
-    background: var(--gradient-color-2);
-    padding: 0;
-    transition: all ease .3s;
-  }
+  .btn-initial {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: var(--gradient-color);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 4px;
+  margin-top: 30px;
+  width: 200px;
+  height: 56px;
+  font: normal 700 16px/16px 'Gilroy', sans-serif;
+}
 
-    .btn-initial-inside, .btn-initial-inside:not(:hover) {
-    border: outset var(--septenary-color) 6px;
-    background: var(--gradient-color-2);
-    width: 100%;
-    height: calc(60px - 6px);
-    outline: none;
-    color: var(--white);
-    cursor: pointer;
-    z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
-  }
+.btn-initial:before {
+  content: '';
+  background: var(--gradient-color-animation);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 4px;
+}
 
-  .btn-initial-inside:active {
-    transform: scale(0.985);
-  }
+.btn-initial:active:after {
+  background: transparent;
+}
 
-  .btn-initial:hover {
-    border: outset var(--quartenary-color) 3px;
-    background: var(--gradient-color-2);
-  }
+.btn-initial:hover:before {
+  opacity: 1;
+}
 
-  .btn-initial:hover .btn-initial-inside {
-    background: var(--gradient-color-4);
-    color: var(--white);
-    border: outset var(--primary-color) 6px;
-  }
+.btn-initial:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
 
-  .container-right {
+.container-right {
     display:flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 70%;
     height: 100%;
   }
   .container-right .image {
-    width: 80%;
-    height: max-content;
+    width: 100%;
+    height: 100%;
     animation: shakeY 20s ease-in-out infinite alternate-reverse both;
   }
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
 `;

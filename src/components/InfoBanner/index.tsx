@@ -7,7 +7,6 @@ const InfoBanner = () => {
   
   return (
     <StyledInfoBanner>
-      <Image className="img-3d-card" src={test} width={10000} height={10000} alt="table"/>
       <DivInfoBanner>
         <h2>Use all your knowledge of security and vulnerabilities here</h2>
         <div>

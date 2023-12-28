@@ -62,7 +62,7 @@ export const DivHeader = styled.div`
     font-size: 16px;
     line-height: 26px;
     cursor: pointer;
-    font-family: 'Norse', sans-serif;
+    font-family: 'Gilroy', sans-serif;
   }
   .login:after, .login::after {
       content: "";
@@ -90,41 +90,69 @@ export const DivHeader = styled.div`
     align-items: center;
     gap: 10px;
   }
-  .btn-register, .btn-register:not(:hover) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 165px;
-    height: 60px;
-    border: outset var(--tertiary-color) 3px;
-    background: var(--gradient-color-2);
-    padding: 0;
-    margin: 0;
-    transition: all ease .3s;
+
+  .btn-register {
+  border: none;
+  outline: none;
+  color: var(--white);
+  background: var(--gradient-color);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 4px;
+  width: 165px;
+  height: 56px;
+  font: normal 700 16px/16px 'Gilroy', sans-serif;
+}
+
+.btn-register:before {
+  content: '';
+  background: var(--gradient-color-animation);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 4px;
+}
+
+.btn-register:active:after {
+  background: transparent;
+}
+
+.btn-register:hover:before {
+  opacity: 1;
+}
+
+.btn-register:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
   }
 
-    .btn-register-inside, .btn-register-inside:not(:hover) {
-    border: outset var(--septenary-color) 6px;
-    background: var(--gradient-color-2);
-    width: calc(165px - 6px);
-    height: calc(60px - 6px);
-    outline: none;
-    color: var(--white);
-    cursor: pointer;
-    z-index: 0;
-    font: normal 700 16px/16px 'Norse', sans-serif;
+  50% {
+    background-position: 400% 0;
   }
 
-  .btn-register-inside:active {
-    transform: scale(0.985);
+  100% {
+    background-position: 0 0;
   }
-  .btn-register:hover {
-    border: outset var(--quartenary-color) 3px;
-    background: var(--gradient-color-2);
-  }
-  .btn-register:hover .btn-register-inside {
-    background: var(--gradient-color-4);
-    color: var(--white);
-    border: outset var(--primary-color) 6px;
-  }
+}
 `;
