@@ -30,7 +30,7 @@ export const StyledInitialSection = styled.div`
     font-size: 60px;
     line-height: 65px;
     color: var(--white);
-    width:400px;
+    width: 500px;
   }
   .container-left span {
     background: var(--gradient-color);
