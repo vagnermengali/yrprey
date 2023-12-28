@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header<IHeaderBg>`
   justify-content: center;
   width: 100%;
   transition: background-color 0.5s ease;
-  background-color: ${({ scrolled }) => scrolled ? "var(--quinternary-color)" : "tranparent"};
+  background-color: ${({ scrolled }) => scrolled ? "var(--grey-5)" : "tranparent"};
   backdrop-filter: ${({ scrolled }) => (scrolled ? "blur(5px)" : "blur(0px)")};
 `;
 

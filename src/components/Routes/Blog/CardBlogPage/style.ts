@@ -37,7 +37,7 @@ export const CardBlogPageItemMainContent = styled.div`
       position: absolute;
       width: inherit;
       height: auto;
-      background-color: var(--quinternary-color);
+      background-color: var(--grey-5);
     }
     .content-top-details-main {
       display: flex;
@@ -86,7 +86,7 @@ export const CardBlogPageItemContentTop = styled.div`
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     height: 250px;
-    background-color: var(--quinternary-color);
+    background-color: var(--grey-5);
     .content-top-details {
       width: 100%;
       padding: 20px;
@@ -102,7 +102,7 @@ export const CardBlogPageItemContentTop = styled.div`
       width: inherit;
       height: min-content;
       object-fit: cover;
-      background-color: var(--quinternary-color);
+      background-color: var(--grey-5);
     }
     .card-blog-page-font {
       color: var(--white);

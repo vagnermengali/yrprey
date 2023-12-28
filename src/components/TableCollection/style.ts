@@ -92,9 +92,6 @@ export const StyledTableCollection = styled.div`
   .eth {
     color: var(--grey-1);
   }
-  .btc {
-    color: var(--orange-1);
-  }
   .btn-top-collections {
   border: none;
   outline: none;

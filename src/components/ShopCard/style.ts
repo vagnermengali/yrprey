@@ -74,9 +74,6 @@ export const StyledCardShop = styled.div`
     font-weight: bold;
     color: var(--grey-1);
   }
-  .btc {
-    color: var(--orange-1);
-  }
   .flip-card-inner {
     position: relative;
     width: 100%;

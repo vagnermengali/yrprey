@@ -6,7 +6,7 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   width: 100vw;
   height: calc(100vh - 76.8px);
-  background-color: var(--quinternary-color);
+  background-color: var(--grey-5);
 `;
 
 export const DivOne = styled.div`
@@ -103,7 +103,7 @@ export const DivOne = styled.div`
   }
 
   .btn-subscribe:hover {
-    background: var(--quinternary-color);
+    background: var(--grey-5);
   }
 `;
 
