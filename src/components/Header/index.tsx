@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
-  const { router, token } = useContext(Context);
+  const { router, token, isMobile } = useContext(Context);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -41,38 +41,44 @@ const Header = () => {
                 ></Image>
               </Link>
             </div>
-            <nav>
-              <Link href="/" className="link">
-                Homepage
-              </Link>
-              <Link href="/about" className="link">
-                About us
-              </Link>
-              <Link href="/shop" className="link">
-                Shop
-              </Link>
-              <Link href="/blog" className="link">
-                Blog
-              </Link>
-            </nav>
-            {token ? (
-              <div className="login-register">
-                <button className="login" onClick={() => ({})}>
-                  Cart ( 0 )
-                </button>
-                  <button className="btn-register" onClick={() => router.push("/profile")}>
-                    My account
-                  </button>
-              </div>
+            {isMobile ? (
+                <></>
             ) : (
-              <div className="login-register">
-                <button className="login" onClick={() => router.push("/login")}>
-                  Login
-                </button>
-                  <button className="btn-register" onClick={() => router.push("/register")}>
-                    Get started
-                  </button>
-              </div>
+              <>
+                <nav>
+                  <Link href="/" className="link">
+                    Homepage
+                  </Link>
+                  <Link href="/about" className="link">
+                    About us
+                  </Link>
+                  <Link href="/shop" className="link">
+                    Shop
+                  </Link>
+                  <Link href="/blog" className="link">
+                    Blog
+                  </Link>
+                </nav>
+                {token ? (
+                  <div className="login-register">
+                    <button className="login" onClick={() => ({})}>
+                      Cart ( 0 )
+                    </button>
+                    <button className="btn-register" onClick={() => router.push("/profile")}>
+                      My account
+                    </button>
+                  </div>
+                ) : (
+                  <div className="login-register">
+                    <button className="login" onClick={() => router.push("/login")}>
+                      Login
+                    </button>
+                    <button className="btn-register" onClick={() => router.push("/register")}>
+                      Get started
+                    </button>
+                  </div>
+                )}
+              </>
             )}
           </div>
         </DivHeader>
