@@ -38,8 +38,18 @@ const ResetStyles = createGlobalStyle`
     body {
       line-height: 1;
     }
-    ::-webkit-scrollbar {
-      width: 0px;
+    body::-webkit-scrollbar {
+      width: 10px;            
+    }
+
+    body::-webkit-scrollbar-track {
+      background: var(--tertiary-color);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color);
+      border-radius: 20px;       
+      border: 3px solid var(--primary-color); 
     }
     ol, ul {
       list-style: none;
@@ -117,11 +127,11 @@ const GlobalStyles = createGlobalStyle`
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <AnimatePresence>
-    <Provider>
-      <Component {...pageProps} />
-      <GlobalStyles />
-      <ResetStyles />
-    </Provider>
+      <Provider>
+        <Component {...pageProps} />
+        <GlobalStyles />
+        <ResetStyles />
+      </Provider>
     </AnimatePresence>
   );
 };
