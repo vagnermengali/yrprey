@@ -8,6 +8,7 @@ import InitialSection from "./InitialSection";
 import ContactSection from "./ContactSection";
 import HomeButton from "@/components/HomeButton";
 import SEO from "@/components/SEO";
+import Layout from "@/components/Layout";
 
 const Home = () => {
 
@@ -25,11 +26,13 @@ const Home = () => {
         />
         <HomeButton />
         <Header />
-        <InitialSection />
-        <AboutSection />
-        <ShopSection />
-        <BlogSection />
-        <ContactSection />
+        <Layout>
+          <InitialSection />
+          <AboutSection />
+          <ShopSection />
+          <BlogSection />
+          <ContactSection />
+        </Layout>
         <Footer />
       </motion.div>
     </>

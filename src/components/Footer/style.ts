@@ -4,8 +4,10 @@ export const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
-  height: calc(100vh - 76.8px);
+  width: 100%;
+  height: auto;
+  max-width: 1280px;
+  margin: 0 auto;
   background-color: var(--grey-5);
 `;
 
@@ -113,6 +115,7 @@ export const DivTwo = styled.div`
   align-items: center;
   width: 85%;
   height: 100%;
+  margin: 70px 0 70px 0;
   .content-left {
     display: flex;
     flex-direction: column;
@@ -202,6 +205,7 @@ export const DivTree = styled.div`
   flex-direction: column;
   width: 100%;
   height: 10%;
+  padding: 16px 0;
   border-top: 1px solid var(--grey-4);
   p {
     font-weight: 500;

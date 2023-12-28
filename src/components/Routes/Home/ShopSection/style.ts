@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const StyledShopSection = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
+  padding: 45px 0;
   display: flex;
   justify-content: center;
   align-items: center;

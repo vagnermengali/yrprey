@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const StyledInitialSection = styled.div`
-  width: 100vw;
-  height: 90vh;
+  width: 100%;
+  height: auto;
+  padding: 0 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;

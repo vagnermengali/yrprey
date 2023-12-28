@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledBlogSection = styled.section`
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: center;

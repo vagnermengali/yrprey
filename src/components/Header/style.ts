@@ -5,6 +5,8 @@ interface IHeaderBg {
 }
 
 export const HeaderContainer = styled.header<IHeaderBg>`
+  max-width: 1280px;
+  margin: 0 auto;
   height: 5rem;
   z-index: 100;
   top: 0;

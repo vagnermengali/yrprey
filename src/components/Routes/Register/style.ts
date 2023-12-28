@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const StyledRegisterSection = styled.div`
-  width: 100vw;
+  width: 100%;
+  height: auto;
+  padding: 20px 0 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
