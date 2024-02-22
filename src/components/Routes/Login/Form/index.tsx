@@ -4,8 +4,13 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { formSchema } from "@/validators/login";
 import { IFormLogin } from "@/interfaces/IFormLogin/IFormLogin";
 import Link from "next/link";
+import axios from "axios";
+import { useRouter } from "next/router";
+import Swal from "sweetalert2";
 
 const FormLogin = () => {
+  const router = useRouter()
+
   const {
     register,
     handleSubmit,
@@ -14,28 +19,80 @@ const FormLogin = () => {
     resolver: yupResolver(formSchema),
   });
 
+  const onSubmit = async (data: any) => {
+    console.log(data, "data")
+    try {
+      const response = await axios.post("http://yrprey.com/login", data);
+      console.log(response)
+      if (typeof response.data === "string") {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: `${response.data}`,
+          showConfirmButton: false,
+          width: 600,
+          padding: "3em",
+          color: "#fff",
+          background: "#28292a",
+          backdrop: `rgba(0, 0, 0, 0.493)`,
+          timer: 1500
+        });
+      } else if (response.data.results[0].status === 200) {
+        localStorage.setItem("token", response.data.results[0].token)
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Welcome again",
+          showConfirmButton: false,
+          width: 600,
+          padding: "3em",
+          color: "#fff",
+          background: "#28292a",
+          backdrop: `rgba(0, 0, 0, 0.493)`,
+          timer: 1500
+        });
+        router.push('/');
+      } else {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Algo deu errado. Por favor, verifique suas credenciais e tente novamente.",
+          showConfirmButton: false,
+          width: 600,
+          padding: "3em",
+          color: "#fff",
+          background: "#28292a",
+          backdrop: `rgba(0, 0, 0, 0.493)`,
+          timer: 1500
+        });
+      }
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+    }
+  };
+
   return (
-    <Form onSubmit={handleSubmit(() => { })}>
+    <Form onSubmit={handleSubmit(onSubmit)}>
       <div className="container-input ">
-        <label className={"label"}>Email</label>
-          <input
-            className="input-email"
-            type="text"
-            placeholder="Your Email"
-            {...register("email")}
-          />
+        <label className={"label"}>Username</label>
+        <input
+          className="input-email"
+          type="text"
+          placeholder="Your username"
+          {...register("username")}
+        />
       </div>
-      <label className={errors.email ? "error" : "no-error"}>
-        {errors.email?.message}
+      <label className={errors.username ? "error" : "no-error"}>
+        {errors.username?.message}
       </label>
       <div className="container-input ">
         <label className={"label"}>Password</label>
-          <input
-            type="password"
-            className="input-password"
-            placeholder="Your Password"
-            {...register("password")}
-          />
+        <input
+          type="password"
+          className="input-password"
+          placeholder="Your Password"
+          {...register("password")}
+        />
       </div>
       <label className={errors.password ? "error" : "no-error"}>
         {errors.password?.message}
@@ -44,9 +101,9 @@ const FormLogin = () => {
         Forgot your password?
       </a>
       <div className="container-button">
-          <button type="submit" className="btn-login">
-            Log in
-          </button>
+        <button type="submit" className="btn-login">
+          Log in
+        </button>
         <Link href="/register" className="link-signup">
           Sign up
         </Link>
