@@ -20,7 +20,6 @@ const FormLogin = () => {
   });
 
   const onSubmit = async (data: any) => {
-    console.log(data, "data")
     try {
       const response = await axios.post("http://yrprey.com/login", data);
       console.log(response)
