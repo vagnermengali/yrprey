@@ -10,4 +10,6 @@ export interface IContext {
     user: any;
     setUser: any;
     onSubmit: any;
+    setToken: any;
+    logout: any;
 }

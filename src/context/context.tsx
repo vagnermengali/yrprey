@@ -27,6 +27,18 @@ const Provider = ({ children }: IChildren) => {
     }
   };
 
+  const logout = async (data: any) => {
+    try {
+      const response = await axios.post("http://yrprey.com/logout", data);
+      if (response.data.results[0].status === 200) {
+        const responseData = response?.data?.results[0];
+        window.location.href = responseData.msg;
+      }
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+    }
+  };
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setToken(localStorage.getItem("token") || "")
@@ -41,8 +53,21 @@ const Provider = ({ children }: IChildren) => {
     return () => window.removeEventListener('resize', handleResize);
   }, [router, token, setToken]);
 
+  useEffect(() => {
+    const handleClick = (event: any) => {
+      console.log('Clique detectado!');
+      console.log('Coordenadas do clique: ', event.clientX, event.clientY);
+    };
+
+    document.addEventListener('click', handleClick);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, [router, token, setToken]);
+
   return (
-    <Context.Provider value={{ router, token, isMobile, showSideBar, isSideBarVisible, setIsSideBarVisible, user, setUser, onSubmit }}>
+    <Context.Provider value={{ router, token, isMobile, showSideBar, isSideBarVisible, setIsSideBarVisible, user, setUser, onSubmit, setToken, logout }}>
       {children}
     </Context.Provider>);
 };

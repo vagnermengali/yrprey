@@ -4,10 +4,9 @@ import { Context } from "@/context/context";
 import logo from "@/assets/image/logos/logo-letter.svg";
 import Image from "next/image";
 import Link from "next/link";
-import axios from "axios";
 
 const Header = () => {
-  const { router, token, isMobile, setUser, onSubmit } = useContext(Context);
+  const { router, token, isMobile, onSubmit, logout  } = useContext(Context);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -43,7 +42,7 @@ const Header = () => {
               </Link>
             </div>
             {isMobile ? (
-                <></>
+              <></>
             ) : (
               <>
                 <nav>
@@ -62,10 +61,16 @@ const Header = () => {
                 </nav>
                 {token ? (
                   <div className="login-register">
+                    <button className="login" onClick={() => {
+                      logout({ token: token, url: "https://www.google.com/" })
+                      localStorage.clear()
+                    }}>
+                      Logout
+                    </button>
                     <button className="btn-register" onClick={() => {
-                      onSubmit({token: token})
-                      router.push("/profile")
-                      }}>
+                      onSubmit({ token: token })
+                      router.push("/")
+                    }}>
                       My account
                     </button>
                   </div>

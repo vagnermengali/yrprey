@@ -3,18 +3,63 @@ import { formSchema } from "@/validators/contact";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { IFormContact } from "@/interfaces/IFormContact/IFormContact";
+import { Context } from "@/context/context";
+import React, { useContext } from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const FormContact = () => {
+  const { router } = useContext(Context);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm<IFormContact>({
     resolver: yupResolver(formSchema),
   });
 
+  const onSendMessage = async (data: any) => {
+    try {
+      const dataToSend = { ...data, dest: "contact@yrprey.com" };
+      const response = await axios.post("http://yrprey.com/message", dataToSend);
+      console.log(response)
+      if (response.data.results[0].status === 200) {
+        localStorage.setItem("token", response.data.results[0].token)
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Message sent successfully",
+          showConfirmButton: false,
+          width: 600,
+          padding: "3em",
+          color: "#fff",
+          background: "#28292a",
+          backdrop: `rgba(0, 0, 0, 0.493)`,
+          timer: 1500
+        });
+        reset()
+      } else {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "ASomething went wrong. Please check your data and try again.",
+          showConfirmButton: false,
+          width: 600,
+          padding: "3em",
+          color: "#fff",
+          background: "#28292a",
+          backdrop: `rgba(0, 0, 0, 0.493)`,
+          timer: 1500
+        });
+      }
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+    }
+  };
+
   return (
-    <Form onSubmit={handleSubmit(() => { })}>
+    <Form onSubmit={handleSubmit(onSendMessage)}>
       <label className={errors.name ? "error-column" : "no-error-column"}>
         {errors.name?.message}
       </label>
