@@ -12,4 +12,5 @@ export interface IContext {
     onSubmit: any;
     setToken: any;
     logout: any;
+    statusApi: string;
 }

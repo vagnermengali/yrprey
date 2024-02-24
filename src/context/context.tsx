@@ -12,6 +12,7 @@ const Provider = ({ children }: IChildren) => {
   const [isSideBarVisible, setIsSideBarVisible] = useState<boolean>(false);
   const [user, setUser] = useState<any>();
   const [token, setToken] = useState<string>("")
+  const [statusApi, setStatusApi] = useState<string>("")
   const router = useRouter();
 
   const showSideBar = () => setIsSideBarVisible(!isSideBarVisible);
@@ -38,6 +39,28 @@ const Provider = ({ children }: IChildren) => {
       console.error("Erro ao enviar formulário:", error);
     }
   };
+
+  const apiStatus = async () => {
+    try {
+      const response = await axios.get("http://yrprey.com/ssrf", {
+        params: {
+          endereco: "localhost",
+          port: 80
+        }
+      });
+      if (response.data.results[0].status === 200) {
+        setStatusApi("green");
+      } else {
+        setStatusApi("red");
+      }
+    } catch (error) {
+      error
+    }
+  };
+
+  useEffect(() => {
+    apiStatus()
+  },[statusApi, setStatusApi])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -67,7 +90,7 @@ const Provider = ({ children }: IChildren) => {
   }, [router, token, setToken]);
 
   return (
-    <Context.Provider value={{ router, token, isMobile, showSideBar, isSideBarVisible, setIsSideBarVisible, user, setUser, onSubmit, setToken, logout }}>
+    <Context.Provider value={{ router, token, isMobile, showSideBar, isSideBarVisible, setIsSideBarVisible, user, setUser, onSubmit, setToken, logout, statusApi }}>
       {children}
     </Context.Provider>);
 };

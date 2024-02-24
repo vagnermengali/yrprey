@@ -4,9 +4,10 @@ import { Context } from "@/context/context";
 import logo from "@/assets/image/logos/logo-letter.svg";
 import Image from "next/image";
 import Link from "next/link";
+import StatusApi from "../StatusApi";
 
 const Header = () => {
-  const { router, token, isMobile, onSubmit, logout  } = useContext(Context);
+  const { router, token, isMobile, onSubmit, logout } = useContext(Context);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -62,7 +63,7 @@ const Header = () => {
                 {token ? (
                   <div className="login-register">
                     <button className="login" onClick={() => {
-                      logout({ token: token, url: "https://www.google.com/" })
+                      logout({ token: token, url: "/" })
                       localStorage.clear()
                     }}>
                       Logout
@@ -89,6 +90,7 @@ const Header = () => {
           </div>
         </DivHeader>
       </HeaderContainer>
+      <StatusApi/>
     </>
   );
 };

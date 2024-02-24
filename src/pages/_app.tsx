@@ -76,6 +76,27 @@ const GlobalStyles = createGlobalStyle`
       src: local('Gilroy'), url(/font/Gilroy.ttf) format('truetype');
       font-display: swap;
     }
+
+    @media (max-width: 1024px) {
+      body {
+        display: none;
+      }
+      html:before {
+        margin: 0;
+        content: "mobile in development";
+        color: #FFFFFF;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        inset: 0;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
     
     :root {
       --primary-color: #FF1A56;

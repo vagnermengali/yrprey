@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const StyledLoginSection = styled.div`
   width: 100%;
   height: auto;
-  padding: 20px 0 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
