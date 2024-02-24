@@ -22,7 +22,6 @@ const FormLogin = () => {
   const onSubmit = async (data: any) => {
     try {
       const response = await axios.post("http://yrprey.com/login", data);
-      console.log(response)
       if (typeof response.data === "string") {
         Swal.fire({
           position: "center",
@@ -38,6 +37,9 @@ const FormLogin = () => {
         });
       } else if (response.data.results[0].status === 200) {
         localStorage.setItem("token", response.data.results[0].token)
+        const user = response.data.results[0]
+        const dataString = JSON.stringify(user);
+        localStorage.setItem("user", dataString)
         Swal.fire({
           position: "center",
           icon: "success",

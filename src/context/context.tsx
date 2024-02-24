@@ -57,15 +57,16 @@ const Provider = ({ children }: IChildren) => {
       error
     }
   };
-
+  
   useEffect(() => {
     apiStatus()
-  },[statusApi, setStatusApi])
+  }, [statusApi, setStatusApi])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setTokenLocal(localStorage.getItem("token") || "")
     }
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1024);
     };

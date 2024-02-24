@@ -8,13 +8,17 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { formSchema } from "@/validators/profile";
 import { IFormProfile } from "@/interfaces/IFormProfile/IFormProfile";
-import { Context } from "@/context/context";
-import { useContext, useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 const Profile = () => {
-  const { user } = useContext(Context);
+  let user = null;
+
+  if (typeof window !== 'undefined') {
+    const userString = localStorage.getItem('user') || "";
+    user = JSON.parse(userString);
+  }
+
   const {
     register,
     handleSubmit,

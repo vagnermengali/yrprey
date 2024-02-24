@@ -9,4 +9,5 @@ export interface ICardShop{
     title_image: string;
     title: string;
     name: string;
+    value: string;
 }

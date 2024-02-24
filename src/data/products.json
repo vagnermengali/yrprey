@@ -1,0 +1,232 @@
+[
+  {
+    "red": [
+      {
+        "title_image": "YRPrey",
+        "image": "sword-red",
+        "title": "red",
+        "name": "Sword",
+        "value": "2.0"
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "map-red",
+        "title": "red",
+        "name": "Map",
+        "value": "4.0"      
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "book-red",
+        "title": "red",
+        "name": "Book",
+        "value": "6.0"   
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "potion-red",
+        "title": "red",
+        "name": "Potion",
+        "value": "8.0"   
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "axe-red",
+        "title": "red",
+        "name": "Axe",
+        "value": "10.0"   
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "arrow-red",
+        "title": "red",
+        "name": "Arrow",
+        "value": "12.0"   
+      }
+    ]
+  },
+  {
+    "blue": [
+      {
+        "title_image": "YRPrey",
+        "image": "axe-blue",
+        "title": "blue",
+        "name": "Axe",
+        "value": "2.0"   
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "map-blue",
+        "title": "blue",
+        "name": "Map",
+        "value": "4.0"   
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "book-blue",
+        "title": "blue",
+        "name": "Book",
+        "value": "6.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "sword-blue",
+        "title": "blue",
+        "name": "Sword",
+        "value": "8.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "potion-blue",
+        "title": "blue",
+        "name": "Potion",
+        "value": "10.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "shield-blue",
+        "title": "blue",
+        "name": "Shield",
+        "value": "12.0"  
+      }
+    ]
+  },
+  {
+    "cian": [
+      {
+        "title_image": "YRPrey",
+        "image": "map-cian",
+        "title": "cian",
+        "name": "Map",
+        "value": "2.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "book-cian",
+        "title": "cian",
+        "name": "Book",
+        "value": "4.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "swordCian",
+        "title": "cian",
+        "name": "Sword",
+        "value": "6.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "helmet-cian",
+        "title": "cian",
+        "name": "Helmet",
+        "value": "8.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "potion-cian",
+        "title": "cian",
+        "name": "Potion",
+        "value": "10.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "shiel-cian",
+        "title": "cian",
+        "name": "Shield",
+        "value": "12.0"  
+      }
+    ]
+  },
+  {
+    "white": [
+      {
+        "title_image": "YRPrey",
+        "image": "map-white",
+        "title": "white",
+        "name": "Map",
+        "value": "2.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "book-white",
+        "title": "white",
+        "name": "Book",
+        "value": "4.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "sword-white",
+        "title": "white",
+        "name": "Sword",
+        "value": "6.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "helmet-white",
+        "title": "white",
+        "name": "Helmet",
+        "value": "8.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "potion-white",
+        "title": "white",
+        "name": "Potion",
+        "value": "10.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "shield-white",
+        "title": "white",
+        "name": "Shield",
+        "value": "12.0"  
+      }
+    ]
+  },
+  {
+    "beige": [
+      {
+        "title_image": "YRPrey",
+        "image": "axe-beige",
+        "title": "beige",
+        "name": "Axe",
+        "value": "2.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "map-beige",
+        "title": "beige",
+        "name": "Map",
+        "value": "4.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "book-beige",
+        "title": "beige",
+        "name": "Book",
+        "value": "6.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "sword-beige",
+        "title": "beige",
+        "name": "Sword",
+        "value": "8.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "potion-beige",
+        "title": "beige",
+        "name": "Potion",
+        "value": "10.0"  
+      },
+      {
+        "title_image": "YRPrey",
+        "image": "shield-beige",
+        "title": "beige",
+        "name": "Shield",
+        "value": "12.0"  
+      }
+    ]
+  }
+]
