@@ -6,10 +6,9 @@ const Banner = () => {
 
   return (
     <StyledBannerSection>
-      <Image className="img-banner-about" src={''} alt="banner-main" width="100"
-        height="100"
-        sizes="100" />
-      <Counter />
+      <Image className="img-banner-about" src={'/banner-about.png'} alt="banner-main" width={10000}
+        height={10000}
+      />
     </StyledBannerSection>
   );
 }

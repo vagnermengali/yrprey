@@ -11,13 +11,12 @@ export const StyledAboutSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 100%;
   }
   .content {
     display: flex;
     flex-direction: column;
-
-    gap: 30px;
+    width: 100%;
   }
   .content h1 {
     color: var(--white);
@@ -27,5 +26,7 @@ export const StyledAboutSection = styled.section`
     letter-spacing: 0;
     text-transform: none;
     gap: 30px;
+    text-align: center;
+    padding: 40px;
   }
 `;

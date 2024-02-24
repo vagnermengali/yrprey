@@ -4,15 +4,15 @@ import { BsCheck2Circle } from "react-icons/bs";
 import Link from "next/link";
 
 const FirstTab = () => {
-  
+
   return (
     <StyledFirstTab>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industrys standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remainin...{" "}
+        At YTPREY, we have a dedicated team of cybersecurity experts, each
+        with extensive experience in different areas of the field. Our founding
+        members have decades of combined experience in pentesting, vulnerability
+        research, incident response, and security consulting for a variety of
+        industries, including government, finance, healthcare, and technology...
         <Link href="/about" className="link">
           View more
         </Link>

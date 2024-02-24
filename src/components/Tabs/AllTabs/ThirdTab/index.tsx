@@ -7,11 +7,10 @@ const ThirdTab = () => {
   return (
     <StyledThirdTab>
       <p>
-        There are many variations of passages of Lorem Ipsum available, but the
-        majority have suffered alteration in some form, by injected humour, or
-        randomised words which dont look even slightly believable. If you are
-        going to use a passage of Lorem Ipsum, you need to be sure there isnt
-        anything embarrassing hidden in the middle of tex...
+        We understand the importance of transparency and ethics in all our activities.
+        Our application is provided solely for educational and penetration testing purposes.
+        We encourage our users to adhere to strict ethical standards and to respect privacy 
+        and system integrity...
         <Link href="/about" className="link">
           View more
         </Link>

@@ -7,8 +7,29 @@ import OurGoals from "./OurGoals";
 import Banner from "./Banner";
 import WhoWeAre from "./WhoWeAre";
 import SEO from "@/components/SEO";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import Counter from "./Counter";
 
 const About = () => {
+  const [text, setText] = useState("");
+
+  useEffect(() => {
+    const fetchAboutData = async () => {
+
+      try {
+        const response = await axios.get("http://yrprey.com/about?id=1");
+        console.log(response)
+        if (response.data.results[0].status === 200 || response.data.results[0].status === 500) {
+          setText(response.data.results[0].text);
+        }
+      } catch (error) {
+        console.error("Error fetching about data:", error);
+      }
+    };
+
+    fetchAboutData();
+  }, []);
 
   return (
     <motion.div
@@ -26,8 +47,10 @@ const About = () => {
         <div className="container">
           <div className="content">
             <Banner />
+            <Counter />
             <WhoWeAre />
             <OurGoals />
+            <h1>{text}</h1>
           </div>
         </div>
       </StyledAboutSection>
