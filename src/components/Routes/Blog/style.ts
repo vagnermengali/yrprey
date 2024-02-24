@@ -4,6 +4,7 @@ export const StyledBlogSection = styled.section`
   width: 100%;
   height: auto;
   max-width: 1280px;
+  padding: 0 40px;
   margin: 0 auto;
   display: flex;
   justify-content: center;

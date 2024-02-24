@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const StyledAboutSection = styled.div`
   width: 100%;
   height: auto;
-  padding: 45px 0;
+  max-width: 1280px;
+  padding: 45px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +13,7 @@ export const StyledAboutSection = styled.div`
   .container {
     display: flex;
     justify-content: center;
-    width: 85%;
+    width: 100%;
   }
   .container img {
     width: 100%;

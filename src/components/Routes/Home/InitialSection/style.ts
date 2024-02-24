@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const StyledInitialSection = styled.div`
   width: 100%;
+  max-width: 1280px;
   height: auto;
-  padding: 0 0 0 0;
+  padding: 0 40px 0 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +13,7 @@ export const StyledInitialSection = styled.div`
   .container {
     display: flex;
     justify-content: center;
-    width: 85%;
+    width: 100%;
   }
   .container img {
     width: 100%;

@@ -20,8 +20,8 @@ const Login = () => {
         title="Login • YRPrey"
         description="Join us in the search for bugs and vulnerabilities!"
       />
+      <Header />
       <StyledLoginSection>
-        <Header />
         <div className="container">
           <div className="container-left">
             <div className="content-up">
@@ -35,9 +35,10 @@ const Login = () => {
             <InfoBanner />
           </div>
         </div>
-        <Footer />
-        <HomeButton />
+
       </StyledLoginSection>
+      <Footer />
+      <HomeButton />
     </motion.div>
   );
 }

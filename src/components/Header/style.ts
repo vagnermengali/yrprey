@@ -5,8 +5,6 @@ interface IHeaderBg {
 }
 
 export const HeaderContainer = styled.header<IHeaderBg>`
-  max-width: 1280px;
-  margin: 0 auto;
   height: 5rem;
   z-index: 100;
   top: 0;
@@ -21,13 +19,16 @@ export const HeaderContainer = styled.header<IHeaderBg>`
 `;
 
 export const DivHeader = styled.div`
-  width: 90%;
+  width: 100%;
   height: min-content;
   .content {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
   }
   .content img {
     width: 8.125rem;

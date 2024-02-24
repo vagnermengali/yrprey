@@ -20,8 +20,8 @@ const Register = () => {
         title="Sign up • YRPrey"
         description="Join us in the search for bugs and vulnerabilities!"
       />
+      <Header />
       <StyledRegisterSection>
-        <Header />
         <div className="container">
           <div className="container-left">
             <div className="content-up">
@@ -36,9 +36,10 @@ const Register = () => {
             <InfoBanner />
           </div>
         </div>
-        <Footer />
-        <HomeButton />
+
       </StyledRegisterSection>
+      <Footer />
+      <HomeButton />
     </motion.div>
   );
 };

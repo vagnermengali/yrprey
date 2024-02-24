@@ -13,8 +13,8 @@ export const StyledLoginSection = styled.div`
   .container {
     display: flex;
     justify-content: center;
-    width: 90%;
-    padding: 140px 0;
+    width: 100%;
+    padding: 140px 40px;
   }
   .container-left {
     display: flex;

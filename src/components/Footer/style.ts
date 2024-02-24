@@ -6,8 +6,7 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   width: 100%;
   height: auto;
-  max-width: 1280px;
-  margin: 0 auto;
+
   background-color: var(--grey-5);
 `;
 
@@ -18,10 +17,13 @@ export const DivOne = styled.div`
   width: 100%;
   background: var(--gradient-color);
   .container-footer {
+    max-width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
+    width: 100%;
     height: 178px;
   }
   .content-left .title {
@@ -110,10 +112,13 @@ export const DivOne = styled.div`
 `;
 
 export const DivTwo = styled.div`
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 100%;
   height: 100%;
   margin: 70px 0 70px 0;
   .content-left {

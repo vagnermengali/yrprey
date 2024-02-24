@@ -76,8 +76,9 @@ const Profile = () => {
         title="Profile • YRPrey"
         description="Join us in the search for bugs and vulnerabilities!"
       />
+      <Header />
       <StyledProfileSection>
-        <Header />
+        
         <Form onSubmit={handleSubmit(onSubmitRegister)}>
           <div className="container">
             <div className="container-input ">
