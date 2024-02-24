@@ -46,9 +46,9 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script src="vendor/jquery-2.1.4.min.js" async></script>
-          <script src="vendor/bootstrap-3.3.5.min.js" async></script>
-          <script src="vendor/lodash-4.16.0.min.js" async></script>
+          <script src="vendor/jquery.js" async></script>
+          <script src="vendor/bootstrap.js" async></script>
+          <script src="vendor/lodash.js" async></script>
         </body>
       </Html>
     )
