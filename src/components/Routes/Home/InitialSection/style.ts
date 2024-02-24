@@ -25,6 +25,7 @@ export const StyledInitialSection = styled.div`
     flex-direction: column;
     width: 50%;
     gap: 32px;
+    margin-bottom: 145px;
   }
   .container-left h1 {
     font-style: normal;
