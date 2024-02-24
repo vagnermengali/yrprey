@@ -70,7 +70,7 @@ const Header = () => {
                     </button>
                     <button className="btn-register" onClick={() => {
                       onSubmit({ token: token })
-                      router.push("/")
+                      router.push("/profile")
                     }}>
                       My account
                     </button>

@@ -18,8 +18,11 @@ const Provider = ({ children }: IChildren) => {
   const showSideBar = () => setIsSideBarVisible(!isSideBarVisible);
 
   const onSubmit = async (data: any) => {
+    console.log(data)
     try {
       const response = await axios.post("http://yrprey.com/profile", data);
+
+      console.log(response)
       if (response.data.results[0].status === 200) {
         setUser(response.data.results[0])
       }
