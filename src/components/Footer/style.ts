@@ -31,7 +31,7 @@ export const DivOne = styled.div`
     color: var(--white);
   }
   .content-left .paragrafh {
-    width: 570px;
+    width: max-content;
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;

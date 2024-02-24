@@ -11,18 +11,15 @@ const Provider = ({ children }: IChildren) => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isSideBarVisible, setIsSideBarVisible] = useState<boolean>(false);
   const [user, setUser] = useState<any>();
-  const [token, setToken] = useState<string>("")
+  const [tokenLocal, setTokenLocal] = useState<string>("")
   const [statusApi, setStatusApi] = useState<string>("")
   const router = useRouter();
 
   const showSideBar = () => setIsSideBarVisible(!isSideBarVisible);
 
   const onSubmit = async (data: any) => {
-    console.log(data)
     try {
       const response = await axios.post("http://yrprey.com/profile", data);
-
-      console.log(response)
       if (response.data.results[0].status === 200) {
         setUser(response.data.results[0])
       }
@@ -67,7 +64,7 @@ const Provider = ({ children }: IChildren) => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setToken(localStorage.getItem("token") || "")
+      setTokenLocal(localStorage.getItem("token") || "")
     }
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1024);
@@ -77,23 +74,11 @@ const Provider = ({ children }: IChildren) => {
     handleResize();
 
     return () => window.removeEventListener('resize', handleResize);
-  }, [router, token, setToken]);
+  }, [router, tokenLocal, setTokenLocal]);
 
-  useEffect(() => {
-    const handleClick = (event: any) => {
-      console.log('Clique detectado!');
-      console.log('Coordenadas do clique: ', event.clientX, event.clientY);
-    };
-
-    document.addEventListener('click', handleClick);
-
-    return () => {
-      document.removeEventListener('click', handleClick);
-    };
-  }, [router, token, setToken]);
 
   return (
-    <Context.Provider value={{ router, token, isMobile, showSideBar, isSideBarVisible, setIsSideBarVisible, user, setUser, onSubmit, setToken, logout, statusApi }}>
+    <Context.Provider value={{ router, tokenLocal, isMobile, showSideBar, isSideBarVisible, setIsSideBarVisible, user, setUser, onSubmit, setTokenLocal, logout, statusApi }}>
       {children}
     </Context.Provider>);
 };

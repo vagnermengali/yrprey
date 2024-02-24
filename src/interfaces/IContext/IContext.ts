@@ -2,7 +2,7 @@ import { NextRouter } from "next/router";
 
 export interface IContext {
     router: NextRouter;
-    token: any;
+    tokenLocal: any;
     isMobile: boolean;
     isSideBarVisible: boolean;
     setIsSideBarVisible: React.Dispatch<React.SetStateAction<boolean>>;
@@ -10,7 +10,7 @@ export interface IContext {
     user: any;
     setUser: any;
     onSubmit: any;
-    setToken: any;
+    setTokenLocal: any;
     logout: any;
     statusApi: string;
 }

@@ -7,7 +7,7 @@ import Link from "next/link";
 import StatusApi from "../StatusApi";
 
 const Header = () => {
-  const { router, token, isMobile, onSubmit, logout } = useContext(Context);
+  const { router, tokenLocal, isMobile, onSubmit, logout } = useContext(Context);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -60,16 +60,16 @@ const Header = () => {
                     Blog
                   </Link>
                 </nav>
-                {token ? (
+                {tokenLocal ? (
                   <div className="login-register">
                     <button className="login" onClick={() => {
-                      logout({ token: token, url: "/" })
+                      logout({ token: tokenLocal, url: "/" })
                       localStorage.clear()
                     }}>
                       Logout
                     </button>
                     <button className="btn-register" onClick={() => {
-                      onSubmit({ token: token })
+                      onSubmit({ token: tokenLocal })
                       router.push("/profile")
                     }}>
                       My account

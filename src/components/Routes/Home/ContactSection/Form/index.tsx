@@ -3,13 +3,10 @@ import { formSchema } from "@/validators/contact";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { IFormContact } from "@/interfaces/IFormContact/IFormContact";
-import { Context } from "@/context/context";
-import React, { useContext } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 const FormContact = () => {
-  const { router } = useContext(Context);
   const {
     register,
     handleSubmit,
