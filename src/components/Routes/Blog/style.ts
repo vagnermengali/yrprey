@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const StyledBlogSection = styled.section`
   width: 100%;
   height: auto;
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +13,7 @@ export const StyledBlogSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 100%;
   }
   .content {
     display: flex;

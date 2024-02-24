@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledBannerSection = styled.section`
-  width: 100vw;
-  height: calc(100vh - 76.8px);
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;

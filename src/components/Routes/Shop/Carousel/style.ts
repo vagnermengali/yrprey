@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerCarousel = styled.div`
-  width: 100vw;
+  width: 100%;
   height: auto;
 
   .content {

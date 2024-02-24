@@ -1,19 +1,22 @@
 import styled from "styled-components";
 
 export const ContainerTopCollections = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 1280px;
+  margin: 0 auto;
   .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     gap: 30px;
+    padding: 60px 0 70px 0;
   }
   .content-title {
     font-style: normal;
