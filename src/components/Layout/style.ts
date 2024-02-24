@@ -5,4 +5,5 @@ export const LayoutContainer = styled.div`
   width: 100%;
   height: auto;
   margin: 0 auto;
+  overflow-x: hidden;
 `;
