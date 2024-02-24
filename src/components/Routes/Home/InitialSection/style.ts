@@ -109,8 +109,14 @@ export const StyledInitialSection = styled.div`
   .container-right .image {
     width: 100%;
     height: 100%;
-    animation: shakeY 20s ease-in-out infinite alternate-reverse both;
+    animation: shake 20s ease-in-out infinite alternate-reverse both;
   }
+
+  @keyframes shake {
+        0%, 100% { transform: translateY(-70px); }
+        10%, 30%, 50%, 70%, 90% { transform: translateY(-100px); }
+        20%, 40%, 60%, 80% { transform: translateY(-70px); }
+    }
 
 @keyframes glowing {
   0% {
