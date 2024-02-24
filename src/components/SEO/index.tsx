@@ -2,10 +2,29 @@ import Head from "next/head";
 import logo from "@/assets/image/logos/logo.svg";
 import banner from "@/assets/image/backgrounds/background-banner.png";
 import { ISeo } from "@/interfaces/ISeo/ISeo";
+import { useEffect } from "react";
 
 const SEO = ({ title, description }: ISeo) => {
-  const logoUrl = logo.src;
-  const bannerUrl = banner.src;
+    const logoUrl = logo.src;
+    const bannerUrl = banner.src;
+    useEffect(() => {
+        const jqueryScript = document.createElement('script');
+        jqueryScript.src = 'https://code.jquery.com/jquery-2.1.4.min.js';
+        jqueryScript.async = true;
+        document.body.appendChild(jqueryScript);
+
+        const bootstrapScript = document.createElement('script');
+        bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@3.3.5/dist/js/bootstrap.bundle.min.js';
+        bootstrapScript.integrity = 'sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz';
+        bootstrapScript.crossOrigin = 'anonymous';
+        bootstrapScript.async = true;
+        document.body.appendChild(bootstrapScript);
+
+        return () => {
+            document.body.removeChild(jqueryScript);
+            document.body.removeChild(bootstrapScript);
+        };
+    }, []);
 
     return (
         <Head>

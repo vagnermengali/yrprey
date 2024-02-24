@@ -26,10 +26,10 @@ const CardBlogPage = () => {
         );
 
         setListNews(response.data.articles);
-        setIsLoading(false); // Atualiza o estado para indicar que a resposta da API foi recebida
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching slides:", error);
-        setIsLoading(false); // Trata o erro e atualiza o estado mesmo em caso de falha
+        setIsLoading(false);
       }
     };
 
