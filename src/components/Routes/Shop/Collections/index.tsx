@@ -3,15 +3,46 @@ import CardShop from "@/components/ShopCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { StyledCollectionsSection } from "./style";
-import collectionsData from "@/data/products.json";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import axios, { AxiosResponse } from "axios";
+
+interface ColorData {
+  [key: string]: Product[];
+}
+
+interface Product {
+  title_image: string;
+  image: string;
+  title: string;
+  name: string;
+  value: string;
+}
 
 const Collections = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const renderProducts = (products: any) => {
-    return products.map((product: any, index: any) => (
+  const [productsList, setProductsList] = useState<ColorData>({});
+
+  useEffect(() => {
+    const fetchProductData = async () => {
+      try {
+        const response: AxiosResponse<ColorData> = await axios.get("http://yrprey.com/cards");
+        console.log(response);
+        if (response.data) {
+          setProductsList(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      }
+    };
+
+    fetchProductData();
+  }, []);
+
+  const renderProducts = (productsList: Product[]) => { 
+    return productsList.map((product: Product, index: number) => (
       <CardShop
         key={index}
         title_image={product.title_image}
@@ -23,7 +54,7 @@ const Collections = () => {
     ));
   };
 
-  const products = collectionsData.find((collection: any) => Object.keys(collection)[0] === id);
+  const products = productsList[id as string];
 
   return (
     <motion.div
@@ -36,7 +67,7 @@ const Collections = () => {
       <StyledCollectionsSection>
         <div className="container">
           <ul className="content">
-            {products && renderProducts(Object.values(products)[0])}
+            {products && renderProducts(products)}
           </ul>
         </div>
       </StyledCollectionsSection>
