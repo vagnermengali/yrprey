@@ -45,7 +45,7 @@ const TransactionsPages = () => {
         <div className="container">
           <h1>My transactions</h1>
           {listTransations ? <>
-          {listTransations.map((transaction, index) => (
+          {listTransations.slice().reverse().map((transaction, index) => (
             <CardTransaction key={index} transaction={transaction} />
           ))}
           </> : 

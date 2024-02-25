@@ -44,6 +44,7 @@ const Collections = () => {
   const renderProducts = (productsList: Product[]) => { 
     return productsList.map((product: Product, index: number) => (
       <CardShop
+        id={index}
         key={index}
         title_image={product.title_image}
         image={require(`@/assets/image/collectibles/${id}/${product.image}.png`)}

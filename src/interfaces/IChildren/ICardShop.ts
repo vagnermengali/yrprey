@@ -10,4 +10,5 @@ export interface ICardShop{
     title: string;
     name: string;
     value: string;
+    id: any;
 }

@@ -7,7 +7,7 @@ import { Context } from "@/context/context";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const CardShop = ({ image, title_image, title, name, value }: ICardShop) => {
+const CardShop = ({ image, title_image, title, name, value, id }: ICardShop) => {
   const { router, tokenLocal, user, setUser } = useContext(Context);
 
   const onSubmitPurchase = async (data: any) => {
@@ -64,7 +64,7 @@ const CardShop = ({ image, title_image, title, name, value }: ICardShop) => {
 
 
   return (
-    <StyledCardShop>
+    <StyledCardShop id={id}>
       <li className="card-container-shop">
         <div className="flip-card-inner">
           <div className="flip-card-front">
