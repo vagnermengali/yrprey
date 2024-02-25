@@ -12,6 +12,21 @@ const CardShop = ({ image, title_image, title, name, value }: ICardShop) => {
 
   const onSubmitPurchase = async (data: any) => {
     try {
+      const loginResponse = await axios.post("http://yrprey.com/profile", { token: tokenLocal  });
+      console.log(loginResponse)
+      console.log(data.token)
+      if (loginResponse.data.results[0].status === 200) {
+        localStorage.clear();
+        localStorage.setItem("token", loginResponse.data.results[0].token);
+        const user = loginResponse.data.results[0];
+        const dataString = JSON.stringify(user);
+        localStorage.setItem("user", dataString);
+        setUser(user)
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+    }
+    try {
       const purchaseResponse = await axios.post("http://yrprey.com/buy", data);
       console.log(purchaseResponse);
 
@@ -44,22 +59,6 @@ const CardShop = ({ image, title_image, title, name, value }: ICardShop) => {
       }
     } catch (error) {
       console.error("Error during purchase:", error);
-    }
-
-    try {
-      const loginResponse = await axios.post("http://yrprey.com/profile", { token: data.token });
-      console.log(loginResponse)
-      console.log(data.token)
-      if (loginResponse.data.results[0].status === 200) {
-        localStorage.clear();
-        localStorage.setItem("token", loginResponse.data.results[0].token);
-        const user = loginResponse.data.results[0];
-        const dataString = JSON.stringify(user);
-        localStorage.setItem("user", dataString);
-        setUser(user)
-      }
-    } catch (error) {
-      console.error("Error during login:", error);
     }
   };
 
