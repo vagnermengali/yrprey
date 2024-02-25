@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { StyledCardShop } from "./style";
-import { FaCheckCircle, FaEthereum } from "react-icons/fa";
+import { FaCheckCircle, FaEthereum, FaTrash } from "react-icons/fa";
 import { ICardShop } from "@/interfaces/IChildren/ICardShop";
 import { useContext } from "react";
 import { Context } from "@/context/context";
@@ -12,9 +12,7 @@ const CardShop = ({ image, title_image, title, name, value, id }: ICardShop) => 
 
   const onSubmitPurchase = async (data: any) => {
     try {
-      const loginResponse = await axios.post("http://yrprey.com/profile", { token: tokenLocal  });
-      console.log(loginResponse)
-      console.log(data.token)
+      const loginResponse = await axios.post("http://yrprey.com/profile", { token: tokenLocal });
       if (loginResponse.data.results[0].status === 200) {
         localStorage.clear();
         localStorage.setItem("token", loginResponse.data.results[0].token);
@@ -24,12 +22,10 @@ const CardShop = ({ image, title_image, title, name, value, id }: ICardShop) => 
         setUser(user)
       }
     } catch (error) {
-      console.error("Error during login:", error);
+      error
     }
     try {
       const purchaseResponse = await axios.post("http://yrprey.com/buy", data);
-      console.log(purchaseResponse);
-
       if (purchaseResponse.data.results[0].status === 200) {
         Swal.fire({
           position: "center",
@@ -58,9 +54,45 @@ const CardShop = ({ image, title_image, title, name, value, id }: ICardShop) => 
         });
       }
     } catch (error) {
-      console.error("Error during purchase:", error);
+      error
     }
   };
+
+  const onSubmitDelete = async () => {
+    try {
+      const response = await axios.post("http://yrprey.com/delete", { id: id,role: user.role, token: tokenLocal });
+      if (response.data.results[0].status === 200) {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Successfully deleted",
+          showConfirmButton: false,
+          width: 600,
+          padding: "3em",
+          color: "#fff",
+          background: "#28292a",
+          backdrop: `rgba(0, 0, 0, 0.493)`,
+          timer: 1500
+        });
+      } else {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Something went wrong",
+          showConfirmButton: false,
+          width: 600,
+          padding: "3em",
+          color: "#fff",
+          background: "#28292a",
+          backdrop: `rgba(0, 0, 0, 0.493)`,
+          timer: 1500
+        });
+      }
+    } catch (error) {
+      error
+    }
+  };
+
 
 
   return (
@@ -89,7 +121,7 @@ const CardShop = ({ image, title_image, title, name, value, id }: ICardShop) => 
                   </span>
                 </h1>
                 <span>
-                  <FaEthereum className="eth" />
+                  {user?.role == "1" ? <FaTrash className="eth trash" onClick={onSubmitDelete} /> : <FaEthereum className="eth" />}
                 </span>
               </div>
               <p className="text-name-item">{name} {title}</p>

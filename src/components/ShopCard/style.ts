@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const StyledCardShop = styled.div`
+.trash:hover {
+  color: var(--tertiary-color);
+  cursor: pointer;
+}
   .card-container-shop {
     background-color: transparent;
     width: 258px;
