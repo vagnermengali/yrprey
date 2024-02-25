@@ -10,6 +10,8 @@ import { formSchema } from "@/validators/profile";
 import { IFormProfile } from "@/interfaces/IFormProfile/IFormProfile";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Link from "next/link";
+import Image from "next/image";
 
 const Profile = () => {
   let user = null;
@@ -78,8 +80,9 @@ const Profile = () => {
       />
       <Header />
       <StyledProfileSection>
-        
         <Form onSubmit={handleSubmit(onSubmitRegister)}>
+          <Image className="user-yrprey" src={"/user-yrprey.png"} alt="user-yrprey" width={10000} height={10000} />
+          <Link href={"/transactions"} className="link-transactions">See my transactions</Link>
           <div className="container">
             <div className="container-input ">
               <label className={"label"}>Username</label>
@@ -168,7 +171,6 @@ const Profile = () => {
 
             </div>
           </div>
-
           <button className="btn" type="submit">Salvar</button>
         </Form>
         <Footer />

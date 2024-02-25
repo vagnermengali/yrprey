@@ -124,6 +124,22 @@ export const Form = styled.form`
   cursor:not-allowed;
   border: 1px solid var(--grey-6);
 }
+
+.link-transactions {
+  font: normal 700 16px/16px 'Gilroy',sans-serif;
+  color: var(--tertiary-color);
+  margin: 0 auto;
+}
+
+.user-yrprey {
+  width: 166px;
+  height: 166px;
+  border-radius: 9999px;
+  border: 2px solid var(--quartenary-color);
+  margin: 0 auto 24px auto;
+  background-color: var(--tertiary-color)
+}
+
 @keyframes glowing {
   0% {
     background-position: 0 0;

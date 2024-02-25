@@ -1,50 +1,57 @@
-
-import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
-import { HiOutlineStatusOnline } from "react-icons/hi";
-import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
-import Image from "next/image";
-import Link from "next/link";
-import axios from "axios";
-import { ContainerCarousel } from "./style";
-import "swiper/swiper-bundle.css";
+import CardShop from "@/components/ShopCard";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import { StyledCollectionsSection } from "./style";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import axios, { AxiosResponse } from "axios";
 
-interface Slide {
+// Defina uma interface para o tipo de dados esperado da API
+interface Product {
+  title_image: string;
   image: string;
-  type: string;
-  id: string;
+  title: string;
+  name: string;
+  value: string;
 }
 
-const Carousel = () => {
-  const [slides, setSlides] = useState<Slide[]>([] as Slide[]);
+const Collections = () => {
+  const router = useRouter();
+  const { id } = router.query;
+
+  const [productsList, setProductsList] = useState<Product[]>([]); // Definir o tipo como Product[]
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchProductData = async () => {
       try {
-        const response = await axios.post<{ results: Slide[] }>(
-          "http://yrprey.com/resposta",
-          {
-            id: "2"
-          },
-          {
-            headers: {
-              "Content-Type": "application/json"
-            }
-          }
-        );
-        setSlides(response.data.results);
+        const response: AxiosResponse<Product[]> = await axios.get("http://yrprey.com/cards"); // Definir o tipo de resposta como AxiosResponse<Product[]>
+        console.log(response);
+        if (response.data) {
+          setProductsList(response.data);
+        }
       } catch (error) {
-        console.error("Error fetching slides:", error);
+        console.error("Error fetching product data:", error);
       }
     };
 
-    fetchData();
+    fetchProductData();
   }, []);
+
+  const renderProducts = (productsList: Product[]) => { // Definir o tipo como Product[]
+    return productsList.map((product: Product, index: number) => ( // Definir o tipo como Product e number
+      <CardShop
+        key={index}
+        title_image={product.title_image}
+        image={require(`@/assets/image/collectibles/${id}/${product.image}.png`)}
+        title={product.title}
+        name={product.name}
+        value={product.value}
+      />
+    ));
+  };
+
+  const products = productsList.find((collection: any) => Object.keys(collection)[0] === id);
 
   return (
     <motion.div
@@ -53,169 +60,17 @@ const Carousel = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <ContainerCarousel>
-        <div className="content">
-          <div className="content-text">
-            <h1 className="content-title">Buy the collectibles</h1>
-            <p className="content-details">from the best creators and brands</p>
-          </div>
-          <Swiper
-            spaceBetween={30}
-            effect="fade"
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 6000 }}
-            className="mySwiper"
-          >
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <div className="container-carousel">
-                  <Image
-                    className="img-carousel"
-                    src={slide.image}
-                    width={1000}
-                    height={1000}
-                    alt="img-carousel"
-                    unoptimized
-                  />
-                  <div className="content-carousel">
-                    <button className="carousel-status" disabled>
-                      <HiOutlineStatusOnline className="icon" />
-                      Active now
-                    </button>
-                    <p className="carousel-date">{slide.type}</p>
-                    <h2 className="carousel-title">
-                      {slide.type}-{slide.id}
-                    </h2>
-                    <p className="carousel-details">{slide.id}</p>
-                    <Link href={slide.image} className="carousel-button">
-                      <button className="carousel-button-inside">
-                        See drop
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+      <Header />
+      <StyledCollectionsSection>
+        <div className="container">
+          <ul className="content">
+            {products && renderProducts(Object.values(products)[0])}
+          </ul>
         </div>
-      </ContainerCarousel>
+      </StyledCollectionsSection>
+      <Footer />
     </motion.div>
   );
 };
 
-export default Carousel;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
-import { HiOutlineStatusOnline } from "react-icons/hi";
-import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
-import Image from "next/image";
-import Link from "next/link";
-import axios from "axios";
-import { ContainerCarousel } from "./style";
-import "swiper/swiper-bundle.css";
-
-interface Slide {
-  image: string;
-  type: string;
-  id: string;
-}
-
-const Carousel = () => {
-  const [slides, setSlides] = useState<Slide[]>([] as Slide[]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get<Slide[]>("http://yrprey.com/resposta?id=1");
-        setSlides(response.data);
-        console.log(response.data)
-      } catch (error) {
-        console.error("Error fetching slides:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0.3 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <ContainerCarousel>
-        <div className="content">
-          <div className="content-text">
-            <h1 className="content-title">Buy the collectibles</h1>
-            <p className="content-details">from the best creators and brands</p>
-          </div>
-          <Swiper
-            spaceBetween={30}
-            effect="fade"
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 6000 }}
-            className="mySwiper"
-          >
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <div className="container-carousel">
-                  <Image
-                    className="img-carousel"
-                    src={slide.image}
-                    width={1000}
-                    height={1000}
-                    alt="img-carousel"
-                  />
-                  <div className="content-carousel">
-                    <button className="carousel-status" disabled>
-                      <HiOutlineStatusOnline className="icon" />
-                      Active now
-                    </button>
-                    <p className="carousel-date">{slide.type}</p>
-                    <h2 className="carousel-title">
-                      {slide.type}-{slide.id}
-                    </h2>
-                    <p className="carousel-details">{slide.id}</p>
-                    <Link href={slide.image} className="carousel-button">
-                      See drop
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </ContainerCarousel>
-    </motion.div>
-  );
-};
-
-export default Carousel;
-
-TODO: fazer identacao copia e cola e acha eles
- width="100"
-            height="100"
-            sizes="100"
+export default Collections;
