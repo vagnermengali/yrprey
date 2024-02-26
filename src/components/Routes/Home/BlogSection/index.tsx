@@ -23,7 +23,7 @@ const BlogSection = () => {
               background_color="var(--grey-0)"
               details_color={"var(--grey-2)"}
               link_color={"var(--secondary-color)"}
-              image={"/collectibles/red/arrow-red.png"}
+              image={"/arrow-red.webp"}
               title="Protect Your Workplace From Cyber Attacks"
               text_details="Mynex has been providing managed web, email and co-location an hosting for local small- to medium-sized Businesses."
               route="/blog"
@@ -31,7 +31,7 @@ const BlogSection = () => {
           </div>
           <div data-aos="fade">
             <CardBlog
-              image={"/collectibles/red/axe-red.png"}
+              image={"/axe-red.webp"}
               title="The Security Risks Of Cyber Changing Package"
               text_details="Mynex has been providing managed web, email and co-location an hosting for local small- to medium-sized Businesses."
               route="/blog"
@@ -42,7 +42,7 @@ const BlogSection = () => {
               background_color="var(--grey-0)"
               details_color={"var(--grey-2)"}
               link_color={"var(--secondary-color)"}
-              image={"/collectibles/red/sword-red.png"}
+              image={"/sword-red.webp"}
               title="Avoid Mistakes In Social And Media Posts"
               text_details="Mynex has been providing managed web, email and co-location an hosting for local small- to medium-sized Businesses."
               route="/blog"

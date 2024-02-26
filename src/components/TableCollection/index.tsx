@@ -24,7 +24,7 @@ const TableCollection = () => {
                 <div>
                   <Image
                     className="img"
-                    src={"/collectibles/red/potion-red.png"}
+                    src={"/potion-red.webp"}
                     width="100"
                     height="100"
                     sizes="100"
@@ -55,7 +55,7 @@ const TableCollection = () => {
                 <div>
                   <Image
                     className="img"
-                    src={"/collectibles/blue/potion-blue.png"}
+                    src={"/potion-blue.webp"}
                     width="100"
                     height="100"
                     sizes="100"
@@ -86,7 +86,7 @@ const TableCollection = () => {
                 <div>
                   <Image
                     className="img"
-                    src={"/collectibles/white/potion-white.png"}
+                    src={"/potion-white.webp"}
                     width="100"
                     height="100"
                     sizes="100"
@@ -117,7 +117,7 @@ const TableCollection = () => {
                 <div className="container-img">
                   <Image
                     className="img"
-                    src={"/collectibles/cian/potion-cian.png"}
+                    src={"/potion-cian.webp"}
                     width="100"
                     height="100"
                     sizes="100"
@@ -148,7 +148,7 @@ const TableCollection = () => {
                 <div>
                   <Image
                     className="img"
-                    src={"/collectibles/beige/potion-beige.png"}
+                    src={"/potion-beige.webp"}
                     width="100"
                     height="100"
                     sizes="100"

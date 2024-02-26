@@ -47,7 +47,7 @@ const Collections = () => {
         id={product.id}
         key={index}
         title_image={product.title_image}
-        image={`/collectibles/${id}/${product.image}.png`}
+        image={`/${product.image}.webp`}
         title={product.title}
         name={product.name}
         value={product.value}

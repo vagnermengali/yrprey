@@ -22,21 +22,21 @@ const ShopSection = () => {
         <div className="content-center">
           <div data-aos="fade-down-right">
             <CardShopClean
-              image={"/collectibles/red/map-red.png"}
+              image={"/map-red.webp"}
               title_image={"book"}
               title="YRPrey Club Red"
             />
           </div>
           <div data-aos="fade">
             <CardShopClean
-              image={"/collectibles/red/potion-red.png"}
+              image={"/potion-red.webp"}
               title_image={"potion"}
               title="YRPrey Club Red"
             />
           </div>
           <div data-aos="fade-down-left">
             <CardShopClean
-              image={"/collectibles/red/map-red.png"}
+              image={"/map-red.webp"}
               title_image={"map"}
               title="YRPrey Club Red"
             />
