@@ -176,4 +176,49 @@ export const Form = styled.form`
     background-position: 0 0;
   }
   }
+  @media (max-width: 1024px) {
+    .container-input {
+      gap: 8px;
+    }
+    .container-button {
+      gap: 25px;
+    }
+    .label {
+      font-size: 14px;
+    }
+    .link, .link:not(:hover) {
+      font-size: 14px;
+    }
+    .link-signup, .link-signup:not(:hover) {
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+    }
+    .error {
+      font-size: 12px;
+    }
+    .no-error {
+      width: 100%;
+    }
+    .input-email, .input-email:not(:hover) {
+      padding-left: 10px;
+      width: 100%;
+    }
+
+    .input-password, .input-password:not(:hover) {
+      width: 100%;
+      padding-left: 10px;
+    }
+
+    .btn-sign-up {
+    width: 100%;
+    font: normal 700 14px/16px 'Gilroy', sans-serif;
+  }
+  p {
+    font-size: 12px;
+  }
+  .fictitious-terms {
+    font-size: 12px !important;
+  }
+  }
 `;

@@ -48,4 +48,24 @@ export const StyledRegisterSection = styled.div`
     justify-content: center;
     width: 50%;
   }
+  @media (max-width: 1024px) {
+  .container {
+    padding: 40px 5vw;
+  }
+  .container-left {
+    width: 100%;
+  }
+  .container-left .content-up {
+    gap: 16px;
+  }
+  .container-left .content-up h1 {
+    font-size: 24px;
+  }
+  .container-left .content-up span {
+    font-size: 24px;
+  }
+  .container-right {
+    display: none;
+  }
+}
 `;
