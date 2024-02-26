@@ -52,7 +52,7 @@ const FormRegister = () => {
         });
       }
     } catch (error) {
-      console.error("Erro ao enviar formulário:", error);
+       error
     }
   };
 

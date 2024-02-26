@@ -40,7 +40,7 @@ const Carousel = () => {
         );
         setSlides(response.data.results);
       } catch (error) {
-        console.error("Error fetching slides:", error);
+        error
       }
     };
 

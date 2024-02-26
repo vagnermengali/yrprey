@@ -68,7 +68,7 @@ const FormLogin = () => {
         });
       }
     } catch (error) {
-      console.error("Erro ao enviar formulário:", error);
+      error
     }
   };
 

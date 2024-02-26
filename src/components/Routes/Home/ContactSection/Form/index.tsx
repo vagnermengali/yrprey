@@ -20,7 +20,6 @@ const FormContact = () => {
     try {
       const dataToSend = { ...data, dest: "contact@yrprey.com" };
       const response = await axios.post("http://yrprey.com/message", dataToSend);
-      console.log(response)
       if (response.data.results[0].status === 200) {
         localStorage.setItem("token", response.data.results[0].token)
         Swal.fire({
@@ -51,7 +50,7 @@ const FormContact = () => {
         });
       }
     } catch (error) {
-      console.error("Erro ao enviar formulário:", error);
+      error
     }
   };
 

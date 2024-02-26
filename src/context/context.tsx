@@ -24,7 +24,7 @@ const Provider = ({ children }: IChildren) => {
         setUser(response.data.results[0])
       }
     } catch (error) {
-      console.error("Erro ao enviar formulário:", error)
+      error
     }
   };
 
@@ -36,7 +36,7 @@ const Provider = ({ children }: IChildren) => {
         window.location.href = responseData.msg;
       }
     } catch (error) {
-      console.error("Erro ao enviar formulário:", error);
+    error
     }
   };
 

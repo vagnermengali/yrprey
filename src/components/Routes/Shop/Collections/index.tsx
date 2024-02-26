@@ -30,12 +30,11 @@ const Collections = () => {
     const fetchProductData = async () => {
       try {
         const response: AxiosResponse<ColorData> = await axios.get("http://yrprey.com/cards");
-        console.log(response);
         if (response.data) {
           setProductsList(response.data);
         }
       } catch (error) {
-        console.error("Error fetching product data:", error);
+       error
       }
     };
 

@@ -19,9 +19,8 @@ const TransactionsPages = () => {
       try {
         const response = await axios.post("http://yrprey.com/v2/status/", data);
         setListTransations(response.data.results);
-        console.log(response.data.results);
       } catch (error) {
-        console.error("Error fetching transactions:", error);
+        error
       }
     };
 

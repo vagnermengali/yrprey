@@ -34,7 +34,6 @@ const Profile = () => {
     try {
       const url = `http://yrprey.com/reset?password=${data.password}&token=${data.token}&username=${data.username}`;
       const response = await axios.post(url, data);
-      console.log(response)
       if (response.data.results[0].status === 200) {
         Swal.fire({
           position: "center",
@@ -63,7 +62,7 @@ const Profile = () => {
         });
       }
     } catch (error) {
-      console.error("Erro ao enviar formulário:", error);
+      error
     }
   };
 

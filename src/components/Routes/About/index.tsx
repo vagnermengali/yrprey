@@ -19,12 +19,11 @@ const About = () => {
 
       try {
         const response = await axios.get("http://yrprey.com/about?id=1");
-        console.log(response)
         if (response.data.results[0].status === 200 || response.data.results[0].status === 500) {
           setText(response.data.results[0].text);
         }
       } catch (error) {
-        console.error("Error fetching about data:", error);
+        error
       }
     };
 

@@ -28,7 +28,7 @@ const CardBlogPage = () => {
         setListNews(response.data.articles);
         setIsLoading(false);
       } catch (error) {
-        console.error("Error fetching slides:", error);
+         error
         setIsLoading(false);
       }
     };
