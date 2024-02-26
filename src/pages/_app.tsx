@@ -72,7 +72,7 @@ const ResetStyles = createGlobalStyle`
 
 const GlobalStyles = createGlobalStyle`
   ${() => css`
-    @media (max-width: 1024px) {
+/*     @media (max-width: 1024px) {
       body {
         display: none;
       }
@@ -94,7 +94,7 @@ const GlobalStyles = createGlobalStyle`
         overflow: hidden;
         z-index: 999999;
       }
-    }
+    } */
     
     :root {
       --primary-color: #FF1A56;

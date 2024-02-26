@@ -49,7 +49,6 @@ export const DivOne = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction:center;
   }
   .error {
     width: 90%;
@@ -109,6 +108,60 @@ export const DivOne = styled.div`
   .btn-subscribe:hover {
     background: var(--grey-5);
   }
+  @media (max-width: 1024px) {
+  .content-left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .content-left .title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .content-left .paragrafh {
+    font-size: 14px;
+    line-height: 24px;
+    width: 100%;
+    text-align: center;
+  }
+  .container-footer {
+    padding: 35px 5vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+  }
+  .content-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .content-right .error{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+  .content-right div {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+  .input-subscribe, .input-subscribe:not(:hover) {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .btn-subscribe, .btn-subscribe:not(:hover) {
+    border-radius: 6px;
+    width: 100%;
+  }
+  }
 `;
 
 export const DivTwo = styled.div`
@@ -164,7 +217,6 @@ export const DivTwo = styled.div`
     transition: all ease .3s;
     border: 0;
   }
-
   .content-left ul button:hover {
     background: var(--gradient-color-2);
     color: var(--white);
@@ -201,6 +253,56 @@ export const DivTwo = styled.div`
   .content-right div .link:hover {
     color: var(--quartenary-color);
   }
+  @media (max-width: 1024px) {
+    padding: 0 5vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 45px 0;
+    gap: 32px;
+    .content-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      width: 100%;
+      gap: 24px;
+    }
+    .content-left img {
+      width: 50%;
+      max-width: 164px;
+    }
+    .content-left p {
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+    }
+    .content-right {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: fit-content;
+      gap: 30px;
+    }
+    .content-right div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .content-right div p {
+      font-size: 18px;
+    }
+    .content-right div .link {
+      font-size: 14px;
+    }
+  }
 `;
 
 export const DivTree = styled.div`
@@ -217,5 +319,10 @@ export const DivTree = styled.div`
     font-size: 14px;
     line-height: 16px;
     color: var(--grey-2);
+  }
+  @media (max-width: 1024px) {
+    p {
+    font-size: 12px;
+  }
   }
 `;

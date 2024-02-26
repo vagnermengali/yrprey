@@ -83,4 +83,8 @@ export const HomeButtonContainer = styled.div`
     background-position: 0 0;
   }
 }
+  @media (max-width: 1024px) {
+    bottom: 55px;
+    right: 8px;
+  }
 `;

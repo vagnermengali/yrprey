@@ -34,6 +34,16 @@ export const StyledTransactionsSection = styled.div`
     font-size: 16px;
     line-height: 16px;
     color: var(--grey-2);
-    transition: all ease 
+  }
+  @media (max-width: 1024px) {
+    padding: 20px 5vw 40px 5vw;
+  h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+  p {
+    font-weight: 500;
+    font-size: 14px;
+  }
   }
 `;

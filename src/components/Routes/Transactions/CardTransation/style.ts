@@ -41,4 +41,15 @@ width: 100%;
     border: 2px solid var(--quartenary-color);
     background-color: var(--tertiary-color)
   }
+  @media (max-width: 1024px) {
+  .card-table {
+    padding: 15px 10px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .value {
+    font-size: 14px;
+  }
+  }
 `;

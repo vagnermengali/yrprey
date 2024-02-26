@@ -153,4 +153,51 @@ export const Form = styled.form`
     background-position: 0 0;
   }
   }
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 5vw 40px 5vw;
+    gap: 16px;
+    .container {
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .error {
+      width: 100%;
+    }
+    .no-error {
+      width: 100%;
+    }
+
+    .input, .input:not(:hover) {
+      width: 100%;
+      padding-left: 16px;
+      font: normal 700 14px/16px 'Gilroy', sans-serif;
+    }
+    .btn {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .container-input {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+    .link-transactions {
+      margin: 0 auto 16px auto;
+    }
+    .user-yrprey {
+      width: 146px;
+      height: 146px;
+      margin: 0 auto 18px auto;
+    }
+    .label {
+      font-size: 14px;
+    }
+  }
 `;
