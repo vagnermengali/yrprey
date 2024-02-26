@@ -5,6 +5,12 @@ export const CardBlogPageContainer = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 0 0 60px 0;
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 0 40px 0;
+  }
 `;
 
 export const CardBlogPageItem = styled.li`
@@ -41,6 +47,7 @@ export const CardBlogPageItemMainContent = styled.div`
     }
     .content-top-details-main {
       display: flex;
+      flex-direction: column;
       gap: 20px;
     }
     .content-details-main {
@@ -74,6 +81,24 @@ export const CardBlogPageItemMainContent = styled.div`
       line-clamp:2;
       -webkit-box-orient: vertical;
     }
+    @media (max-width: 1024px) {
+      height: 160px;
+    .content-top-details-main {
+      display: flex;
+      gap: 12px;
+    }
+    .content-details-main {
+      gap: 12px;
+      padding: 16px;
+    }
+    .card-blog-page-main-title {
+      font-size: 24px;
+    }
+
+    .card-blog-page-main-description {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const CardBlogPageItemContentTop = styled.div`
@@ -113,6 +138,19 @@ export const CardBlogPageItemContentTop = styled.div`
       color: var(--white);
       font-weight: 900;
     }
+    @media (max-width: 1024px) {
+      height: 210px;
+    .content-top-details {
+      padding: 16px;
+    }
+    .card-blog-page-font {
+      font-size: 12px;
+    }
+  
+    .card-blog-page-date {
+      font-size: 12px;
+    }
+  }
 `;
 
 export const CardBlogPageItemContentBottom = styled.div`
@@ -167,6 +205,21 @@ export const CardBlogPageItemContentBottom = styled.div`
     .card-blog-page-link:hover::before {
       width: 100%;
     }
+    @media (max-width: 1024px) {
+      padding: 16px;
+      gap: 8px;
+      height: 200px;
+    .card-blog-page-title {
+      font-size: 18px;
+    }
+    .card-blog-page-description {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .card-blog-page-link {
+      font-size: 14px;
+    }
+  }
 `;
 
 export const LoadingContainer = styled.div`

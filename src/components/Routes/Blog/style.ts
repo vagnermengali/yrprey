@@ -30,4 +30,13 @@ export const StyledBlogSection = styled.section`
     text-transform: none;
     gap: 20px;
   }
+  @media (max-width: 1024px) {
+    padding: 0 5vw;
+  }
+  .content {
+    gap: 16px;
+  }
+  .content h1 {
+    font-size: 24px;
+  }
 `;
