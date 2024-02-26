@@ -5,11 +5,12 @@ import { formSchema } from "@/validators/register";
 import Link from "next/link";
 import { IFormRegister } from "@/interfaces/IFormRegister/IFormRegister";
 import axios from "axios";
-import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import { Context } from "@/context/context";
+import { useContext } from "react";
 
 const FormRegister = () => {
-  const router = useRouter()
+  const { router } = useContext(Context);
 
   const {
     register,

@@ -1,72 +1,38 @@
 import { createContext, useState, useEffect } from "react";
 import { useRouter } from 'next/router';
+import axios from "axios";
 
 import { IChildren } from "@/interfaces/IChildren/IChildren";
 import { IContext } from "@/interfaces/IContext/IContext";
-import axios from "axios";
 
 export const Context = createContext<IContext>({} as IContext)
 
 const Provider = ({ children }: IChildren) => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isSideBarVisible, setIsSideBarVisible] = useState<boolean>(false);
-  const [user, setUser] = useState<any>();
-  const [tokenLocal, setTokenLocal] = useState<string>("")
-  const [statusApi, setStatusApi] = useState<string>("")
+  const [user, setUser] = useState<any>({});
+  const [tokenLocal, setTokenLocal] = useState<string>("");
+  const [statusApi, setStatusApi] = useState<string>("");
   const router = useRouter();
 
-  const showSideBar = () => setIsSideBarVisible(!isSideBarVisible);
+  const showSideBar = () => setIsSideBarVisible(prevState => !prevState);
 
-  const onSubmit = async (data: any) => {
+  const fetchUserData = async () => {
     try {
-      const response = await axios.post("http://yrprey.com/profile", data);
-      if (response.data.results[0].status === 200) {
-        setUser(response.data.results[0])
-      }
-    } catch (error) {
-      error
-    }
-  };
-
-  const logout = async (data: any) => {
-    try {
-      const response = await axios.post("http://yrprey.com/logout", data);
-      if (response.data.results[0].status === 200) {
-        const responseData = response?.data?.results[0];
-        window.location.href = responseData.msg;
-      }
-    } catch (error) {
-    error
-    }
-  };
-
-  const apiStatus = async () => {
-    try {
-      const response = await axios.get("http://yrprey.com/ssrf", {
-        params: {
-          endereco: "localhost",
-          port: 80
+      const storedToken = localStorage.getItem("token");
+      if (storedToken) {
+        setTokenLocal(storedToken);
+        const response = await axios.post("http://yrprey.com/profile", { token: storedToken });
+        if (response.data.results[0].status === 200) {
+          setUser(response.data.results[0]);
         }
-      });
-      if (response.data.results[0].status === 200) {
-        setStatusApi("green");
-      } else {
-        setStatusApi("red");
       }
     } catch (error) {
-      error
+      console.error("Error fetching user data:", error);
     }
   };
-  
-  useEffect(() => {
-    apiStatus()
-  }, [statusApi, setStatusApi])
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setTokenLocal(localStorage.getItem("token") || "")
-    }
-
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1024);
     };
@@ -75,13 +41,17 @@ const Provider = ({ children }: IChildren) => {
     handleResize();
 
     return () => window.removeEventListener('resize', handleResize);
-  }, [router, tokenLocal, setTokenLocal]);
+  }, []);
 
+  useEffect(() => {
+    fetchUserData();
+  }, [user, setUser, tokenLocal, setTokenLocal, router]);
 
   return (
-    <Context.Provider value={{ router, tokenLocal, isMobile, showSideBar, isSideBarVisible, setIsSideBarVisible, user, setUser, onSubmit, setTokenLocal, logout, statusApi }}>
+    <Context.Provider value={{ router, tokenLocal, isMobile, showSideBar, isSideBarVisible, setIsSideBarVisible, user, setUser, setTokenLocal, statusApi, setStatusApi }}>
       {children}
-    </Context.Provider>);
+    </Context.Provider>
+  );
 };
 
 export default Provider;

@@ -19,7 +19,7 @@ export const StyledCardShopClean = styled.div`
     }
     .link {
       text-decoration:none;
-      height: 85%;
+      height: 88%;
       width: 100%;
     }
 

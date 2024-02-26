@@ -12,14 +12,24 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import Link from "next/link";
 import Image from "next/image";
+import { Context } from "@/context/context";
+import { useContext, useEffect } from "react";
+import Error404Page from "@/components/ErrorPage";
 
 const Profile = () => {
+  const { setUser, router, tokenLocal } = useContext(Context);
   let user = null;
 
-  if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {
+  const userLocal = localStorage.getItem('user');
+
+  if (!userLocal) {
+
+  } else {
     const userString = localStorage.getItem('user') || "";
     user = JSON.parse(userString);
   }
+}
 
   const {
     register,
@@ -29,6 +39,20 @@ const Profile = () => {
     resolver: yupResolver(formSchema),
     defaultValues: user
   });
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      router.push('/login');
+    }
+  }, []);
+
+  if (!tokenLocal) {
+    return (
+      <>
+        <Error404Page />
+      </>
+    )
+  }
 
   const onSubmitRegister = async (data: any) => {
     try {
@@ -47,6 +71,13 @@ const Profile = () => {
           backdrop: `rgba(0, 0, 0, 0.493)`,
           timer: 1500
         });
+        const urlProfile = `http://yrprey.com/profile`;
+        const responseProfile = await axios.post(urlProfile, { token: data.token });
+        const user = responseProfile.data.results[0];
+        const dataString = JSON.stringify(user);
+        localStorage.setItem("user", dataString);
+        setUser(user)
+
       } else {
         Swal.fire({
           position: "center",
@@ -172,9 +203,9 @@ const Profile = () => {
           </div>
           <button className="btn" type="submit">Salvar</button>
         </Form>
-        <Footer />
-        <HomeButton />
       </StyledProfileSection>
+      <Footer />
+      <HomeButton />
     </motion.div>
   );
 }

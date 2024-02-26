@@ -3,9 +3,10 @@ import CardShop from "@/components/ShopCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { StyledCollectionsSection } from "./style";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
+import { Context } from "@/context/context";
+import { useContext } from "react";
 
 interface ColorData {
   [key: string]: Product[];
@@ -21,7 +22,7 @@ interface Product {
 }
 
 const Collections = () => {
-  const router = useRouter();
+  const { router } = useContext(Context);
   const { id } = router.query;
 
   const [productsList, setProductsList] = useState<ColorData>({});

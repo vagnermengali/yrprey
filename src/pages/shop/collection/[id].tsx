@@ -1,9 +1,12 @@
+import { Context } from "@/context/context";
+import { useContext } from "react";
+
 import Collections from '@/components/Routes/Shop/Collections';
 import SEO from '@/components/SEO';
-import { useRouter } from 'next/router';
+
 
 const CollectionPage = () => {
-  const router = useRouter();
+  const { router } = useContext(Context);
   const { id } = router.query;
   const capitalizedId = Array.isArray(id) ? id.join('') : id || '';
   const capitalizedIdWithFirstLetterUpperCase = capitalizedId.charAt(0).toUpperCase() + capitalizedId.slice(1);

@@ -2,13 +2,15 @@ import React, { useContext, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Context } from "@/context/context";
+import axios from "axios";
 
 import StatusApi from "@/components/StatusApi";
 
 import { HeaderContainer, DivHeader } from "./style";
 
+
 const Header = () => {
-  const { router, tokenLocal, isMobile, onSubmit, logout } = useContext(Context);
+  const { router, tokenLocal, isMobile, setUser } = useContext(Context);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,6 +27,29 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const onProfile = async (data: any) => {
+    try {
+      const response = await axios.post("http://yrprey.com/profile", data);
+      if (response.data.results[0].status === 200) {
+        setUser(JSON.stringify(response.data.results[0]))
+      }
+    } catch (error) {
+      error
+    }
+  };
+
+  const onLogout = async (data: any) => {
+    try {
+      const response = await axios.post("http://yrprey.com/logout", data);
+      if (response.data.results[0].status === 200) {
+        const responseData = response?.data?.results[0];
+        window.location.href = responseData.msg;
+      }
+    } catch (error) {
+      error
+    }
+  };
 
   return (
     <>
@@ -64,13 +89,13 @@ const Header = () => {
                 {tokenLocal ? (
                   <div className="login-register">
                     <button className="login" onClick={() => {
-                      logout({ token: tokenLocal, url: "/" })
+                      onLogout({ token: tokenLocal, url: "/" })
                       localStorage.clear()
                     }}>
                       Logout
                     </button>
                     <button className="btn-register" onClick={() => {
-                      onSubmit({ token: tokenLocal })
+                      onProfile({ token: tokenLocal })
                       router.push("/profile")
                     }}>
                       My account
@@ -91,7 +116,7 @@ const Header = () => {
           </div>
         </DivHeader>
       </HeaderContainer>
-      <StatusApi/>
+      <StatusApi />
     </>
   );
 };

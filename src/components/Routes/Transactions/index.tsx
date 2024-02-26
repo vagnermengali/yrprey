@@ -8,11 +8,19 @@ import HomeButton from "@/components/HomeButton";
 import SEO from "@/components/SEO";
 import CardTransaction from "./CardTransation";
 import { Context } from "@/context/context";
+import Error404Page from "@/components/ErrorPage";
 
 const TransactionsPages = () => {
-  const { tokenLocal } = useContext(Context);
+  const { tokenLocal, router } = useContext(Context);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      router.push('/login');
+    }
+  }, []);
+
   const [listTransations, setListTransations] = useState([]);
-  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fetchDataTransations = async (data: any) => {
@@ -27,6 +35,14 @@ const TransactionsPages = () => {
     fetchDataTransations({ token: tokenLocal });
 
   }, [tokenLocal]);
+
+  if (!tokenLocal) {
+    return (
+      <>
+        <Error404Page />
+      </>
+    )
+  }
 
   return (
     <motion.div
@@ -44,13 +60,13 @@ const TransactionsPages = () => {
         <div className="container">
           <h1>My transactions</h1>
           {listTransations ? <>
-          {listTransations.slice().reverse().map((transaction, index) => (
-            <CardTransaction key={index} transaction={transaction} />
-          ))}
-          </> : 
-          <>
-          <p>There are no transactions</p>
-          </>}
+            {listTransations.slice().reverse().map((transaction, index) => (
+              <CardTransaction key={index} transaction={transaction} />
+            ))}
+          </> :
+            <>
+              <p>There are no transactions</p>
+            </>}
         </div>
       </StyledTransactionsSection>
       <Footer />

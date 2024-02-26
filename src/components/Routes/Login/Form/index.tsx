@@ -7,9 +7,11 @@ import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import { Context } from "@/context/context";
+import { useContext } from "react";
 
 const FormLogin = () => {
-  const router = useRouter()
+  const { router } = useContext(Context);
 
   const {
     register,
@@ -98,7 +100,7 @@ const FormLogin = () => {
       <label className={errors.password ? "error" : "no-error"}>
         {errors.password?.message}
       </label>
-      <a className="link" onClick={() => alert("make modal to proceed")}>
+      <a className="link">
         Forgot your password?
       </a>
       <div className="container-button">
