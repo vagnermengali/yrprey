@@ -28,4 +28,14 @@ export const StyledOurGoalsSection = styled.section`
     opacity: 0.7;
     text-align: center;
   }
+  @media (max-width: 1024px) {
+    gap: 12px;
+    padding: 24px 5vw;
+    .title {
+      font-size: 24px;
+    }
+    .text {
+      font-size: 14px;
+    }
+  }
 `;

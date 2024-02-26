@@ -29,4 +29,10 @@ export const StyledAboutSection = styled.section`
     text-align: center;
     padding: 40px;
   }
+  @media (max-width: 1024px) {
+    .content h1 {
+      font-size: 28px;
+      padding: 20px 5vw 30px 5vw;
+    }
+  }
 `;

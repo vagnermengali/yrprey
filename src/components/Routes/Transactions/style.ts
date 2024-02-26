@@ -38,7 +38,7 @@ export const StyledTransactionsSection = styled.div`
   @media (max-width: 1024px) {
     padding: 20px 5vw 40px 5vw;
   h1 {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 32px;
   }
   p {

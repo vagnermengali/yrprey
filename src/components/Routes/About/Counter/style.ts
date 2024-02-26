@@ -29,4 +29,21 @@ export const StyledCounterSection = styled.section`
     font-size: 32px;
     margin-left: 10px;
   }
+  @media (max-width: 1024px) {
+    height: fit-content;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 24px 5vw;
+    }
+    p {
+      font-size: 18px;
+      min-width: 160px;
+    }
+    span {
+      font-size: 14px;
+      margin-left: 6px;
+    }
+  }
 `;
