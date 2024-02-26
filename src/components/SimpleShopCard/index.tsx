@@ -10,14 +10,14 @@ const CardShopClean = ({ image, title_image, title }: ICardShopClean) => {
   return (
     <StyledCardShopClean>
       <Link href="/shop/collection/red" className="link">
+        <div className="card-shop-clean">
         <Image
           className="card-img"
           src={image}
-          width="100"
-          height="100"
-          sizes="100"
+          fill
           alt={title_image}
         ></Image>
+        </div>
         <div className="card-details">
           <p className="text-title">{title}</p>
         </div>

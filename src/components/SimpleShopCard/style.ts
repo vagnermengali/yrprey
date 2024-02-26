@@ -12,9 +12,17 @@ export const StyledCardShopClean = styled.div`
     border: 1px solid var(--grey-6);
     border-radius: 3px;
     text-decoration:none;
+    .card-shop-clean {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
     .link {
       text-decoration:none;
+      height: 85%;
+      width: 100%;
     }
+
   .card-img {
     width: 100%;
     height: 88%;

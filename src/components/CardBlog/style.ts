@@ -11,6 +11,7 @@ export const StyledCard = styled.div<ICardBlogStyled>`
       ? "var(--grey-0)"
       : "var(--gradient-color)"};
   .content-up {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
