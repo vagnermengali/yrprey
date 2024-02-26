@@ -13,7 +13,7 @@ const AboutSection = () => {
     <StyledAboutSection>
       <div className="container">
         <div className="container-left" data-aos="fade-right">
-          <Image src={"/hacker-2.png"} width="100"
+          <Image src={"/hacker-2.webp"} width="100"
             height="100"
             sizes="100"
             alt="shield"></Image>

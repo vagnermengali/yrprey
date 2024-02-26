@@ -53,7 +53,7 @@ const Footer = () => {
       <DivTwo>
         <div className="content-left">
           <Image
-            src={"/logo-letter.svg"}
+            src={"/logo-letter.webp"}
             width="100"
             height="100"
             sizes="100"

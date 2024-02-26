@@ -21,7 +21,7 @@ const InitialSection = () => {
         <div className="container-right">
           <Image
             className="image"
-            src={"/hacker-1.png"}
+            src={"/hacker-1.webp"}
             width="100"
             height="100"
             sizes="100"

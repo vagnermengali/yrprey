@@ -32,9 +32,9 @@ const Header = () => {
             <div>
               <Link href="/">
                 <Image
-                  src={"/logo-letter.svg"}
+                  src={"/logo-letter.webp"}
                   width={130}
-                  height={40}
+                  height={30}
                   sizes="100"
                   alt="logo-letter"
                   className="logo-header"

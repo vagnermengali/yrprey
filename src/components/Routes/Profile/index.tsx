@@ -80,7 +80,7 @@ const Profile = () => {
       <Header />
       <StyledProfileSection>
         <Form onSubmit={handleSubmit(onSubmitRegister)}>
-          <Image className="user-yrprey" src={"/user-yrprey.png"} alt="user-yrprey" width={10000} height={10000} />
+          <Image className="user-yrprey" src={"/user-yrprey.webp"} alt="user-yrprey" width={10000} height={10000} />
           <Link href={"/transactions"} className="link-transactions">See my transactions</Link>
           <div className="container">
             <div className="container-input ">

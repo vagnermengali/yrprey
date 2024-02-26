@@ -4,7 +4,8 @@ import Provider from "@/context/context";
 import 'aos/dist/aos.css';
 import "swiper/css/bundle";
 import "animate.css/animate.min.css";
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence } from "framer-motion";
+import { Montserrat } from 'next/font/google'
 
 const ResetStyles = createGlobalStyle`
   ${() => css`
@@ -26,7 +27,7 @@ const ResetStyles = createGlobalStyle`
       border: 0;
       font-size: 100%;
       font: inherit;
-      font-family: 'Gilroy', sans-serif;
+      font-family: ${montserrat.style.fontFamily};
       vertical-align: baseline;
       scroll-behavior: smooth;
     }
@@ -71,12 +72,6 @@ const ResetStyles = createGlobalStyle`
 
 const GlobalStyles = createGlobalStyle`
   ${() => css`
-    @font-face {
-      font-family: 'Gilroy';
-      src: local('Gilroy'), url(/font/Gilroy.ttf) format('truetype');
-      font-display: swap;
-    }
-
     @media (max-width: 1024px) {
       body {
         display: none;
@@ -144,6 +139,13 @@ const GlobalStyles = createGlobalStyle`
     }
   `}
 `;
+
+const montserrat = Montserrat({
+  weight: ['500', '600', '700', '800', '900'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

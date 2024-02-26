@@ -56,7 +56,7 @@ const CardBlogPage = () => {
             <CardBlogPageItemMainContent>
               <Image
                 className="card-blog-page-main-img"
-                src={listNews[0].media === null || listNews[0].media === "" ? "/background-no-image.png" : listNews[0].media}
+                src={listNews[0].media === null || listNews[0].media === "" ? "/background-no-image.webp" : listNews[0].media}
                 alt={listNews[0].title}
                 width="100"
                 height="100"
@@ -90,7 +90,7 @@ const CardBlogPage = () => {
                 <CardBlogPageItemContentTop>
                   <Image
                     className="card-blog-page-img"
-                    src={news.media === null || news.media === "" ? "/background-no-image.png" : news.media}
+                    src={news.media === null || news.media === "" ? "/background-no-image.webp" : news.media}
                     alt={news.title}
                     width="100"
                     height="100"

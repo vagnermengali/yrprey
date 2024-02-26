@@ -6,7 +6,7 @@ const Banner = () => {
 
   return (
     <StyledBannerSection>
-      <Image className="img-banner-about" src={'/banner-about.png'} alt="banner-main" width={10000}
+      <Image className="img-banner-about" src={'/banner-about.webp'} alt="banner-main" width={10000}
         height={10000}
       />
     </StyledBannerSection>
