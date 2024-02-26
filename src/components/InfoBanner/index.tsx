@@ -1,7 +1,5 @@
 import { BsCheck2 } from "react-icons/bs";
 import { StyledInfoBanner, DivInfoBanner } from "./style";
-import Image from "next/image";
-import test from "@/assets/image/Illustrations/table.png"
 
 const InfoBanner = () => {
   

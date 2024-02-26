@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { StyledInitialSection } from "./style";
 import { Context } from "@/context/context";
-import padclock from "@/assets/image/Illustrations/hacker-1.png";
 import Image from "next/image";
 
 const InitialSection = () => {
@@ -22,7 +21,7 @@ const InitialSection = () => {
         <div className="container-right">
           <Image
             className="image"
-            src={padclock}
+            src={"/hacker-1.png"}
             width="100"
             height="100"
             sizes="100"

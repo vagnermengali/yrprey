@@ -6,7 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import { INews } from "@/interfaces/News/INews";
-import no_image from "@/assets/image/backgrounds/background-no-image.png"
 
 const CardBlogPage = () => {
   const [listNews, setListNews] = useState<INews[]>([]);
@@ -57,7 +56,7 @@ const CardBlogPage = () => {
             <CardBlogPageItemMainContent>
               <Image
                 className="card-blog-page-main-img"
-                src={listNews[0].media === null || listNews[0].media === "" ? no_image : listNews[0].media}
+                src={listNews[0].media === null || listNews[0].media === "" ? "/background-no-image.png" : listNews[0].media}
                 alt={listNews[0].title}
                 width="100"
                 height="100"
@@ -91,7 +90,7 @@ const CardBlogPage = () => {
                 <CardBlogPageItemContentTop>
                   <Image
                     className="card-blog-page-img"
-                    src={news.media === null || news.media === "" ? no_image : news.media}
+                    src={news.media === null || news.media === "" ? "/background-no-image.png" : news.media}
                     alt={news.title}
                     width="100"
                     height="100"

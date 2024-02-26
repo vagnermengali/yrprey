@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import logo from "@/assets/image/logos/logo-letter.svg";
 import { formSchema } from "@/validators/drop";
 import { StyledFooter, DivOne, DivTwo, DivTree } from "./style";
 import {
@@ -54,7 +53,7 @@ const Footer = () => {
       <DivTwo>
         <div className="content-left">
           <Image
-            src={logo}
+            src={"/logo-letter.svg"}
             width="100"
             height="100"
             sizes="100"

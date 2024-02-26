@@ -3,9 +3,6 @@ import { StyledShopSection } from "./style";
 import { useContext, useEffect } from "react";
 import { Context } from "@/context/context";
 import CardShopClean from "@/components/SimpleShopCard";
-import nft3 from "@/assets/image/collectibles/red/map-red.png";
-import nft1 from "@/assets/image/collectibles/red/book-red.png";
-import nft2 from "@/assets/image/collectibles/red/potion-red.png";
 
 const ShopSection = () => {
   const { router } = useContext(Context);
@@ -25,21 +22,21 @@ const ShopSection = () => {
         <div className="content-center">
           <div data-aos="fade-down-right">
             <CardShopClean
-              image={nft1}
+              image={"/collectibles/red/map-red.png"}
               title_image={"book"}
               title="YRPrey Club Red"
             />
           </div>
           <div data-aos="fade">
             <CardShopClean
-              image={nft2}
+              image={"/collectibles/red/potion-red.png"}
               title_image={"potion"}
               title="YRPrey Club Red"
             />
           </div>
           <div data-aos="fade-down-left">
             <CardShopClean
-              image={nft3}
+              image={"/collectibles/red/map-red.png"}
               title_image={"map"}
               title="YRPrey Club Red"
             />

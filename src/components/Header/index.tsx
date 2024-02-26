@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { HeaderContainer, DivHeader } from "./style";
 import { Context } from "@/context/context";
-import logo from "@/assets/image/logos/logo-letter.svg";
 import Image from "next/image";
 import Link from "next/link";
 import StatusApi from "../StatusApi";
@@ -33,7 +32,7 @@ const Header = () => {
             <div>
               <Link href="/">
                 <Image
-                  src={logo}
+                  src={"/logo-letter.svg"}
                   width={130}
                   height={40}
                   sizes="100"

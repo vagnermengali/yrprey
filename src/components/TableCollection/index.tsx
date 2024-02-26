@@ -1,11 +1,6 @@
 import React from "react";
 import { StyledTableCollection } from "./style";
 import { FaCheckCircle, FaEthereum } from "react-icons/fa";
-import profileRed from "@/assets/image//collectibles/red/potion-red.png";
-import profileBlue from "@/assets/image//collectibles/blue/potion-blue.png";
-import profileWhite from "@/assets/image//collectibles/white/potion-white.png";
-import profileCian from "@/assets/image//collectibles/cian/potion-cian.png";
-import profileBeige from "@/assets/image//collectibles/beige/potion-beige.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,7 +24,7 @@ const TableCollection = () => {
                 <div>
                   <Image
                     className="img"
-                    src={profileRed}
+                    src={"/collectibles/red/potion-red.png"}
                     width="100"
                     height="100"
                     sizes="100"
@@ -60,7 +55,7 @@ const TableCollection = () => {
                 <div>
                   <Image
                     className="img"
-                    src={profileBlue}
+                    src={"/collectibles/blue/potion-blue.png"}
                     width="100"
                     height="100"
                     sizes="100"
@@ -91,7 +86,7 @@ const TableCollection = () => {
                 <div>
                   <Image
                     className="img"
-                    src={profileWhite}
+                    src={"/collectibles/white/potion-white.png"}
                     width="100"
                     height="100"
                     sizes="100"
@@ -122,7 +117,7 @@ const TableCollection = () => {
                 <div className="container-img">
                   <Image
                     className="img"
-                    src={profileCian}
+                    src={"/collectibles/cian/potion-cian.png"}
                     width="100"
                     height="100"
                     sizes="100"
@@ -153,7 +148,7 @@ const TableCollection = () => {
                 <div>
                   <Image
                     className="img"
-                    src={profileBeige}
+                    src={"/collectibles/beige/potion-beige.png"}
                     width="100"
                     height="100"
                     sizes="100"

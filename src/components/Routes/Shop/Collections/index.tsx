@@ -47,7 +47,7 @@ const Collections = () => {
         id={product.id}
         key={index}
         title_image={product.title_image}
-        image={require(`@/assets/image/collectibles/${id}/${product.image}.png`)}
+        image={`/collectibles/${id}/${product.image}.png`}
         title={product.title}
         name={product.name}
         value={product.value}
