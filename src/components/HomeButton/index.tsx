@@ -1,7 +1,8 @@
-import { HomeButtonContainer } from "./style";
 import { RxCaretUp } from "react-icons/rx";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
+
+import { HomeButtonContainer } from "./style";
 
 const HomeButton = () => {
   const [showButton, setShowButton] = useState(false);

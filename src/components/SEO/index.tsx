@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { ISeo } from "@/interfaces/ISeo/ISeo";
 
 const SEO = ({ title, description }: ISeo) => {

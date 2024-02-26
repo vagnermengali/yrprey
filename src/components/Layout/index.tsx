@@ -1,4 +1,5 @@
 import { IChildren } from "@/interfaces/IChildren/IChildren";
+
 import { LayoutContainer } from "./style";
 
 const Layout = ({children}: IChildren) => {

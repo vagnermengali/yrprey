@@ -1,5 +1,6 @@
-import { ICardBlogStyled } from "@/interfaces/ICardBlog/ICardBlog";
 import styled from "styled-components";
+
+import { ICardBlogStyled } from "@/interfaces/ICardBlog/ICardBlog";
 
 export const StyledCard = styled.div<ICardBlogStyled>`
   width: 370px;

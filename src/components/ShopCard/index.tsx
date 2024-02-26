@@ -1,11 +1,13 @@
 import Image from "next/image";
-import { StyledCardShop } from "./style";
 import { FaCheckCircle, FaEthereum, FaTrash } from "react-icons/fa";
-import { ICardShop } from "@/interfaces/IChildren/ICardShop";
 import { useContext } from "react";
 import { Context } from "@/context/context";
 import axios from "axios";
 import Swal from "sweetalert2";
+
+import { ICardShop } from "@/interfaces/IChildren/ICardShop";
+
+import { StyledCardShop } from "./style";
 
 const CardShop = ({ image, title_image, title, name, value, id }: ICardShop) => {
   const { router, tokenLocal, user, setUser } = useContext(Context);

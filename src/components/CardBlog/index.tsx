@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { StyledCard } from "./style";
-import { FaArrowRight } from "react-icons/fa";
-import { ICardBlog } from "@/interfaces/ICardBlog/ICardBlog";
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
+
+import { ICardBlog } from "@/interfaces/ICardBlog/ICardBlog";
+
+import { StyledCard } from "./style";
 
 const Card = ({
   background_color,

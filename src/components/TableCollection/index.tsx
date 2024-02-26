@@ -1,8 +1,9 @@
 import React from "react";
-import { StyledTableCollection } from "./style";
 import { FaCheckCircle, FaEthereum } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+
+import { StyledTableCollection } from "./style";
 
 const TableCollection = () => {
 

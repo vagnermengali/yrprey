@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { StyledCardShopClean } from "./style";
 import Link from "next/link";
-import { useRouter } from "next/router";
+
+import { StyledCardShopClean } from "./style";
+
 import { ICardShopClean } from "@/interfaces/IChildren/ICardShop";
 
 const CardShopClean = ({ image, title_image, title }: ICardShopClean) => {
-  const router = useRouter()
-  const { id } = router.query
 
   return (
     <StyledCardShopClean>

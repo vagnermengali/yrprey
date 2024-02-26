@@ -1,9 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
-import { HeaderContainer, DivHeader } from "./style";
-import { Context } from "@/context/context";
 import Image from "next/image";
 import Link from "next/link";
-import StatusApi from "../StatusApi";
+import { Context } from "@/context/context";
+
+import StatusApi from "@/components/StatusApi";
+
+import { HeaderContainer, DivHeader } from "./style";
 
 const Header = () => {
   const { router, tokenLocal, isMobile, onSubmit, logout } = useContext(Context);

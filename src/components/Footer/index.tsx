@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { formSchema } from "@/validators/drop";
-import { StyledFooter, DivOne, DivTwo, DivTree } from "./style";
+import Image from "next/image";
+import Link from "next/link";
 import {
   FaTwitter,
   FaFacebookF,
@@ -9,9 +9,11 @@ import {
   FaLinkedinIn,
   FaExternalLinkAlt,
 } from "react-icons/fa";
+
 import { IFormDrop } from "@/interfaces/FormDrop/IFormDrop";
-import Image from "next/image";
-import Link from "next/link";
+import { formSchema } from "@/validators/drop";
+
+import { StyledFooter, DivOne, DivTwo, DivTree } from "./style";
 
 const Footer = () => {
   const {
