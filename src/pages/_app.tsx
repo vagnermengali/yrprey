@@ -73,6 +73,9 @@ const ResetStyles = createGlobalStyle`
 const GlobalStyles = createGlobalStyle`
   ${() => css`
     @media (max-width: 1024px) {
+      body {
+        display: none;
+      }
       html:before {
         margin: 0;
         content: "mobile in development";
