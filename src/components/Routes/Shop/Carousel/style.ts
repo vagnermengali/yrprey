@@ -226,4 +226,89 @@ export const ContainerCarousel = styled.div`
     opacity: 1;
     background: var(--primary-color);
   }
+  @media (max-width: 1024px)  {
+  .content-text {
+    gap: 12px;
+  }
+
+  .content-title {
+    font-size: 32px;
+  }
+
+  .content-details {
+    font-size: 18px;
+  }
+
+  .container-carousel {
+    height: 300px;
+  }
+
+  .content-carousel {
+    gap: 12px;
+    height: auto;
+  }
+
+  .carousel-status {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px;
+    border-radius: 30px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .carousel-date {
+    font-size: 16px;
+  }
+
+  .carousel-title {
+    font-size: 24px;
+  }
+
+  .carousel-details {
+    font-size: 16px;
+  }
+
+  .carousel-button {
+  width: 116px;
+  height: 46px;
+  font: normal 700 14px/16px 'Gilroy', sans-serif;
+}
+
+.carousel-button:before {
+  content: '';
+  background: var(--gradient-color-animation);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 4px;
+}
+
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-button-prev:not(:hover),
+  .swiper-button-next:not(:hover) {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 24px;
+    height: 4px;
+  }
+  }
 `;
