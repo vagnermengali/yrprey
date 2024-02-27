@@ -118,7 +118,7 @@ const Header = () => {
         </DivHeader>
       </HeaderContainer>
       {!isMobile && <StatusApi />}
-      {!isSideBarVisible && isMobile && <Sidebar />}
+      {isSideBarVisible && isMobile && <Sidebar />}
     </>
   );
 };
