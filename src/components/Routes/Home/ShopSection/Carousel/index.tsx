@@ -31,8 +31,6 @@ const Carousel = () => {
             effect="fade"
             navigation
             pagination={{ clickable: true }}
-            autoplay={{ delay: 6000 }}
-            loop
             className="mySwiper"
           >
             <SwiperSlide>

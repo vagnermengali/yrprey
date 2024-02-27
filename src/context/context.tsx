@@ -28,7 +28,7 @@ const Provider = ({ children }: IChildren) => {
         }
       }
     } catch (error) {
-      console.error("Error fetching user data:", error);
+      error
     }
   };
 
@@ -45,7 +45,7 @@ const Provider = ({ children }: IChildren) => {
 
   useEffect(() => {
     fetchUserData();
-  }, [user, setUser, tokenLocal, setTokenLocal, router]);
+  }, [ setUser,, setTokenLocal, router]);
 
   return (
     <Context.Provider value={{ router, tokenLocal, isMobile, showSideBar, isSideBarVisible, setIsSideBarVisible, user, setUser, setTokenLocal, statusApi, setStatusApi }}>

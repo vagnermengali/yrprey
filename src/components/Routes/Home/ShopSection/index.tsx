@@ -40,8 +40,7 @@ const ShopSection = () => {
                       navigation
                       pagination={{ clickable: true }}
                       className="mySwiper"
-                      slidesPerView={1}
-                      loop
+                      slidesPerView={1}     
                     >
                       <SwiperSlide>
                         <div data-aos="fade">

@@ -46,7 +46,7 @@ const Carousel = () => {
             }
           }
         );
-        console.log(response)
+        response
         setSlides(response.data.results);
       } catch (error) {
         error
@@ -70,8 +70,6 @@ const Carousel = () => {
             effect="fade"
             navigation
             pagination={{ clickable: true }}
-            autoplay={{ delay: 6000 }}
-            loop
             className="mySwiper"
           >
             {slides.map((slide, index) => (

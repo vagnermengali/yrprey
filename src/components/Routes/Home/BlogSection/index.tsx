@@ -41,7 +41,6 @@ const BlogSection = () => {
                       pagination={{ clickable: true }}
                       className="mySwiper"
                       slidesPerView={1}
-                      loop
                     >
                       <SwiperSlide>
                         <div data-aos="fade">
