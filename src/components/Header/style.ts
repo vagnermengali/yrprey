@@ -14,8 +14,13 @@ export const HeaderContainer = styled.header<IHeaderBg>`
   justify-content: center;
   width: 100%;
   transition: background-color 0.5s ease;
-  background-color: ${({ scrolled }) => scrolled ? "var(--grey-5)" : "tranparent"};
+  background-color: ${({ scrolled }) => scrolled ? "var(--grey-5)" : "transparent !important"};
   backdrop-filter: ${({ scrolled }) => (scrolled ? "blur(5px)" : "blur(0px)")};
+  .menu-mobile {
+    color: #fff;
+    width: 26px;
+    height: 26px;
+  }
 `;
 
 export const DivHeader = styled.div`
@@ -156,6 +161,14 @@ export const DivHeader = styled.div`
 
   100% {
     background-position: 0 0;
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    padding: 0 5vw;
+  }
+  .logo-header {
+    height: auto;
   }
 }
 `;

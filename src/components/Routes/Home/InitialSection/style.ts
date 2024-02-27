@@ -114,9 +114,9 @@ export const StyledInitialSection = styled.div`
   }
 
   @keyframes shake {
-        0%, 100% { transform: translateY(-70px); }
-        10%, 30%, 50%, 70%, 90% { transform: translateY(-100px); }
-        20%, 40%, 60%, 80% { transform: translateY(-70px); }
+        0%, 100% { transform: translateY(-40px); }
+        10%, 30%, 50%, 70%, 90% { transform: translateY(-60px); }
+        20%, 40%, 60%, 80% { transform: translateY(-40px); }
     }
 
 @keyframes glowing {

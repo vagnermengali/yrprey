@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Context } from "@/context/context";
 import axios from "axios";
+import { FaBars } from "react-icons/fa";
 
 import StatusApi from "@/components/StatusApi";
 
@@ -69,7 +70,7 @@ const Header = () => {
               </Link>
             </div>
             {isMobile ? (
-              <></>
+              <><FaBars className="menu-mobile" /></>
             ) : (
               <>
                 <nav>
@@ -116,7 +117,7 @@ const Header = () => {
           </div>
         </DivHeader>
       </HeaderContainer>
-      <StatusApi />
+      {!isMobile && <StatusApi />}
     </>
   );
 };
