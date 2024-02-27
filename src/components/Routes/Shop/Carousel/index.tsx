@@ -24,13 +24,21 @@ interface Slide {
 const Carousel = () => {
   const [slides, setSlides] = useState<Slide[]>([] as Slide[]);
 
+  function getDataAtualFormatada() {
+    const dataAtual = new Date();
+    const dia = String(dataAtual.getDate()).padStart(2, '0');
+    const mes = String(dataAtual.getMonth() + 1).padStart(2, '0');
+    const ano = String(dataAtual.getFullYear()).slice(-2); // Pegando apenas os dois últimos dígitos do ano
+    return `${dia} - ${mes} - ${ano}`;
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.post<{ results: Slide[] }>(
           "http://yrprey.com/resposta",
           {
-            id: "2"
+            id: "1"
           },
           {
             headers: {
@@ -71,7 +79,7 @@ const Carousel = () => {
                 <div className="container-carousel">
                   <Image
                     className="img-carousel"
-                    src={slide.image}
+                    src={`/slide-${(slide.image.match(/slide-(.*?)\.webp/)?.[1].split("-").pop() || "")}.webp`}
                     width={1000}
                     height={1000}
                     alt="img-carousel"
@@ -82,72 +90,13 @@ const Carousel = () => {
                       <HiOutlineStatusOnline className="icon" />
                       Active now
                     </button>
-                    <p className="carousel-date">{slide.type}</p>
+                    <p className="carousel-date">{getDataAtualFormatada()}</p>
                     <h2 className="carousel-title">
-                      {slide.type}-{slide.id}
+                      YRprey- {slide.image.match(/slide-(.*?)\.webp/)?.[1].split("-").pop()}
                     </h2>
-                    <p className="carousel-details">{slide.id}</p>
-                    <Link href={slide.image} className="carousel-button">
-                      <button className="carousel-button">
-                        See drop
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <div className="container-carousel">
-                  <Image
-                    className="img-carousel"
-                    src={slide.image}
-                    width={1000}
-                    height={1000}
-                    alt="img-carousel"
-                    unoptimized
-                  />
-                  <div className="content-carousel">
-                    <button className="carousel-status" disabled>
-                      <HiOutlineStatusOnline className="icon" />
-                      Active now
-                    </button>
-                    <p className="carousel-date">{slide.type}</p>
-                    <h2 className="carousel-title">
-                      {slide.type}-{slide.id}
-                    </h2>
-                    <p className="carousel-details">{slide.id}</p>
-                    <Link href={slide.image} className="carousel-button">
-                      <button className="carousel-button">
-                        See drop
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <div className="container-carousel">
-                  <Image
-                    className="img-carousel"
-                    src={slide.image}
-                    width={1000}
-                    height={1000}
-                    alt="img-carousel"
-                    unoptimized
-                  />
-                  <div className="content-carousel">
-                    <button className="carousel-status" disabled>
-                      <HiOutlineStatusOnline className="icon" />
-                      Active now
-                    </button>
-                    <p className="carousel-date">{slide.type}</p>
-                    <h2 className="carousel-title">
-                      {slide.type}-{slide.id}
-                    </h2>
-                    <p className="carousel-details">{slide.id}</p>
-                    <Link href={slide.image} className="carousel-button">
+                    <p className="carousel-details">Collection - {slide.image.match(/slide-(.*?)\.webp/)?.[1].split("-").pop()}</p>
+                    <Link href={"/shop/collection/" + (slide.image.match(/slide-(.*?)\.webp/)?.[1].split("-").pop() || "")}
+                      className="carousel-button">
                       <button className="carousel-button">
                         See drop
                       </button>
