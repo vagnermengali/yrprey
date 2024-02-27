@@ -38,4 +38,18 @@ export const StyledCardShopClean = styled.div`
   .card:hover {
     border-color: var(--primary-color);
   }
+  @media (max-width: 1024px) {
+    width: 330px;
+    height: 378px;
+    .link {
+      height: 80%;
+    }
+
+  .card-img {
+    height: 100%;
+  }
+  .text-title {
+    font-size: 1.1em;
+  }
+  }
 `;
