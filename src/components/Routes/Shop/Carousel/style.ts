@@ -310,5 +310,8 @@ export const ContainerCarousel = styled.div`
     width: 24px;
     height: 4px;
   }
+  .img-carousel {
+    object-fit: cover;
+  }
   }
 `;
