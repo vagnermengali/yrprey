@@ -72,30 +72,6 @@ const ResetStyles = createGlobalStyle`
 
 const GlobalStyles = createGlobalStyle`
   ${() => css`
-/*     @media (max-width: 1024px) {
-      body {
-        display: none;
-      }
-      html:before {
-        margin: 0;
-        content: "mobile in development";
-        color: #FFFFFF;
-        transform: none;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        inset: 0;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        align-items: center;
-        background-color: #101112;
-        overflow: hidden;
-        z-index: 999999;
-      }
-    } */
-    
     :root {
       --primary-color: #FF1A56;
       --secondary-color: #D80B4B;

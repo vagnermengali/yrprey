@@ -20,6 +20,7 @@ export const HeaderContainer = styled.header<IHeaderBg>`
     color: #fff;
     width: 26px;
     height: 26px;
+    cursor: pointer;
   }
 `;
 
