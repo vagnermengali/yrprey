@@ -205,7 +205,6 @@ export const DivTwo = styled.div`
     color: var(--primary-color);
     border-radius: 9999pc;
     outline: none;
-    gap: 20px;
     width: 34px;
     height: 34px;
     font-size: 18px;
