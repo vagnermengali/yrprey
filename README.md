@@ -63,6 +63,13 @@ Backend
 - Download the yrprey database file (yrprey.sql) and run it in the MySQL database
 - In the database yrprey, dive: "SET GLOBAL sql_mode = ''"
 
+Frontend
+- Clone the repository to your local environment.
+- Navigate to the cloned repository directory.
+- Run the yarn install command to install the dependencies.
+- Then start the development server with the yarn dev command.
+- After starting the server, access http://localhost:3000/ in your browser to view the application.
+
 ## Reporting Vulnerabilities
 
 Please, avoid taking this action and requesting a CVE!
