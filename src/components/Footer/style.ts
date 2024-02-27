@@ -272,8 +272,8 @@ export const DivTwo = styled.div`
       gap: 24px;
     }
     .content-left ul button svg {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
   }
     .content-left img {
       width: 50%;
