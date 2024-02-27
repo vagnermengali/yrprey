@@ -30,7 +30,7 @@ const StatusApi = () => {
 
     return (
         <>
-            <StyledStatusApi style={{ background: statusApi }}>
+            <StyledStatusApi style={{ background: statusApi === "green" ? "green" : "red" }}>
                 {statusApi === "green" ? (
                     <>
                         <p>Back end on</p>
