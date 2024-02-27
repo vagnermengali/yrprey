@@ -203,7 +203,7 @@ export const DivTwo = styled.div`
   .content-left ul button {
     background: var(--grey-0);
     color: var(--primary-color);
-    border-radius: 50%;
+    border-radius: 9999pc;
     outline: none;
     gap: 20px;
     width: 34px;
