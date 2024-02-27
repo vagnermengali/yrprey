@@ -30,6 +30,7 @@ export const StyledShopSection = styled.div`
     line-height: 52px;
     text-align: center;
     color: var(--white);
+    padding: 0 5vw;
   }
   h3 span {
     background: var(--primary-color);
