@@ -273,6 +273,8 @@ export const DivTwo = styled.div`
     .content-left ul button svg {
       width: 18px;
       height: 18px;
+      min-width: 18px;
+      min-height: 18px;
   }
     .content-left img {
       width: 50%;
