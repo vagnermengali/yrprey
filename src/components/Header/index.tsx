@@ -3,15 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Context } from "@/context/context";
 import axios from "axios";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import StatusApi from "@/components/StatusApi";
 import Sidebar from "@/components/Sidebar";
-import MenuBurguer from "@/components/MenuBurguer";
 
 import { HeaderContainer, DivHeader } from "./style";
 
 const Header = () => {
-  const { router, tokenLocal, isMobile, setUser, isSideBarVisible } = useContext(Context);
+  const { router, tokenLocal, isMobile, setUser, isSideBarVisible, showSideBar } = useContext(Context);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -70,7 +70,17 @@ const Header = () => {
               </Link>
             </div>
             {isMobile ? (
-              <><MenuBurguer /></>
+              <>
+                {!isSideBarVisible ?
+                  <>
+                    <FaBars className="menu-mobile" onClick={showSideBar} />
+                  </>
+                  :
+                  <>
+                    <FaTimes className="menu-mobile" onClick={showSideBar} />
+                  </>
+                }
+              </>
             ) : (
               <>
                 <nav>
