@@ -209,20 +209,20 @@ export const Form = styled.form`
     }
     .input-name {
       width: 100%;
-      font-size: 14px;
-      line-height: 14px;
+      font-size: 16px;
+      line-height: 16px;
       padding-left: 10px;
     }
     .input-subject {
       width: 100%;
-      font-size: 14px;
-      line-height: 14px;
+      font-size: 16px;
+      line-height: 16px;
       padding-left: 10px;
     }
     textarea {
       width: 100%;
-      font-size: 14px;
-      line-height: 14px;
+      font-size: 16px;
+      line-height: 16px;
       padding-left: 10px;
     }
     .btn-send-message {
@@ -239,8 +239,8 @@ export const Form = styled.form`
       width: 100%;
     }
     .input-contact div input {
-      font-size: 14px;
-      line-height: 14px;
+      font-size: 16px;
+      line-height: 16px;
       padding-left: 10px;
     }
   }
