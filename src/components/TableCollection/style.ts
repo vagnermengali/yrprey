@@ -156,4 +156,46 @@ export const StyledTableCollection = styled.div`
     background-position: 0 0;
   }
 }
+@media (max-width: 1024px) {
+  .scope-container {
+    height: 40px;
+    padding: 15px 0;
+  }
+  .scope-content {
+    width: 100%;
+    gap: 8px;
+  }
+  .scope-content p {
+    font-size: 14px;
+  }
+  .img {
+    width: 46px;
+    height: 46px;
+  }
+  .card-table {
+    width: 100%;
+    gap: 8px;
+  }
+  .card-table-static {
+    width: 18.3333333333333333%
+  }
+  li {
+    height: 70px;
+    padding: 15px 0;
+  }
+  .collection-details {
+    width: fit-content;
+  }
+  .collection-details div {
+    padding: 0 8px;
+  }
+  .collection-details h4 {
+    display: none;
+  }
+  .btn-top-collections {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+}
 `;

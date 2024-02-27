@@ -4,7 +4,7 @@ import React from "react";
 import TableCollection from "@/components/TableCollection";
 
 const TopCollections = () => {
-  
+
   return (
     <>
       <motion.div

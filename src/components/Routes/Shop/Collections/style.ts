@@ -19,4 +19,22 @@ export const StyledCollectionsSection = styled.section`
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  @media (max-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 5vw;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  }
 `;

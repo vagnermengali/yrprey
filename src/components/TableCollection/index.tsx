@@ -2,10 +2,14 @@ import React from "react";
 import { FaCheckCircle, FaEthereum } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import { Context } from "@/context/context";
+import { useContext } from "react";
+import { FaCartPlus } from "react-icons/fa";
 
 import { StyledTableCollection } from "./style";
 
 const TableCollection = () => {
+  const { isMobile } = useContext(Context);
 
   return (
     <StyledTableCollection>
@@ -43,11 +47,21 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/red" className="btn-top-collections">
-              <button className="btn-top-collections">
-                Purchase
-              </button>
-            </Link>
+            {
+              isMobile ? <>
+                <Link href="/shop/collection/red" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    <FaCartPlus />
+                  </button>
+                </Link>
+              </> : <>
+                <Link href="/shop/collection/red" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    Purchase
+                  </button>
+                </Link>
+              </>
+            }
           </li>
           <li>
             <div className="card-table">
@@ -74,11 +88,21 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/blue" className="btn-top-collections">
-              <button className="btn-top-collections">
-                Purchase
-              </button>
-            </Link>
+            {
+              isMobile ? <>
+                <Link href="/shop/collection/blue" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    <FaCartPlus />
+                  </button>
+                </Link>
+              </> : <>
+                <Link href="/shop/collection/blue" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    Purchase
+                  </button>
+                </Link>
+              </>
+            }
           </li>
           <li>
             <div className="card-table">
@@ -105,11 +129,21 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/white" className="btn-top-collections">
-              <button className="btn-top-collections">
-                Purchase
-              </button>
-            </Link>
+            {
+              isMobile ? <>
+                <Link href="/shop/collection/white" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    <FaCartPlus />
+                  </button>
+                </Link>
+              </> : <>
+                <Link href="/shop/collection/white" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    Purchase
+                  </button>
+                </Link>
+              </>
+            }
           </li>
           <li>
             <div className="card-table">
@@ -136,11 +170,21 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/cian" className="btn-top-collections">
-              <button className="btn-top-collections">
-                Purchase
-              </button>
-            </Link>
+            {
+              isMobile ? <>
+                <Link href="/shop/collection/cian" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    <FaCartPlus />
+                  </button>
+                </Link>
+              </> : <>
+                <Link href="/shop/collection/cian" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    Purchase
+                  </button>
+                </Link>
+              </>
+            }
           </li>
           <li>
             <div className="card-table">
@@ -167,11 +211,21 @@ const TableCollection = () => {
               <p className="card-table-static">1</p>
               <p className="card-table-static">6</p>
             </div>
-            <Link href="/shop/collection/beige" className="btn-top-collections">
-              <button className="btn-top-collections">
-                Purchase
-              </button>
-            </Link>
+            {
+              isMobile ? <>
+                <Link href="/shop/collection/beige" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    <FaCartPlus />
+                  </button>
+                </Link>
+              </> : <>
+                <Link href="/shop/collection/beige" className="btn-top-collections">
+                  <button className="btn-top-collections">
+                    Purchase
+                  </button>
+                </Link>
+              </>
+            }
           </li>
         </ul>
       </div>

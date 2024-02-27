@@ -108,7 +108,7 @@ export const StyledCardShop = styled.div`
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    
+    width: 100%;
     border-radius: 3px;
   }
   .flip-card-front div img {
@@ -196,6 +196,37 @@ export const StyledCardShop = styled.div`
 
   100% {
     background-position: 0 0;
+  }
+}
+@media (max-width: 1024px) {
+  .card-container-shop {
+    background-color: transparent;
+    width: 258px;
+    height: 258px;
+    perspective: 1000px;
+    list-style: none;
+  }
+  .text-name-item {
+    font-size: 14px;
+  }
+  .text-details p:first-child {
+    font-size: 14px;
+  }
+  .text-details p:last-child {
+    font-size: 24px;
+  }
+  .container-button {
+    gap: 16px;
+  }
+  .eth {
+    font-size: 16px;
+  }
+
+  .flip-card-back {
+    padding: 20px 16px;
+  }
+  .btn-puschase-item {
+    font: normal 700 14px/16px 'Gilroy', sans-serif;
   }
 }
 `;

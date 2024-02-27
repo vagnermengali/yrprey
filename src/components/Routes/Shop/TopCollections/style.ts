@@ -24,4 +24,13 @@ export const ContainerTopCollections = styled.div`
     font-size: 50px;
     color: var(--white);
   }
+  @media (max-width: 1024px) {
+  .content {
+    gap: 24px;
+    padding: 40px 5vw;
+  }
+  .content-title {
+    font-size: 32px;
+  }
+  }
 `;
