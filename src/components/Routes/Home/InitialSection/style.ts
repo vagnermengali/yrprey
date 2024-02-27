@@ -137,7 +137,7 @@ export const StyledInitialSection = styled.div`
     .container-left {
       width: 100%;
       gap: 24px;
-      padding: 40px 0;
+      padding: 110px 0;
       margin-bottom: 0;
     }
     .container-left h1 {
