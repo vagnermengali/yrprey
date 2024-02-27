@@ -106,4 +106,40 @@ export const StyledContactSection = styled.div`
     flex-direction: column;
     width: 50%;
   }
+  @media (max-width: 1024px) {
+    padding: 40px 5vw;
+    .container {
+      flex-direction: column;
+    }
+    .container-left {
+      width: 100%;
+      gap: 0px;
+    }
+    .container-left .content-up {
+      gap: 24px;
+    }
+    .container-left .content-up .title {
+      display: flex;
+    }
+    .container-left .content-up h5 {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    .container-left .content-up span {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    .container-left .content-up p {
+      display: none;
+    }
+    .content-down {
+      gap: 24px;
+    }
+    .container-right {
+    width: 100%;
+  }
+    .contact {
+      display: none;
+    }
+  }
 `;

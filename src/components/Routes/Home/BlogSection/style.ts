@@ -43,4 +43,7 @@ export const StyledBlogSection = styled.div`
     justify-content: center;
     gap: 20px;
   }
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;

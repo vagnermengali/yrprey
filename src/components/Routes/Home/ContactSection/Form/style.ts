@@ -186,4 +186,62 @@ export const Form = styled.form`
   input[type="number"] {
     -moz-appearance: textfield;
   }
+  @media (max-width: 1024px) {
+    .error-column {
+      width: 100%;
+      padding: 8px 0;
+      font-size: 12px;
+      line-height: 12px;
+    }
+    .error-row {
+      width: 100%;
+      padding: 8px 0;
+      font-size: 12px;
+      line-height: 12px;
+    }
+    .no-error-column {
+      width: 100%;
+      min-height: 30px;
+    }
+    .no-error-row {
+      width: 100%;
+      min-height: 30px;
+    }
+    .input-name {
+      width: 100%;
+      font-size: 14px;
+      line-height: 14px;
+      padding-left: 10px;
+    }
+    .input-subject {
+      width: 100%;
+      font-size: 14px;
+      line-height: 14px;
+      padding-left: 10px;
+    }
+    textarea {
+      width: 100%;
+      font-size: 14px;
+      line-height: 14px;
+      padding-left: 10px;
+    }
+    .btn-send-message {
+      margin-top: 30px;
+      width: 100%;
+      font: normal 700 14px/16px 'Gilroy', sans-serif;
+    }
+
+    .input-contact {
+      width: 100%;
+      gap: 18px;
+    }
+    .input-contact div {
+      width: 100%;
+    }
+    .input-contact div input {
+      font-size: 14px;
+      line-height: 14px;
+      padding-left: 10px;
+    }
+  }
 `;

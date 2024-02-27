@@ -132,4 +132,21 @@ export const StyledInitialSection = styled.div`
     background-position: 0 0;
   }
 }
+@media (max-width: 1024px) {
+  padding: 0 5vw;
+    .container-left {
+      width: 100%;
+      gap: 24px;
+      padding: 40px 0;
+      margin-bottom: 0;
+    }
+    .container-left h1 {
+      font-size: 32px;
+      line-height: 42px;
+      width: fit-content;
+    }
+    .container-right {
+      display: none;
+    }
+  }
 `;

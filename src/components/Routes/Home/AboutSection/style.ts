@@ -64,4 +64,19 @@ export const StyledAboutSection = styled.div`
     width: 100%;
     height: 100%;
   }
+  @media (max-width: 1024px) {
+    max-width: 1280px;
+    padding: 40px 5vw;
+    .container-right {
+      width: 100%;
+      gap: 24px;
+    }
+    .container-right h2 {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    .container-left {
+      display: none;
+    }
+  }
 `;

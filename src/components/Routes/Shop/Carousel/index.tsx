@@ -38,6 +38,7 @@ const Carousel = () => {
             }
           }
         );
+        console.log(response)
         setSlides(response.data.results);
       } catch (error) {
         error

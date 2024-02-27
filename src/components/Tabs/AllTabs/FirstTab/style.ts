@@ -42,4 +42,23 @@ export const StyledFirstTab = styled.div`
     line-height: 16px;
     color: var(--white);
   }
+  @media (max-width: 1024px) {
+    gap: 24px;
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 26px;
+      color: var(--grey-2);
+      text-align: justify;
+    }
+    .topic {
+      gap: 24px;
+    }
+    .topic div {
+      gap: 24px;
+    }
+    .topic p {
+      font-size: 14px;
+    }
+  }
 `;

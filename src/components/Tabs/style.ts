@@ -28,4 +28,15 @@ export const StyledTabs = styled.div`
     color: var(--primary-color);
     border-bottom: 3px solid var(--primary-color);
   }
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: fit-content;
+    gap: 24px;
+    ul.nav {
+      gap: 24px;
+    }
+    ul.nav li {
+      font-size: 14px;
+    }
+  }
 `;
