@@ -36,21 +36,21 @@ const Sidebar = () => {
         <Overlay onClick={showSideBar} />
         <ContainerSidebar>
           <nav>
-            <Link href="/" className="link">
+            <Link href="/" className="link" onClick={showSideBar}>
               Homepage
             </Link>
-            <Link href="/about" className="link">
+            <Link href="/about" className="link" onClick={showSideBar}>
               About us
             </Link>
-            <Link href="/shop" className="link">
+            <Link href="/shop" className="link" onClick={showSideBar}>
               Shop
             </Link>
-            <Link href="/blog" className="link">
+            <Link href="/blog" className="link" onClick={showSideBar}>
               Blog
             </Link>
             {
               tokenLocal && <>
-                <Link href="/transactions" className="link">
+                <Link href="/transactions" className="link" onClick={showSideBar}>
                   My transactions
                 </Link>
               </>
@@ -61,22 +61,30 @@ const Sidebar = () => {
               <button className="login" onClick={() => {
                 onLogout({ token: tokenLocal, url: "/" })
                 localStorage.clear()
+                showSideBar()
               }}>
                 Logout
               </button>
               <button className="btn-register" onClick={() => {
                 onProfile({ token: tokenLocal })
                 router.push("/profile")
+                showSideBar()
               }}>
                 My account
               </button>
             </div>
           ) : (
             <div className="login-register">
-              <button className="login" onClick={() => router.push("/login")}>
+              <button className="login" onClick={() => {
+                showSideBar()
+                router.push("/login")
+              }}>
                 Login
               </button>
-              <button className="btn-register" onClick={() => router.push("/register")}>
+              <button className="btn-register" onClick={() => {
+                showSideBar()
+                router.push("/register")
+              }}>
                 Get started
               </button>
             </div>
