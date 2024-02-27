@@ -6,8 +6,27 @@ import InfoBanner from "@/components/InfoBanner";
 import Footer from "@/components/Footer";
 import HomeButton from "@/components/HomeButton";
 import SEO from "@/components/SEO";
+import { Context } from "@/context/context";
+import { useContext, useEffect } from "react";
+import Error404Page from "@/components/ErrorPage";
 
 const Login = () => {
+  const { tokenLocal, router } = useContext(Context);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      router.push('/');
+    }
+  }, []);
+
+  if (tokenLocal) {
+    return (
+      <>
+        <Error404Page />
+      </>
+    )
+  }
 
   return (
     <motion.div
