@@ -271,10 +271,10 @@ export const DivTwo = styled.div`
       width: 100%;
       gap: 24px;
     }
-    .content-left button svg {
+    .content-left ul button svg {
       width: 16px;
       height: 16px;
-    }
+  }
     .content-left img {
       width: 50%;
       max-width: 164px;
