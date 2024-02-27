@@ -3,6 +3,7 @@ import { Context } from "@/context/context";
 import { StyledSidebar, Overlay, ContainerSidebar } from "./style";
 import { useContext } from "react";
 import axios from "axios";
+import StatusApi from "../StatusApi";
 
 const Sidebar = () => {
   const { router, tokenLocal, setUser, showSideBar } = useContext(Context);
@@ -58,6 +59,7 @@ const Sidebar = () => {
           </nav>
           {tokenLocal ? (
             <div className="login-register">
+              <StatusApi/>
               <button className="login" onClick={() => {
                 onLogout({ token: tokenLocal, url: "/" })
                 localStorage.clear()
@@ -75,6 +77,7 @@ const Sidebar = () => {
             </div>
           ) : (
             <div className="login-register">
+              <StatusApi/>
               <button className="login" onClick={() => {
                 showSideBar()
                 router.push("/login")

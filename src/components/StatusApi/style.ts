@@ -15,4 +15,9 @@ export const StyledStatusApi = styled.div`
       color: #fff;
       font-size: 14px;
     }
+    @media (max-width: 1024px) {
+      position: static;
+      width: 100%;
+      z-index: 1;
+    }
 `;
