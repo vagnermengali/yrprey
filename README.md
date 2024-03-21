@@ -1,4 +1,6 @@
-# Yprey
+<h1 align="center">
+  Yprey
+</h1>
 
 **Backend created by [Fernando Mengali](https://www.linkedin.com/in/fernando-mengali-273504142/)**
 
