@@ -56,22 +56,26 @@ After understanding the scenario and the vulnerable route, the process of identi
 
 For more details you can use a service like the [swagger editor](https://editor.swagger.io).
 
-## How to create the environment:
-You can created one local servers:
+## How to Create the Environment:
 
-#### Backend
+You can create a local server with the following steps:
+
+### Backend
+
 - Linux Ubuntu with PHP and MySQL
-- Give chmod 777 /var/www/html/
-- Give chmod 777 /var/www/html/log/log.php
-- Create database with name yrprey
-- Download the yrprey database file (yrprey.sql) and run it in the MySQL database
-- In the database yrprey, dive: "SET GLOBAL sql_mode = ''"
+- Grant permissions: 
+  - `chmod 777 /var/www/html/`
+  - `chmod 777 /var/www/html/log/log.php`
+- Create a database named `yrprey`
+- Download the `yrprey.sql` database file and import it into the MySQL database
+- In the `yrprey` database, execute: `SET GLOBAL sql_mode = ''`
 
-#### Frontend
+### Frontend
+
 - Clone the repository to your local environment.
 - Navigate to the cloned repository directory.
-- Run the yarn install command to install the dependencies.
-- Then start the development server with the yarn dev command.
+- Run the `yarn install` command to install the dependencies.
+- Start the development server with the `yarn dev` command.
 - After starting the server, access http://localhost:3000/ in your browser to view the application.
 
 ## Reporting Vulnerabilities
